@@ -1,3 +1,138 @@
-<div class='button button-primary'>
-  test
+<div>
+
+  <div ng-include="'common/partials/_nav.html'"></div>
+  
+  <div>
+    <ul id='filter'>
+      <li>Type</li>
+      <li class='filter-type commercial'>Commercial</li>
+      <li class='filter-type narrative'>Narrative</li>
+      <li class='filter-type Creative'>Creative</li>
+    </ul>
+  </div>
+
+  <div class='content-container'>
+    
+    <section id='photo'>
+
+      <div class='row'>
+        
+        <div class='large-3 columns'>
+          <img src="http://placehold.it/350x150">
+        </div>
+        <div class='large-3 columns'>
+          <img src="http://placehold.it/350x150">
+        </div>
+        <div class='large-3 columns'>
+          <img src="http://placehold.it/350x150">
+        </div>
+        <div class='large-3 columns'>
+          <img src="http://placehold.it/350x150">
+        </div>
+
+        <div class='large-3 columns'>
+          <img src="http://placehold.it/350x150">
+        </div>
+        <div class='large-3 columns'>
+          <img src="http://placehold.it/350x150">
+        </div>
+        <div class='large-3 columns'>
+          <img src="http://placehold.it/350x150">
+        </div>
+        <div class='large-3 columns'>
+          <img src="http://placehold.it/350x150">
+        </div>
+
+        <div class='large-3 columns'>
+          <img src="http://placehold.it/350x150">
+        </div>
+        <div class='large-3 columns'>
+          <img src="http://placehold.it/350x150">
+        </div>
+        <div class='large-3 columns'>
+          <img src="http://placehold.it/350x150">
+        </div>
+        <div class='large-3 columns'>
+          <img src="http://placehold.it/350x150">
+        </div>
+
+      </div>
+    </section>
+
+    <section id='chronicles-section' class='show-for-large'>
+      <h1>Chronicles</h1>
+      <h2>Blog/Articles</h2>
+
+      <div class='row'>
+
+        <div class='large-4 columns'>
+          <span class='icon'></span>
+          <h3>Tools & Techniques</h3>
+          <img src="http://placehold.it/350x150">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
+        </div>
+
+        <div class='large-4 columns'>
+          <span class='icon'></span>
+          <h3>Adventures</h3>
+          <img src="http://placehold.it/350x150">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
+        </div>
+
+        <div class='large-4 columns'>
+          <span class='icon'></span>
+          <h3>Inspiration</h3>
+          <img src="http://placehold.it/350x150">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
+        </div>
+
+      </div>
+
+      <div id='social-media-icons'>
+        <span class='icon facebook'></span>
+        <span class='icon twitter'></span>
+        <span class='icon instagram'></span>
+      </div>
+
+    </section>
+
+    <section id='footer-section' class='show-for-large'>
+
+      <div class='row'>
+        
+        <div class='large-6 columns' id='about-section'>
+          <h3>Randy Panado</h3>
+          <img src="http://placehold.it/350x150">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum ab exercitationem ut dicta, dolor eius sed. Doloribus, sed totam, odio fuga, amet commodi consectetur accusantium officiis eaque magnam adipisci hic?</p>
+          <a href="#">More About Randy</a>
+        </div>
+
+        <div class='large-6 columns' id='contact-section'>
+          <h3>Contact</h3>
+          <form action="" name='contact_form' ng-model='contact_form'>
+            <input type="text" name='name' ng-model='name' placeholder='name'>
+            <input type="text" name='phone' ng-model='phone' placeholder='phone'>
+            <input type="text" name='email' ng-model='email' placeholder='email'>
+            <input type="text" name='company' ng-model='company' placeholder='company'>
+            <select name="project_type" ng-model='project_type'>Type of Project</select>
+            <input type="text" name='project_date' ng-model='project_date' placeholder='Dates of Project'>
+            <textarea name="project_notes" ng-model='project_notes' cols="30" rows="10" placeholder='Project Notes'></textarea>
+            <button type='submit'>Submit</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class='footer-notes'>
+        <ul>
+          <li>&copy;2015 Panado</li>
+          <li>Designed by GomaGames</li>
+          <li>Built With AirshipCMS</li>
+        </ul>
+      </div>
+
+    </section>
+
+  </div>
+
 </div>
