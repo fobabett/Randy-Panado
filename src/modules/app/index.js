@@ -10,8 +10,9 @@ module.exports =
     //useful directives, filters, services shared across the app
     require('../common').name,
     //example app module:
-    require('./work').name,
+    require('./home').name,
     require('./chronicles').name,
+    require('./about').name,
     //load extra app modules here, e.g.:
     //require('./frontend').name,
     //require('./admin').name

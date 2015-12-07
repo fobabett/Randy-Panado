@@ -10,7 +10,8 @@ module.exports =
     .state('chronicles', {
       url: '/chronicles',
       templateUrl: 'app/chronicles/layout.html',
-      controller: 'chroniclesController'
+      controller: 'chroniclesController',
+      directive: 'modal'
     });
   })
   .controller('chroniclesController', require('./chroniclesController'));

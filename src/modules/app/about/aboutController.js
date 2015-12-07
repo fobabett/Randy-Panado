@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = /*@ngInject*/
-  function workController($scope) {
+  function aboutController($scope) {
   };
