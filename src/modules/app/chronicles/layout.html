@@ -1,8 +1,27 @@
-<div>
+<div class='page-content-container'>
   
   <div ng-include="'common/partials/_nav.html'"></div>
 
-  <div class='title-banner'>
+  <div id='blog-nav' ng-class='{"show-nav":boolChangeClass}'>
+
+    <div class='logo-container blog-logo-container'>
+      <div class='logo'></div>
+      <h1 id='header-title'>Randy Panado</h1>
+    </div>
+    
+    <div class='nav-section blog-nav-section'>
+      <ul class='nav-list blog-nav-list'>
+        <li class='nav-item icon'></li>
+        <li class='nav-item icon'></li>
+        <li class='nav-item icon'></li>
+        <li class='nav-item icon'></li>
+        <li class='nav-item icon'></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class='title-banner' scroll>
     <h1 class='page-title'>Chronicles</h1>
     <h2 class='subtitle'>Blog/Articles</h2>
   </div>
@@ -56,7 +75,7 @@
 
       </div>
 
-      <div class='large-3 columns' id='instagram-sidebar'>
+      <div class='large-3 columns show-for-large' id='instagram-sidebar'>
         <span class='icon instagram'></span>
 
         <div class='instagram-content'>

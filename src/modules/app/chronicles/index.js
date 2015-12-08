@@ -11,7 +11,8 @@ module.exports =
       url: '/chronicles',
       templateUrl: 'app/chronicles/layout.html',
       controller: 'chroniclesController',
-      directive: 'modal'
+      directive: 'scroll'
     });
   })
-  .controller('chroniclesController', require('./chroniclesController'));
+  .controller('chroniclesController', require('./chroniclesController'))
+  .directive('scroll', require('./scroll'));

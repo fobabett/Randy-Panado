@@ -3582,18 +3582,17 @@ img.active {
 
 .logo-container {
   float: left;
-  border: 1px solid red;
   width: 50%; }
   .logo-container h2 {
     color: #B3B3B2; }
 
 #header-info {
-  border: 1px solid blue;
   display: inline-block; }
 
 #header-title {
   font-size: 40px;
-  color: #5B5B5B; }
+  color: #5B5B5B;
+  display: inline-block; }
 
 .logo {
   width: 50px;
@@ -3610,6 +3609,28 @@ img.active {
   display: inline-block;
   color: #4E4E4E;
   margin-right: 20px; }
+
+#blog-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #ADDDDD;
+  background-color: #EAE9E4;
+  visibility: hidden; }
+
+#blog-nav.show-nav {
+  visibility: visible; }
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #635C56; }
+
+.blog-logo-container,
+.blog-nav-section {
+  float: none;
+  display: inline-block; }
 
 #filter {
   text-align: right; }
