@@ -2,6 +2,9 @@
 
 module.exports = /*@ngInject*/
   function homeController($scope) {
+
+    $scope.filter = {};
+
     $scope.modalShown = false;
     $scope.toggleModal = function() {
       $scope.modalShown = !$scope.modalShown;
@@ -20,6 +23,17 @@ module.exports = /*@ngInject*/
     $scope.isCurrentSlideIndex = function (index) {
       return $scope.currentIndex === index;
     };
+
+    $scope.filters = [
+      {type: 'commerical'},
+      {type: 'narrative'},
+      {type: 'creative'}
+    ]
+
+    $scope.setFilterType = function(filter) {
+      $scope.filter.type = filter.type
+      console.log($scope.filter.type);
+    }
 
     console.log($scope.slides);
   };

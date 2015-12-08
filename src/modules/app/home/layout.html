@@ -2,7 +2,7 @@
 
   <div ng-include="'common/partials/_nav.html'"></div>
 
-  <div ng-show='modalShown'>
+  <div ng-show='modalShown' id='slideshow-modal'>
     <span ng-click='toggleModal()' id='close-modal'>&times;</span>
   
     <div class='rows'>
@@ -22,33 +22,30 @@
 
       </div>
   
-      <div class='large-3 columns'>
-      <h3>Photo Title</h3>
-      <h3>Panado Ranch</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, dicta labore rerum itaque ipsa nihil repellat ad modi iste totam, quaerat eveniet ab quam. Harum fuga sunt libero ad deserunt?
-      </p>
+      <div class='large-3 columns selected-photo-description-container'>
+        <h3 id='selected-photo-title'>Photo Title</h3>
+        <h3 id='selected-photo-subtitle'>Panado Ranch</h3>
+        <p id='selected-photo-details'>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, dicta labore rerum itaque ipsa nihil repellat ad modi iste totam, quaerat eveniet ab quam. Harum fuga sunt libero ad deserunt?
+        </p>
 
-      <div class='type-tags'>
-        <span>Commercial</span>
-        <span>Narrative</span>
-      </div>
+        <div class='filter-tags'>
+          <span>Commercial</span>
+          <span>Narrative</span>
+        </div>
 
-      <div>
-        <h3>Related Blog Post</h3>
-        <h3>Kinetic Cinematography</h3>
-      </div>
+        <div id='related-blog-post'>
+          <h3 class='subtitle'>Related Blog Post</h3>
+          <h3>Kinetic Cinematography</h3>
+        </div>
       </div>
   
     </div>
   </div>
   
   <div>
-    <ul id='filter'>
-      <li>Type</li>
-      <li class='filter-type commercial'>Commercial</li>
-      <li class='filter-type narrative'>Narrative</li>
-      <li class='filter-type Creative'>Creative</li>
+    <ul id='filter'> Type
+      <li class='filter-type commercial' ng-repeat='filter in filters track by filter.type' ng-click='setFilterType(filter)'>{{filter.type}}</li>
     </ul>
   </div>
 
