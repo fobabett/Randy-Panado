@@ -3605,10 +3605,20 @@ img.active {
 .nav-section {
   float: right; }
 
+@media (max-width: 1029px) {
+  .nav-list {
+    display: none; } }
+
+.nav-list.toggle-nav {
+  display: block; }
+
 .nav-item {
   display: inline-block;
   color: #4E4E4E;
   margin-right: 20px; }
+  @media (max-width: 1029px) {
+    .nav-item {
+      display: block; } }
 
 #blog-nav {
   position: fixed;
@@ -3631,6 +3641,22 @@ img.active {
 .blog-nav-section {
   float: none;
   display: inline-block; }
+
+.toggle-dropdown {
+  width: 30px;
+  height: 30px;
+  background-color: #A4A4A4; }
+
+.blog-dropdown-nav {
+  display: inline-block; }
+  .blog-dropdown-nav ul {
+    position: absolute;
+    top: 55px;
+    right: 200px;
+    background-color: #EAE9E4; }
+  .blog-dropdown-nav .nav-item {
+    display: block;
+    margin: 15px; }
 
 #filter {
   text-align: right; }

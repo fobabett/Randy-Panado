@@ -11,11 +11,23 @@
     
     <div class='nav-section blog-nav-section'>
       <ul class='nav-list blog-nav-list'>
-        <li class='nav-item icon'></li>
-        <li class='nav-item icon'></li>
-        <li class='nav-item icon'></li>
-        <li class='nav-item icon'></li>
-        <li class='nav-item icon'></li>
+        <li class='nav-item icon' ui-sref='category'></li>
+        <li class='nav-item icon' ui-sref='category'></li>
+        <li class='nav-item icon' ui-sref='category'></li>
+        <li class='nav-item icon' ui-sref='category'></li>
+        <li class='nav-item icon' ui-sref='category'></li>
+      </ul>
+    </div>
+    
+    <button class='toggle-dropdown' ng-click='toggleDropdown=!toggleDropdown'></button>
+
+    <div class='blog-dropdown-nav'>
+      <ul ng-show='toggleDropdown' class='nav-list'>
+        <li class='nav-item'><a ui-sref='home'>Work</a></li>
+        <li class='nav-item'><a ui-sref='about'>About</a></li>
+        <li class='nav-item'><a ui-sref='about'>Equipment</a></li>
+        <li class='nav-item'><a ui-sref='chronicles'>Chronicles</a></li>
+        <li class='nav-item'><a ui-sref='home'>Contact</a></li>
       </ul>
     </div>
 

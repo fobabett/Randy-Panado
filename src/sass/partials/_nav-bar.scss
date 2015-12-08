@@ -1,3 +1,6 @@
+@import 'mixins';
+@import 'variables';
+
 .logo-container {
   float: left;
   width: 50%;
@@ -25,10 +28,23 @@
 .nav-section {
   float: right;
 }
+.nav-list {
+
+  @include respond-to('medium-small') {
+    display: none;
+  }
+}
+.nav-list.toggle-nav {
+  display: block;
+}
 .nav-item {
   display: inline-block;
   color: #4E4E4E;
   margin-right: 20px;
+
+  @include respond-to('medium-small') {
+    display: block;
+  }
 }
 #blog-nav {
   position: fixed;
@@ -52,4 +68,24 @@
 .blog-nav-section {
   float: none;
   display: inline-block;
+}
+.toggle-dropdown {
+  width: 30px;
+  height: 30px;
+  background-color: #A4A4A4;
+}
+.blog-dropdown-nav {
+  display: inline-block;
+  
+  ul {
+    position: absolute;
+    top: 55px;
+    right: 200px;
+    background-color: #EAE9E4;
+  }
+
+  .nav-item {
+    display: block;
+    margin: 15px;
+  }
 }

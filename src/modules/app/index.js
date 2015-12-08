@@ -12,6 +12,7 @@ module.exports =
     //example app module:
     require('./home').name,
     require('./chronicles').name,
+    require('./category').name,
     require('./about').name,
     //load extra app modules here, e.g.:
     //require('./frontend').name,

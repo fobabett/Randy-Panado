@@ -10,13 +10,16 @@
     </div>
   </div>
   
-  <div class='nav-section show-for-large'>
-    <ul class='nav-list'>
-      <li class='nav-item work'>Work</li>
-      <li class='nav-item about'>About</li>
-      <li class='nav-item equipment'>Equipment</li>
-      <li class='nav-item chronicles'>Chronicles</li>
-      <li class='nav-item contact'>Contact</li>
+  <div class='nav-section'>
+
+    <button class='toggle-dropdown hide-for-large' ng-click='toggleNav=!toggleNav'></button>
+
+    <ul ng-class='{"toggle-nav": toggleNav}' class='nav-list'>
+      <li class='nav-item'><a ui-sref='home'>Work</a></li>
+      <li class='nav-item'><a ui-sref='about'>About</a></li>
+      <li class='nav-item'><a ui-sref='about'>Equipment</a></li>
+      <li class='nav-item'><a ui-sref='chronicles'>Chronicles</a></li>
+      <li class='nav-item'><a ui-sref='home'>Contact</a></li>
     </ul>
   </div>
 

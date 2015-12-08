@@ -1,4 +1,7 @@
-//
-// Bootstrap-sass-official
-// ----------------------------------------------------------------------------------------------------
-$icon-font-path: "assets/fonts/bootstrap/";
+$breakpoints: (
+  'small': '(max-width: 599px)',
+  'medium-small': '(max-width: 1029px)',
+  'medium': '(min-width: 600px) and (max-width: 1029px)',
+  'medium-up': '(min-width: 600px)',
+  'large': '(min-width: 1030px)'
+);
