@@ -7,12 +7,19 @@
   
     <div class='rows'>
       <div class='large-9 columns'>
-        <img src="http://placehold.it/600x300" alt="">
-        <div>
-          <img src="http://placehold.it/50x50" alt="">
-          <img src="http://placehold.it/50x50" alt="">
-          <img src="http://placehold.it/50x50" alt="">
-        </div>
+
+        <img ng-repeat='slide in slides' class='slide' ng-src='{{slide.url}}' ng-hide='!isCurrentSlideIndex($index)'>
+
+        <nav class="slideshow-nav">
+          <div class="wrapper">
+            <ul class="slideshow-nav-dots">
+              <li class="dot" ng-repeat="slide in slides">
+                <img href="#" ng-class="{'active':isCurrentSlideIndex($index)}" class='slide-image' ng-click="setCurrentSlideIndex($index);" ng-src='{{slide.url}}'>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
       </div>
   
       <div class='large-3 columns'>

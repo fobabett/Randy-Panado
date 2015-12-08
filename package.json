@@ -33,10 +33,12 @@
   },
   "browser": {
     "angular": "./bower_components/angular/angular.min.js",
-    "angular-ui-router": "./bower_components/angular-ui-router/release/angular-ui-router.min.js"
+    "angular-ui-router": "./bower_components/angular-ui-router/release/angular-ui-router.min.js",
+    "jquery": "./bower_components/jquery/dist/jquery.min.js"
   },
   "browserify-shim": {},
   "dependencies": {
+    "angular-simple-slideshow": "0.0.3",
     "foundation-sites": "^6.0.5",
     "gulp-sass": "^2.1.0"
   }
