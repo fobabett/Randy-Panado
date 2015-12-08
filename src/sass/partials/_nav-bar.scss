@@ -1,5 +1,6 @@
 @import 'mixins';
 @import 'variables';
+@import 'typography';
 
 .logo-container {
   float: left;
@@ -16,6 +17,7 @@
   font-size: 40px;
   color: #5B5B5B;
   display: inline-block;
+  font-family: 'Caviar Dreams';
 }
 .logo {
   width: 50px;
