@@ -58,14 +58,15 @@
     
     <section id='photo'>
 
-      <div class='row'>
+      <div>
         
-        <div class='large-3 columns photo-item' ng-repeat='image in images'>
-          <img ng-src='{{image.url}}'>
-          <span class='photo-details' ng-click='widgetExpanded = !widgetExpanded; toggleModal()'><span>{{image.name}}</span></span>
+        <div class='photo-item' ng-repeat='rows in chunkedData'>
+          <img ng-src="{{image.url}}" alt="" ng-repeat='image in rows'>
+          <span class='photo-details' ng-click='toggleModal()'><span>{{image.name}}</span></span>
         </div>
 
-      </div>
+      </div>  
+
     </section>
 
     <section id='chronicles-section' class='show-for-large'>

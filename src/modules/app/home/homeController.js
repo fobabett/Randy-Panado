@@ -8,67 +8,79 @@ module.exports = /*@ngInject*/
     var mockData = [
       {
         name: 'one of a kind',
-        url: 'http://placehold.it/350x200',
+        url: 'http://placehold.it/300x200',
         type: ['commercial', 'narrative']
       },
       {
         name: 'kitty cat',
-        url: 'http://placehold.it/350x200',
+        url: 'http://placehold.it/300x200',
         type: ['creative']
       },
       {
         name: 'awesomeness',
-        url: 'http://placehold.it/350x200',
+        url: 'http://placehold.it/300x200',
         type: ['creative', 'narrative']
       },
       {
         name: 'blah',
-        url: 'http://placehold.it/350x200',
+        url: 'http://placehold.it/300x200',
         type: ['narrative']
       },
       {
         name: 'dsfdsf',
-        url: 'http://placehold.it/350x200',
+        url: 'http://placehold.it/300x200',
         type: ['commercial', 'creative']
       },
       {
         name: 'boooo',
-        url: 'http://placehold.it/350x200',
+        url: 'http://placehold.it/300x200',
         type: ['commercial', 'creative', 'narrative']
       },
       {
         name: 'one of a kind',
-        url: 'http://placehold.it/350x200',
+        url: 'http://placehold.it/300x200',
         type: ['commercial', 'narrative']
       },
       {
         name: 'kitty cat',
-        url: 'http://placehold.it/350x200',
+        url: 'http://placehold.it/300x200',
         type: ['creative']
       },
       {
         name: 'awesomeness',
-        url: 'http://placehold.it/350x200',
+        url: 'http://placehold.it/300x200',
         type: ['creative', 'narrative']
       },
       {
         name: 'blah',
-        url: 'http://placehold.it/350x200',
+        url: 'http://placehold.it/300x200',
         type: ['narrative']
       },
       {
         name: 'dsfdsf',
-        url: 'http://placehold.it/350x200',
+        url: 'http://placehold.it/300x200',
         type: ['commercial', 'creative']
       },
       {
         name: 'boooo',
-        url: 'http://placehold.it/350x200',
+        url: 'http://placehold.it/300x200',
         type: ['commercial', 'creative', 'narrative']
       }
     ];
 
     $scope.images = mockData;
+
+    function chunk(arr, size) {
+      var newArr = [];
+      for (var i=0; i<arr.length; i+=size) {
+        newArr.push(arr.slice(i, i+size));
+      }
+      return newArr;
+    }
+
+    $scope.chunkedData = chunk($scope.images, 4);
+
+    console.log($scope.chunkedData);
 
     $scope.modalShown = false;
     $scope.toggleModal = function() {
