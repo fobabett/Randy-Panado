@@ -3736,3 +3736,30 @@ img.active {
   @media (min-width: 1030px) {
     .filter-type {
       margin-left: 20px; } }
+
+#home-page {
+  font-family: 'Novecento Sans'; }
+
+.photo-item {
+  position: relative; }
+  .photo-item:hover .photo-details {
+    opacity: 1; }
+
+.photo-details {
+  color: #FEFEFE;
+  display: table;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  opacity: 0;
+  text-transform: uppercase;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms; }
+  .photo-details span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle; }
