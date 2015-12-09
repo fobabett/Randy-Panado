@@ -2,22 +2,30 @@
 @import 'variables';
 @import 'typography';
 
+.header {
+  font-size: 14px;
+
+  @include respond-to('large') {
+    margin: 50px;
+  }
+}
 .logo-container {
   float: left;
   width: 50%;
 
   h2 {
     color: #B3B3B2;
+    font-family: 'Novecento Sans';
   }
 }
 #header-info {
   display: inline-block;
 }
 #header-title {
-  font-size: 40px;
+  font-size: 36px;
   color: #5B5B5B;
   display: inline-block;
-  font-family: 'Caviar Dreams';
+  font-family: 'Caviar Dreams Bold';
 }
 .logo {
   width: 50px;
@@ -29,9 +37,10 @@
 }
 .nav-section {
   float: right;
+  font-family: 'Novecento Sans';
 }
 .nav-list {
-
+  
   @include respond-to('medium-small') {
     display: none;
   }
@@ -41,8 +50,11 @@
 }
 .nav-item {
   display: inline-block;
-  color: #4E4E4E;
   margin-right: 20px;
+
+  a {
+    color: #505050;
+  }
 
   @include respond-to('medium-small') {
     display: block;

@@ -1,7 +1,18 @@
+@import 'variables';
+@import 'mixins';
+
 #slideshow-modal {
   background-color: #464646;
   overflow: auto;
   position: relative;
+  font-family: 'Novecento Sans Light';
+}
+.slideshow-content {
+  overflow: auto;
+  
+  @include respond-to('large') {
+    margin: 50px;
+  }
 }
 #close-modal {
   position: absolute;
@@ -9,15 +20,15 @@
   top: 0;
   color: #898989;
   font-size: 40px;
+  cursor: pointer;
+  margin: 20px;
 }
 .slide {
   width: 100%;
 }
-.slideshow-nav {
-  border: 1px solid red;
-}
 .slideshow-nav-dots {
   text-align: center;
+  margin-top: 20px;
 }
 li.dot {
   display: inline-block;
@@ -26,21 +37,24 @@ li.dot {
   width: 70px;
   height: 70px;
   margin: 5px;
+  cursor: pointer;
 }
 img.active {
   border: 5px solid #CFCFCF;
 }
 #selected-photo-title {
-  font-size: 40px;
+  font-size: 32px;
   color: #CFCFCF;
 }
 #selected-photo-subtitle {
   font-size: 14px;
   color: #95BABA;
 }
-#selected-photo-details {
+.selected-photo-details {
   color: #B8B8B8;
   margin-top: 30px;
+  font-family: 'Novecento Sans';
+  font-size: 14px;
 }
 .filter-tags {
   margin-top: 30px;
@@ -49,23 +63,27 @@ img.active {
     background-color: #ACDADA;
     color: #464646;
     padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-radius: 2px;
+    font-family: 'Novecento Sans';
   }
 }
 #related-blog-post {
   border-left: 5px solid #ACDADA;
-  margin-top: 220px;
   padding-left: 5px;
+  position: absolute;
+  bottom: 155px;
 
   .subtitle {
     color: #ACDADA;
+    text-transform: uppercase;
+    font-size: 12px;
   }
 
-  h3 {
+  .blog-title {
     color: #CDCDCD;
+    font-family: 'Novecento Sans';
+    font-size: 14px;
   }
-}
-
-.selected-photo-description-container {
-  height: 465px;
 }

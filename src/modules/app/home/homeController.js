@@ -8,62 +8,62 @@ module.exports = /*@ngInject*/
     var mockData = [
       {
         name: 'one of a kind',
-        url: 'http://placehold.it/300x150',
+        url: 'http://placehold.it/350x200',
         type: ['commercial', 'narrative']
       },
       {
         name: 'kitty cat',
-        url: 'http://placehold.it/300x150',
+        url: 'http://placehold.it/350x200',
         type: ['creative']
       },
       {
         name: 'awesomeness',
-        url: 'http://placehold.it/300x150',
+        url: 'http://placehold.it/350x200',
         type: ['creative', 'narrative']
       },
       {
         name: 'blah',
-        url: 'http://placehold.it/300x150',
+        url: 'http://placehold.it/350x200',
         type: ['narrative']
       },
       {
         name: 'dsfdsf',
-        url: 'http://placehold.it/300x150',
+        url: 'http://placehold.it/350x200',
         type: ['commercial', 'creative']
       },
       {
         name: 'boooo',
-        url: 'http://placehold.it/300x150',
+        url: 'http://placehold.it/350x200',
         type: ['commercial', 'creative', 'narrative']
       },
       {
         name: 'one of a kind',
-        url: 'http://placehold.it/300x150',
+        url: 'http://placehold.it/350x200',
         type: ['commercial', 'narrative']
       },
       {
         name: 'kitty cat',
-        url: 'http://placehold.it/300x150',
+        url: 'http://placehold.it/350x200',
         type: ['creative']
       },
       {
         name: 'awesomeness',
-        url: 'http://placehold.it/300x150',
+        url: 'http://placehold.it/350x200',
         type: ['creative', 'narrative']
       },
       {
         name: 'blah',
-        url: 'http://placehold.it/300x150',
+        url: 'http://placehold.it/350x200',
         type: ['narrative']
       },
       {
         name: 'dsfdsf',
-        url: 'http://placehold.it/300x150',
+        url: 'http://placehold.it/350x200',
         type: ['commercial', 'creative']
       },
       {
         name: 'boooo',
-        url: 'http://placehold.it/300x150',
+        url: 'http://placehold.it/350x200',
         type: ['commercial', 'creative', 'narrative']
       }
     ];

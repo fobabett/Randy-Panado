@@ -3469,6 +3469,9 @@ table.hover tr:nth-of-type(even):hover {
   .top-bar-right {
     float: right; } }
 
+.page-content-container {
+  margin: 0 auto; }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -3519,23 +3522,30 @@ table {
 #slideshow-modal {
   background-color: #464646;
   overflow: auto;
-  position: relative; }
+  position: relative;
+  font-family: 'Novecento Sans Light'; }
+
+.slideshow-content {
+  overflow: auto; }
+  @media (min-width: 1030px) {
+    .slideshow-content {
+      margin: 50px; } }
 
 #close-modal {
   position: absolute;
   right: 0;
   top: 0;
   color: #898989;
-  font-size: 40px; }
+  font-size: 40px;
+  cursor: pointer;
+  margin: 20px; }
 
 .slide {
   width: 100%; }
 
-.slideshow-nav {
-  border: 1px solid red; }
-
 .slideshow-nav-dots {
-  text-align: center; }
+  text-align: center;
+  margin-top: 20px; }
 
 li.dot {
   display: inline-block; }
@@ -3543,22 +3553,25 @@ li.dot {
 .slide-image {
   width: 70px;
   height: 70px;
-  margin: 5px; }
+  margin: 5px;
+  cursor: pointer; }
 
 img.active {
   border: 5px solid #CFCFCF; }
 
 #selected-photo-title {
-  font-size: 40px;
+  font-size: 32px;
   color: #CFCFCF; }
 
 #selected-photo-subtitle {
   font-size: 14px;
   color: #95BABA; }
 
-#selected-photo-details {
+.selected-photo-details {
   color: #B8B8B8;
-  margin-top: 30px; }
+  margin-top: 30px;
+  font-family: 'Novecento Sans';
+  font-size: 14px; }
 
 .filter-tags {
   margin-top: 30px; }
@@ -3566,22 +3579,31 @@ img.active {
     background-color: #ACDADA;
     color: #464646;
     padding: 2px;
-    border-radius: 2px; }
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px;
+    font-family: 'Novecento Sans'; }
 
 #related-blog-post {
   border-left: 5px solid #ACDADA;
-  margin-top: 220px;
-  padding-left: 5px; }
+  padding-left: 5px;
+  position: absolute;
+  bottom: 155px; }
   #related-blog-post .subtitle {
-    color: #ACDADA; }
-  #related-blog-post h3 {
-    color: #CDCDCD; }
-
-.selected-photo-description-container {
-  height: 465px; }
+    color: #ACDADA;
+    text-transform: uppercase;
+    font-size: 12px; }
+  #related-blog-post .blog-title {
+    color: #CDCDCD;
+    font-family: 'Novecento Sans';
+    font-size: 14px; }
 
 @font-face {
   font-family: 'Novecento Sans';
+  src: url("../../assets/fonts/novecento_sans/2FE2AA_4_0.woff"); }
+
+@font-face {
+  font-family: 'Novecento Sans Light';
   src: url("../../assets/fonts/novecento_sans/2FE2AA_5_0.woff"); }
 
 @font-face {
@@ -3600,20 +3622,27 @@ img.active {
   font-family: 'Caviar Dreams Italic';
   src: url("../../assets/fonts/caviarDreams/caviarDreams_Italic.WOFF"); }
 
+.header {
+  font-size: 14px; }
+  @media (min-width: 1030px) {
+    .header {
+      margin: 50px; } }
+
 .logo-container {
   float: left;
   width: 50%; }
   .logo-container h2 {
-    color: #B3B3B2; }
+    color: #B3B3B2;
+    font-family: 'Novecento Sans'; }
 
 #header-info {
   display: inline-block; }
 
 #header-title {
-  font-size: 40px;
+  font-size: 36px;
   color: #5B5B5B;
   display: inline-block;
-  font-family: 'Caviar Dreams'; }
+  font-family: 'Caviar Dreams Bold'; }
 
 .logo {
   width: 50px;
@@ -3624,7 +3653,8 @@ img.active {
   vertical-align: top; }
 
 .nav-section {
-  float: right; }
+  float: right;
+  font-family: 'Novecento Sans'; }
 
 @media (max-width: 1029px) {
   .nav-list {
@@ -3635,8 +3665,9 @@ img.active {
 
 .nav-item {
   display: inline-block;
-  color: #4E4E4E;
   margin-right: 20px; }
+  .nav-item a {
+    color: #505050; }
   @media (max-width: 1029px) {
     .nav-item {
       display: block; } }

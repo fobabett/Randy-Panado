@@ -1,0 +1,11 @@
+@import 'variables';
+@import 'mixins';
+
+.page-content-container {
+  margin: 0 auto;
+  
+  @include respond-to('large') {
+    // max-width: $largest-width;
+    // margin: 50px;
+  }
+}
