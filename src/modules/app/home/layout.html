@@ -1,7 +1,7 @@
 <div class='page-content-container'>
 
   <div ng-include="'common/partials/_nav.html'"></div>
-  
+
   <div ng-show='modalShown' id='slideshow-modal'>
     <span ng-click='toggleModal()' id='close-modal'>&times;</span>
   
@@ -34,8 +34,8 @@
         </p>
 
         <div class='filter-tags'>
-          <span>Commercial</span>
-          <span>Narrative</span>
+          <span class='selected-tag'>Commercial</span>
+          <span class='selected-tag'>Narrative</span>
         </div>
 
         <div id='related-blog-post'>
@@ -48,8 +48,9 @@
   </div>
   
   <div>
-    <ul id='filter'> Type
-      <li class='filter-type commercial' ng-repeat='filter in filters track by filter.type' ng-click='setFilterType(filter)'>{{filter.type}}</li>
+    <ul id='filter'> 
+      <li>Type</li>
+      <li class='filter-type' ng-repeat='filter in filters track by filter.type' ng-click='setFilterType(filter)'>{{filter.type}}</li>
     </ul>
   </div>
 

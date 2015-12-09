@@ -58,16 +58,15 @@ img.active {
 }
 .filter-tags {
   margin-top: 30px;
-
-  span {
-    background-color: #ACDADA;
-    color: #464646;
-    padding: 2px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 2px;
-    font-family: 'Novecento Sans';
-  }
+}
+.selected-tag {
+  background-color: #ACDADA;
+  color: #464646;
+  padding: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 2px;
+  font-family: 'Novecento Sans';
 }
 #related-blog-post {
   border-left: 5px solid #ACDADA;

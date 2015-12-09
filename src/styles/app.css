@@ -3575,14 +3575,15 @@ img.active {
 
 .filter-tags {
   margin-top: 30px; }
-  .filter-tags span {
-    background-color: #ACDADA;
-    color: #464646;
-    padding: 2px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 2px;
-    font-family: 'Novecento Sans'; }
+
+.selected-tag {
+  background-color: #ACDADA;
+  color: #464646;
+  padding: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 2px;
+  font-family: 'Novecento Sans'; }
 
 #related-blog-post {
   border-left: 5px solid #ACDADA;
@@ -3711,7 +3712,27 @@ img.active {
     margin: 15px; }
 
 #filter {
-  text-align: right; }
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Novecento Sans';
+  color: #737272;
+  font-size: 14px; }
+  @media (max-width: 1029px) {
+    #filter {
+      text-align: center; } }
+  @media (min-width: 1030px) {
+    #filter {
+      text-align: right;
+      margin-left: 50px;
+      margin-right: 50px; } }
   #filter li {
-    display: inline-block;
-    margin-right: 20px; }
+    display: inline-block; }
+
+.filter-type {
+  cursor: pointer; }
+  @media (max-width: 1029px) {
+    .filter-type {
+      margin-left: 10px; } }
+  @media (min-width: 1030px) {
+    .filter-type {
+      margin-left: 20px; } }

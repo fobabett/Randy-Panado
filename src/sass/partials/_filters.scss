@@ -1,8 +1,35 @@
+@import 'mixins';
+@import 'variables';
+
 #filter {
-  text-align: right;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Novecento Sans';
+  color: #737272;
+  font-size: 14px;
+
+  @include respond-to('medium-small') {
+    text-align: center;
+  }
+
+  @include respond-to('large') {
+    text-align: right;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 
   li {
     display: inline-block;
-    margin-right: 20px;
+  }
+}
+.filter-type {
+  cursor: pointer;
+
+  @include respond-to('medium-small') {
+    margin-left: 10px;
+  }
+
+  @include respond-to('large') {
+    margin-left: 20px;
   }
 }
