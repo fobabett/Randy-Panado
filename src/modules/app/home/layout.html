@@ -58,10 +58,10 @@
     
     <section id='photo'>
 
-      <div>
+      <div class='photo-grid clearfix'>
         
         <div class='photo-item' ng-repeat='rows in chunkedData'>
-          <img ng-src="{{image.url}}" alt="" ng-repeat='image in rows'>
+          <img ng-click='toggleModal()' ng-src="{{image.url}}" alt="{{image.name}}" ng-repeat='image in rows'>
           <span class='photo-details' ng-click='toggleModal()'><span>{{image.name}}</span></span>
         </div>
 
@@ -75,33 +75,45 @@
 
       <div class='row blog-content'>
 
-        <div class='large-4 columns'>
+        <div class='large-4 columns article-snippet-container'>
           <div class='icon blog-category-icon'></div>
           <h3 class='title blog-category-title'>Tools & Techniques</h3>
-          <img src="http://placehold.it/350x150">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
+          <div class='article-snippet-content'>
+            <img src="http://placehold.it/350x150">
+            <h1 class='article-title'>DJI Inspire 1 Log Color</h1>
+            <span class='article-date'>5 months ago 123 views</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
+          </div>  
         </div>
 
-        <div class='large-4 columns'>
+        <div class='large-4 columns article-snippet-container'>
           <div class='icon blog-category-icon'></div>
           <h3 class='title blog-category-title'>Adventures</h3>
-          <img src="http://placehold.it/350x150">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
+          <div class='article-snippet-content'>
+            <img src="http://placehold.it/350x150">
+            <h1 class='article-title'>Trip to San Diego</h1>
+            <span class='article-date'>Oct 21, 2015</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
+          </div>
         </div>
 
-        <div class='large-4 columns'>
+        <div class='large-4 columns article-snippet-container'>
           <div class='icon blog-category-icon'></div>
           <h3 class='title blog-category-title'>Inspiration</h3>
-          <img src="http://placehold.it/350x150">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
+          <div class='article-snippet-content'>
+            <img src="http://placehold.it/350x150">
+            <h1 class='article-title'>Crimson Creative</h1>
+            <span class='article-date'>Oct 1, 2013</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
+          </div>  
         </div>
 
       </div>
 
       <div id='social-media-icons'>
-        <span class='icon facebook'></span>
-        <span class='icon twitter'></span>
-        <span class='icon instagram'></span>
+        <div class='icon facebook'></div>
+        <div class='icon twitter'></div>
+        <div class='icon instagram'></div>
       </div>
 
     </section>
@@ -111,14 +123,18 @@
       <div class='row'>
         
         <div class='large-6 columns show-for-large' id='about-section'>
-          <h3>Randy Panado</h3>
-          <img src="http://placehold.it/350x150">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum ab exercitationem ut dicta, dolor eius sed. Doloribus, sed totam, odio fuga, amet commodi consectetur accusantium officiis eaque magnam adipisci hic?</p>
-          <a href="#">More About Randy</a>
+          <div id='about-section-content'>
+            <h3 class='title'>Randy Panado</h3>
+            <img src="http://placehold.it/350x300">
+            <div id='about-section-snippet'>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum ab exercitationem ut dicta, dolor eius sed. Doloribus, sed totam, odio fuga, amet commodi consectetur accusantium officiis eaque magnam adipisci hic?</p>
+            </div>
+            <a href="#">More About Randy</a>
+          </div>
         </div>
 
         <div class='large-6 columns' id='contact-section'>
-          <h3>Contact</h3>
+          <h3 class='title'>Contact</h3>
           <form action="" name='contact_form' ng-model='contact_form'>
             <input type="text" name='name' ng-model='name' placeholder='name'>
             <input type="text" name='phone' ng-model='phone' placeholder='phone'>

@@ -8,12 +8,16 @@
   position: relative;
   text-align: center;
 
-  &:hover .photo-details {
-    opacity: 1;
-  }
-
   @include respond-to('medium-small') {
     margin-bottom: 15px;
+  }
+
+  img {
+    margin: 5px;
+  }
+
+  &:hover .photo-details {
+    opacity: 1;
   }
 }
 .photo-details {
@@ -49,12 +53,14 @@
     }
   }
 }
+
 #chronicles-section {
   margin-top: 200px;
+  margin-bottom: 200px;
   text-align: center;
 }
 .section-title {
-  font-family: 'Caviar Dreams';
+  font-family: 'Caviar Dreams Bold';
 
   @include respond-to('large') {
     font-size: 32px;
@@ -72,10 +78,123 @@
   margin: 0 auto;
   margin-bottom: 15px;
 }
-.blog-content:first-child {
-  border-right: 2px solid #E4F1EF;
-  background-color: red;
+.article-snippet-container {
+
+  img {
+    margin-top: 50px;
+    margin-bottom: 15px;
+  }
 }
-.blog-content:last-child {
+.article-snippet-container:first-child {
+  border-right: 2px solid #E4F1EF;
+}
+.article-snippet-container:last-child {
   border-left: 2px solid #E4F1EF;
+}
+.article-snippet-content {
+  text-align: left;
+  font-family: 'Novecento Sans';
+  color: #717171;
+  padding-bottom: 50px;
+
+  .article-title,
+  .article-date,
+  p {
+    margin-top: 15px;
+  }
+
+  .article-title {
+    font-family: 'Caviar Dreams Bold';
+  }
+
+  .article-date {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+    color: #B8B8B8;
+  }
+}
+#social-media-icons {
+  .icon {
+    display: inline-block;
+    margin: 5px;
+  }
+}
+
+#about-section {
+  text-align: center;
+}
+#about-section-content {
+  display: inline-block;
+  font-size: 14px;
+
+  img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  a {
+    color: #92A7A3;
+  }
+}
+#about-section-snippet {
+  text-align: left;
+  margin-bottom: 30px;
+
+  p {
+    max-width: 350px;
+    color: #878685;
+  }
+}
+
+#contact-section {
+  border-left: 2px solid #D7D7D6;
+  text-align: center;
+
+  input,
+  select,
+  textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    box-shadow: none;
+    background-color: #FFFFFF;
+    font-size: 14px;
+    resize: none;
+  }
+
+  button {
+    color: #FFFFFF;
+    background-color: #ACDADA;
+    width: 100%;
+    padding: 15px;
+  }
+}
+form {
+  margin-right: 80px;
+  margin-left: 80px;
+  margin-top: 30px;
+}
+
+.footer-notes {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 50px;
+
+  li {
+    display: inline-block;
+    color: #BFBEBD;
+    border-right: 2px solid #BFBEBD;
+    font-size: 12px;
+    margin: 5px;
+    padding-right: 10px;
+    text-transform: uppercase;
+
+    &:last-child {
+      border: none;
+    }
+  }
 }
