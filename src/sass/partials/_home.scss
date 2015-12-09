@@ -1,32 +1,81 @@
+@import 'mixins';
+@import 'variables';
+
 #home-page {
   font-family: 'Novecento Sans'
 }
 .photo-item {
   position: relative;
+  text-align: center;
 
   &:hover .photo-details {
     opacity: 1;
   }
+
+  @include respond-to('medium-small') {
+    margin-bottom: 15px;
+  }
 }
 .photo-details {
-  color: #FEFEFE;
-  display: table;
-  left: 0;
-  top: 0;
-  position: absolute;
-  // same as photo
-  width: 300px;
-  height: 200px;
-  opacity: 0;
   text-transform: uppercase;
-  -webkit-transition: opacity 500ms;
-  -moz-transition: opacity 500ms;
-  -o-transition: opacity 500ms;
-  transition: opacity 500ms;
+
+  @include respond-to('medium-small') {
+    color: #606060;
+    font-size: 14px;
+  }
+
+  @include respond-to('large') {
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+    color: #FEFEFE;
+    display: table;
+    left: 0;
+    top: 0;
+    position: absolute;
+    // same as photo
+    width: 300px;
+    height: 200px;
+    opacity: 0;
+  }
 
   span {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
+
+    @include respond-to('large') {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
   }
+}
+#chronicles-section {
+  margin-top: 200px;
+  text-align: center;
+}
+.section-title {
+  font-family: 'Caviar Dreams';
+
+  @include respond-to('large') {
+    font-size: 32px;
+    color: #4E4E4E;
+  }
+}
+.section-subtitle {
+  color: #A0C6C6;
+  font-size: 12px;
+}
+.blog-content {
+  margin-top: 50px;
+}
+.blog-category-icon {
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.blog-content:first-child {
+  border-right: 2px solid #E4F1EF;
+  background-color: red;
+}
+.blog-content:last-child {
+  border-left: 2px solid #E4F1EF;
 }

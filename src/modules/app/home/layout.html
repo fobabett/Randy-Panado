@@ -2,13 +2,13 @@
 
   <div ng-include="'common/partials/_nav.html'"></div>
 
-  <div ng-show='modalShown' id='slideshow-modal'>
+  <div ng-show='modalShown' id='slideshow-modal' class='animate-slide'>
     <span ng-click='toggleModal()' id='close-modal'>&times;</span>
   
     <div class='rows slideshow-content'>
       <div class='large-9 columns'>
 
-        <img ng-repeat='slide in slides' class='slide' ng-src='{{slide.url}}' ng-hide='!isCurrentSlideIndex($index)'>
+        <img ng-repeat='slide in slides' id='slide' ng-src='{{slide.url}}' ng-hide='!isCurrentSlideIndex($index)'>
 
         <nav class="slideshow-nav">
           <div class="wrapper">
@@ -46,7 +46,7 @@
   
     </div>
   </div>
-  
+
   <div>
     <ul id='filter'> 
       <li>Type</li>
@@ -61,36 +61,36 @@
       <div class='row'>
         
         <div class='large-3 columns photo-item' ng-repeat='image in images'>
-          <img ng-click='toggleModal()'ng-src='{{image.url}}'>
-          <span class='photo-details'><span>{{image.name}}</span></span>
+          <img ng-src='{{image.url}}'>
+          <span class='photo-details' ng-click='widgetExpanded = !widgetExpanded; toggleModal()'><span>{{image.name}}</span></span>
         </div>
 
       </div>
     </section>
 
     <section id='chronicles-section' class='show-for-large'>
-      <h1>Chronicles</h1>
-      <h2>Blog/Articles</h2>
+      <h1 class='section-title title'>Chronicles</h1>
+      <h2 class='section-subtitle subtitle'>Blog/Articles</h2>
 
-      <div class='row'>
+      <div class='row blog-content'>
 
         <div class='large-4 columns'>
-          <span class='icon'></span>
-          <h3>Tools & Techniques</h3>
+          <div class='icon blog-category-icon'></div>
+          <h3 class='title blog-category-title'>Tools & Techniques</h3>
           <img src="http://placehold.it/350x150">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
         </div>
 
         <div class='large-4 columns'>
-          <span class='icon'></span>
-          <h3>Adventures</h3>
+          <div class='icon blog-category-icon'></div>
+          <h3 class='title blog-category-title'>Adventures</h3>
           <img src="http://placehold.it/350x150">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
         </div>
 
         <div class='large-4 columns'>
-          <span class='icon'></span>
-          <h3>Inspiration</h3>
+          <div class='icon blog-category-icon'></div>
+          <h3 class='title blog-category-title'>Inspiration</h3>
           <img src="http://placehold.it/350x150">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
         </div>

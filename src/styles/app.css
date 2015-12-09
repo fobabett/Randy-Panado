@@ -3471,6 +3471,16 @@ table.hover tr:nth-of-type(even):hover {
 
 .page-content-container {
   margin: 0 auto; }
+  @media (max-width: 1029px) {
+    .page-content-container {
+      margin-top: 80px; } }
+
+.title,
+.subtitle {
+  text-transform: uppercase; }
+
+.title {
+  color: #4B4B4B; }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -3540,7 +3550,7 @@ table {
   cursor: pointer;
   margin: 20px; }
 
-.slide {
+#slide {
   width: 100%; }
 
 .slideshow-nav-dots {
@@ -3599,6 +3609,17 @@ img.active {
     font-family: 'Novecento Sans';
     font-size: 14px; }
 
+.animate-slide {
+  height: 632px; }
+
+.animate-slide.ng-hide-add.ng-hide-add-active,
+.animate-slide.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s; }
+
+.animate-slide.ng-hide {
+  height: 0; }
+
 @font-face {
   font-family: 'Novecento Sans';
   src: url("../../assets/fonts/novecento_sans/2FE2AA_4_0.woff"); }
@@ -3625,6 +3646,15 @@ img.active {
 
 .header {
   font-size: 14px; }
+  @media (max-width: 1029px) {
+    .header {
+      position: fixed;
+      top: 0;
+      border-bottom: 2px solid #BEE1E0;
+      height: 80px;
+      width: 100%;
+      z-index: 1;
+      background-color: white; } }
   @media (min-width: 1030px) {
     .header {
       margin: 50px; } }
@@ -3644,14 +3674,20 @@ img.active {
   color: #5B5B5B;
   display: inline-block;
   font-family: 'Caviar Dreams Bold'; }
+  @media (max-width: 1029px) {
+    #header-title {
+      font-size: 16px; } }
 
 .logo {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: #545454;
-  display: inline-block;
-  vertical-align: top; }
+  display: inline-block; }
+  @media (max-width: 1029px) {
+    .logo {
+      width: 30px;
+      height: 30px; } }
 
 .nav-section {
   float: right;
@@ -3741,25 +3777,65 @@ img.active {
   font-family: 'Novecento Sans'; }
 
 .photo-item {
-  position: relative; }
+  position: relative;
+  text-align: center; }
   .photo-item:hover .photo-details {
     opacity: 1; }
+  @media (max-width: 1029px) {
+    .photo-item {
+      margin-bottom: 15px; } }
 
 .photo-details {
-  color: #FEFEFE;
-  display: table;
-  left: 0;
-  top: 0;
-  position: absolute;
-  width: 300px;
-  height: 200px;
-  opacity: 0;
-  text-transform: uppercase;
-  -webkit-transition: opacity 500ms;
-  -moz-transition: opacity 500ms;
-  -o-transition: opacity 500ms;
-  transition: opacity 500ms; }
-  .photo-details span {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle; }
+  text-transform: uppercase; }
+  @media (max-width: 1029px) {
+    .photo-details {
+      color: #606060;
+      font-size: 14px; } }
+  @media (min-width: 1030px) {
+    .photo-details {
+      -webkit-transition: opacity 500ms;
+      -moz-transition: opacity 500ms;
+      -o-transition: opacity 500ms;
+      transition: opacity 500ms;
+      color: #FEFEFE;
+      display: table;
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 300px;
+      height: 200px;
+      opacity: 0; } }
+  @media (min-width: 1030px) {
+    .photo-details span {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center; } }
+
+#chronicles-section {
+  margin-top: 200px;
+  text-align: center; }
+
+.section-title {
+  font-family: 'Caviar Dreams'; }
+  @media (min-width: 1030px) {
+    .section-title {
+      font-size: 32px;
+      color: #4E4E4E; } }
+
+.section-subtitle {
+  color: #A0C6C6;
+  font-size: 12px; }
+
+.blog-content {
+  margin-top: 50px; }
+
+.blog-category-icon {
+  margin: 0 auto;
+  margin-bottom: 15px; }
+
+.blog-content:first-child {
+  border-right: 2px solid #E4F1EF;
+  background-color: red; }
+
+.blog-content:last-child {
+  border-left: 2px solid #E4F1EF; }

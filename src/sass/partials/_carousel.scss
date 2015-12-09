@@ -23,7 +23,7 @@
   cursor: pointer;
   margin: 20px;
 }
-.slide {
+#slide {
   width: 100%;
 }
 .slideshow-nav-dots {
@@ -85,4 +85,15 @@ img.active {
     font-family: 'Novecento Sans';
     font-size: 14px;
   }
+}
+.animate-slide {
+  height: 632px;
+}
+.animate-slide.ng-hide-add.ng-hide-add-active,
+.animate-slide.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+.animate-slide.ng-hide {
+  height: 0;
 }

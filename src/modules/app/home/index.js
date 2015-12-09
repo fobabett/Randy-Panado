@@ -2,8 +2,6 @@
 
 module.exports =
   angular.module('Pando.home', [
-    //load your foo submodules here, e.g.:
-    //require('./bar').name
   ])
   .config(function ($stateProvider) {
     $stateProvider

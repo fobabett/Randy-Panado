@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = /*@ngInject*/
-  function homeController($scope) {
+  function homeController($scope, $location, $anchorScroll, $window) {
 
     $scope.filter = {};
 
@@ -73,6 +73,10 @@ module.exports = /*@ngInject*/
     $scope.modalShown = false;
     $scope.toggleModal = function() {
       $scope.modalShown = !$scope.modalShown;
+      $scope.widgetExpanded = !$scope.widgetExpanded;
+      // $location.hash('slidesow-modal');
+      // $anchorScroll();
+      $window.scrollTo(0,165);
     };
 
     $scope.slides = [
