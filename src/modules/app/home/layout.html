@@ -51,9 +51,9 @@
   <div>
     <ul id='filter'> 
       <li>Type</li>
-      <li class='filter-type' ng-click='commercialFilter()'>Commercial</li>
-      <li class='filter-type' ng-click='narrativeFilter()'>Narrative</li>
-      <li class='filter-type' ng-click='creativeFilter()'>Creative</li>
+      <li class='filter-type' ng-click='commercialFilter()' ng-class='{"selected-tag": commercial == "commercial"}'>Commercial</li>
+      <li class='filter-type' ng-click='narrativeFilter()' ng-class='{"selected-tag": narrative == "narrative"}'>Narrative</li>
+      <li class='filter-type' ng-click='creativeFilter()' ng-class='{"selected-tag": creative == "creative"}'>Creative</li>
     </ul>
   </div>
 
