@@ -9,57 +9,87 @@ module.exports = /*@ngInject*/
       {
         name: 'one of a kind',
         url: 'http://placehold.it/300x200',
-        type: ['commercial', 'narrative']
+        types: [
+          {value: 'commercial'},
+          {value: 'narrative'}
+        ]
       },
       {
         name: 'kitty cat',
         url: 'http://placehold.it/300x200',
-        type: ['creative']
+        types: [
+          {value: 'commercial'}
+        ]
       },
       {
         name: 'awesomeness',
         url: 'http://placehold.it/300x200',
-        type: ['creative', 'narrative']
+        types: [
+          {value: 'creative'},
+          {value: 'narrative'}
+        ]
       },
       {
         name: 'blah',
         url: 'http://placehold.it/300x200',
-        type: ['narrative']
+        types: [
+          {value: 'narrative'}
+        ]
       },
       {
         name: 'dsfdsf',
         url: 'http://placehold.it/300x200',
-        type: ['commercial', 'creative']
+        types: [
+          {value: 'creative'},
+          {value: 'commercial'}
+        ]
       },
       {
         name: 'boooo',
         url: 'http://placehold.it/300x200',
-        type: ['commercial', 'creative', 'narrative']
+        types: [
+          {value: 'creative'},
+          {value: 'narrative'},
+          {value: 'commercial'}
+        ]
       },
       {
         name: 'one of a kind',
         url: 'http://placehold.it/300x200',
-        type: ['commercial', 'narrative']
+        types: [
+          {value: 'commercial'},
+          {value: 'narrative'}
+        ]
       },
       {
         name: 'kitty cat',
         url: 'http://placehold.it/300x200',
-        type: ['creative']
+        types: [
+          {value: 'creative'}
+        ]
       },
       {
         name: 'awesomeness',
         url: 'http://placehold.it/300x200',
-        type: ['creative', 'narrative']
+        types: [
+          {value: 'creative'},
+          {value: 'narrative'}
+        ]
       },
       {
         name: 'blah',
         url: 'http://placehold.it/300x200',
-        type: ['narrative']
+        types: [
+          {value: 'narrative'}
+        ]
       },
       {
         name: 'dsfdsf',
         url: 'http://placehold.it/300x200',
-        type: ['commercial', 'creative']
+        types: [
+          {value: 'commercial'},
+          {value: 'creative'}
+        ]
       },
       {
         name: 'boooo',
@@ -83,19 +113,20 @@ module.exports = /*@ngInject*/
     console.log($scope.chunkedData);
 
     $scope.modalShown = false;
-    $scope.toggleModal = function() {
+    $scope.toggleModal = function(image) {
+      console.log(image);
       $scope.modalShown = !$scope.modalShown;
-      $scope.widgetExpanded = !$scope.widgetExpanded;
+      $scope.selectedImage = image;
+      $scope.types = image.types;
       // $location.hash('slidesow-modal');
       // $anchorScroll();
       $window.scrollTo(0,165);
     };
 
-    $scope.slides = [
-      {name: 'img 1', url: "http://placehold.it/600x300"},
-      {name: 'img 2', url: "http://placehold.it/600x300"},
-      {name: 'img 3', url: "http://placehold.it/600x300"}
-    ];
+    $scope.setSelectedImage = function(image) {
+      $scope.selectedImage = image;
+      $scope.types = image.types;
+    }
 
     $scope.currentIndex = 0;
     $scope.setCurrentSlideIndex = function (index) {
@@ -106,7 +137,7 @@ module.exports = /*@ngInject*/
     };
 
     $scope.filters = [
-      {type: 'commerical'},
+      {type: 'commercial'},
       {type: 'narrative'},
       {type: 'creative'}
     ];

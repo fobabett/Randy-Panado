@@ -8,13 +8,13 @@
     <div class='rows slideshow-content'>
       <div class='large-9 columns'>
 
-        <img ng-repeat='slide in slides' id='slide' ng-src='{{slide.url}}' ng-hide='!isCurrentSlideIndex($index)'>
+        <img id='slide' ng-repeat='image in images' ng-src='{{image.url}}' ng-hide='!isCurrentSlideIndex($index)'>
 
         <nav class="slideshow-nav">
           <div class="wrapper">
             <ul class="slideshow-nav-dots">
-              <li class="dot" ng-repeat="slide in slides">
-                <img href="#" ng-class="{'active':isCurrentSlideIndex($index)}" class='slide-image' ng-click="setCurrentSlideIndex($index);" ng-src='{{slide.url}}'>
+              <li class="dot" ng-repeat="image in images | limitTo: 3">
+                <img href="#" ng-class="{'active':isCurrentSlideIndex($index)}" class='slide-image' ng-click="setCurrentSlideIndex($index); setSelectedImage(image)" ng-src='{{image.url}}'>
               </li>
             </ul>
           </div>
@@ -23,7 +23,7 @@
       </div>
   
       <div class='large-3 columns selected-photo-description-container'>
-        <h3 id='selected-photo-title'>One of a Kind</h3>
+        <h3 id='selected-photo-title'>{{selectedImage.name}}</h3>
         <h3 id='selected-photo-subtitle'>Panado Ranch</h3>
         <p class='selected-photo-details'>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, dicta labore rerum itaque ipsa nihil repellat ad modi iste totam, quaerat eveniet ab quam. Harum fuga sunt libero ad deserunt?
@@ -34,8 +34,7 @@
         </p>
 
         <div class='filter-tags'>
-          <span class='selected-tag'>Commercial</span>
-          <span class='selected-tag'>Narrative</span>
+          <span class='selected-tag' ng-repeat='type in types'>{{type.value}}</span>
         </div>
 
         <div id='related-blog-post'>
@@ -61,8 +60,8 @@
       <div class='photo-grid clearfix'>
         
         <div class='photo-item' ng-repeat='rows in chunkedData'>
-          <img ng-click='toggleModal()' ng-src="{{image.url}}" alt="{{image.name}}" ng-repeat='image in rows'>
-          <span class='photo-details' ng-click='toggleModal()'><span>{{image.name}}</span></span>
+          <img ng-click='toggleModal(image); setCurrentSlideIndex($index)' ng-src="{{image.url}}" alt="{{image.name}}" ng-repeat='image in rows'>
+          <!-- <span class='photo-details' ng-click='toggleModal(image)'><span>{{image.name}}</span></span> -->
         </div>
 
       </div>  
