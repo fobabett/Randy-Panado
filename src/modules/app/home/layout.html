@@ -63,8 +63,8 @@
 
       <div class='photo-grid clearfix'>
         
-        <div class='photo-item' ng-repeat='rows in chunkedData'>
-          <img ng-click='toggleModal(image); setCurrentSlideIndex($index)' ng-src="{{image.url}}" alt="{{image.name}}" ng-repeat='image in rows | filter: commercial | filter: narrative | filter: creative'>
+        <div class='photo-item'>
+          <img ng-click='toggleModal(image); setCurrentSlideIndex($index)' ng-src="{{image.url}}" alt="{{image.name}}" ng-repeat='image in images | filter: commercial | filter: narrative | filter: creative'>
           <!-- <span class='photo-details' ng-click='toggleModal(image)'><span>{{image.name}}</span></span> -->
         </div>
 
