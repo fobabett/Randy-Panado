@@ -139,21 +139,6 @@ module.exports = /*@ngInject*/
       return $scope.currentIndex === index;
     };
 
-    $scope.filters = [
-      {type: 'commercial'},
-      {type: 'narrative'},
-      {type: 'creative'}
-    ];
-
-    $scope.activeFilters = [];
-
-
-    $scope.setFilterType = function(index, filter) {
-      $scope.filter.type = filter.type;
-      $scope.selected = index;
-      $scope.activeFilters.push(filter);
-    };
-
     $scope.commercialFilter = function() {
       if ($scope.commercial == '') {
         $scope.commercial = 'commercial';
