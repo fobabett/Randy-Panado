@@ -4,6 +4,10 @@
 .title-banner {
   text-align: center;
 
+  @include respond-to('medium-small') {
+    padding: 50px;
+  }
+
   @include respond-to('large') {
     border-top: 1px solid #BDE0E0;
     border-bottom: 1px solid #BDE0E0;
@@ -15,20 +19,43 @@
     font-family: 'Novecento Sans';
   }
 }
+.icon.article-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #ABD9D9;
+  position: absolute;
+  top: -15px;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
 .page-title {
   font-family: 'Caviar Dreams';
+
+  @include respond-to('medium-small') {
+    font-size: 30px;
+  }
   
   @include respond-to('large') {
     font-size: 50px;
   }
 }
+.blog-content-wrapper {
+  border-right: 1px solid #BDE0E0;
+}
 .blog-content {
-  // border-bottom: 1px solid #BDE0E0;
   font-family: 'Novecento Sans';
+  position: relative;
+
+  @include respond-to('medium-small') {
+    padding: 15px;
+    border-top: 2px solid #BDE0E0;
+  }
 }
 .blog-image-wrapper {
   text-align: center;
   margin-bottom: 20px;
+
   img {
     margin-top: 20px;
   }
@@ -43,6 +70,11 @@
 .article-title {
   color: #515151;
 
+  @include respond-to('medium-small'){
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
   @include respond-to('large'){
     font-size: 30px;
     margin-bottom: 20px;
@@ -51,6 +83,11 @@
 .article-subtitle {
   color: #9A9A9A;
   text-transform: uppercase;
+
+  @include respond-to('medium-small') {
+    color: #A0C6C7;
+    font-size: 12px;
+  }
 }
 .category-icon {
 
@@ -61,6 +98,11 @@
 }
 .date {
 
+  @include respond-to('medium-small') {
+    color: #A0C6C7;
+    font-size: 12px;
+  }
+
   @include respond-to('large') {
     font-size: 12px;
     color: #989796;
@@ -68,18 +110,29 @@
 }
 .article-text {
 
-  color: #B0B0AF;
+  @include respond-to('medium-small') {
+    color: #858585;
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 15px;
+  }
 
   @include respond-to('large') {
     margin-top: 20px;
     line-height: 20px;
     font-size: 14px;
     margin-bottom: 20px;
+    color: #B0B0AF;
+  }
+}
+.social-media-icons {
+
+  @include respond-to('medium-small') {
+    text-align: center;
   }
 }
 
 #instagram-sidebar {
-  border-left: 1px solid #BDE0E0;
   font-family: 'Novecento Sans';
 }
 .icon.instagram {
