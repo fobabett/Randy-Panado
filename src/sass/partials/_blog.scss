@@ -1,0 +1,108 @@
+@import 'mixins';
+@import 'variables';
+
+.title-banner {
+  text-align: center;
+
+  @include respond-to('large') {
+    border-top: 1px solid #BDE0E0;
+    border-bottom: 1px solid #BDE0E0;
+    padding: 100px;
+  }
+
+  .subtitle {
+    color: #92BDBD;
+    font-family: 'Novecento Sans';
+  }
+}
+.page-title {
+  font-family: 'Caviar Dreams';
+  
+  @include respond-to('large') {
+    font-size: 50px;
+  }
+}
+.blog-content {
+  // border-bottom: 1px solid #BDE0E0;
+  font-family: 'Novecento Sans';
+}
+.blog-image-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+  img {
+    margin-top: 20px;
+  }
+}
+.article-content {
+
+  @include respond-to('large') {
+    max-width: 700px;
+    margin: 0 auto; 
+  }
+}
+.article-title {
+  color: #515151;
+
+  @include respond-to('large'){
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+.article-subtitle {
+  color: #9A9A9A;
+  text-transform: uppercase;
+}
+.category-icon {
+
+  @include respond-to('large') {
+    position: absolute;
+    left: 60px;
+  }
+}
+.date {
+
+  @include respond-to('large') {
+    font-size: 12px;
+    color: #989796;
+  }
+}
+.article-text {
+
+  color: #B0B0AF;
+
+  @include respond-to('large') {
+    margin-top: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+
+#instagram-sidebar {
+  border-left: 1px solid #BDE0E0;
+  font-family: 'Novecento Sans';
+}
+.icon.instagram {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.instagram-content {
+
+  @include respond-to('large') {
+    padding: 50px;
+    padding-top: 0;
+  }
+}
+.instagram-caption {
+  color: #BABAB8;
+
+  @include respond-to('large') {
+    font-size: 12px;
+    margin-top: 10px;
+    line-height: 15px;
+  }
+}
+#blog-page .footer {
+  border-top: 1px solid #BDE0E0;
+}
