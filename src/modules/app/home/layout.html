@@ -46,10 +46,15 @@
     </div>
   </div>
 
+  <span>{{commercial}}</span>
+
   <div>
     <ul id='filter'> 
       <li>Type</li>
-      <li class='filter-type' ng-repeat='filter in filters track by filter.type' ng-click='setFilterType(filter)'>{{filter.type}}</li>
+      <!-- <li class='filter-type' ng-repeat='filter in filters track by filter.type' ng-click='setFilterType($index, filter)' ng-class='{"selected-tag": $index == selected}'>{{filter.type}}</li> -->
+      <li class='filter-type' ng-click='commercialFilter()'>Commercial</li>
+      <li class='filter-type' ng-click='narrativeFilter()'>Narrative</li>
+      <li class='filter-type' ng-click='creativeFilter()'>Creative</li>
     </ul>
   </div>
 
@@ -60,7 +65,7 @@
       <div class='photo-grid clearfix'>
         
         <div class='photo-item' ng-repeat='rows in chunkedData'>
-          <img ng-click='toggleModal(image); setCurrentSlideIndex($index)' ng-src="{{image.url}}" alt="{{image.name}}" ng-repeat='image in rows'>
+          <img ng-click='toggleModal(image); setCurrentSlideIndex($index)' ng-src="{{image.url}}" alt="{{image.name}}" ng-repeat='image in rows | filter: commercial | filter: narrative | filter: creative'>
           <!-- <span class='photo-details' ng-click='toggleModal(image)'><span>{{image.name}}</span></span> -->
         </div>
 

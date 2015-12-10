@@ -4,6 +4,9 @@ module.exports = /*@ngInject*/
   function homeController($scope, $location, $anchorScroll, $window) {
 
     $scope.filter = {};
+    $scope.commercial = '';
+    $scope.narrative = '';
+    $scope.creative = '';
 
     var mockData = [
       {
@@ -142,9 +145,35 @@ module.exports = /*@ngInject*/
       {type: 'creative'}
     ];
 
-    $scope.setFilterType = function(filter) {
+    $scope.activeFilters = [];
+
+
+    $scope.setFilterType = function(index, filter) {
       $scope.filter.type = filter.type;
-      console.log($scope.filter.type);
+      $scope.selected = index;
+      $scope.activeFilters.push(filter);
     };
+
+    $scope.commercialFilter = function() {
+      if ($scope.commercial == '') {
+        $scope.commercial = 'commercial';
+      } else {
+        $scope.commercial = '';
+      }
+    }
+    $scope.narrativeFilter = function() {
+      if ($scope.narrative == '') {
+        $scope.narrative = 'narrative';
+      } else {
+        $scope.narrative = '';
+      }
+    }
+    $scope.creativeFilter = function() {
+      if ($scope.creative == '') {
+        $scope.creative = 'creative';
+      } else {
+        $scope.creative = '';
+      }
+    }
 
   };
