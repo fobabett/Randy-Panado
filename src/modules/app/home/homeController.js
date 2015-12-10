@@ -123,7 +123,7 @@ module.exports = /*@ngInject*/
       $scope.types = image.types;
       // $location.hash('slidesow-modal');
       // $anchorScroll();
-      $window.scrollTo(0,165);
+      // $window.scrollTo(0,165);
     };
 
     $scope.setSelectedImage = function(image) {
@@ -140,24 +140,24 @@ module.exports = /*@ngInject*/
     };
 
     $scope.commercialFilter = function() {
-      if ($scope.commercial == '') {
-        $scope.commercial = 'commercial';
+      if ($scope.commercial === '') {
+        return $scope.commercial = 'commercial';
       } else {
-        $scope.commercial = '';
+        return $scope.commercial = '';
       }
     }
     $scope.narrativeFilter = function() {
-      if ($scope.narrative == '') {
-        $scope.narrative = 'narrative';
+      if ($scope.narrative === '') {
+        return $scope.narrative = 'narrative';
       } else {
-        $scope.narrative = '';
+        return $scope.narrative = '';
       }
     }
     $scope.creativeFilter = function() {
-      if ($scope.creative == '') {
-        $scope.creative = 'creative';
+      if ($scope.creative === '') {
+        return $scope.creative = 'creative';
       } else {
-        $scope.creative = '';
+        return $scope.creative = '';
       }
     }
 

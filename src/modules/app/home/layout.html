@@ -1,12 +1,14 @@
-<div class='page-content-container' id='home-page'>
+<div class='page-content-container' ng-class='{modalOpen: modalShown == true}' id='home-page'>
 
-  <div ng-include="'common/partials/_nav.html'"></div>
+  <div ng-hide='modalShown' class='header-container' ng-include="'common/partials/_nav.html'"></div>
 
   <div ng-show='modalShown' id='slideshow-modal' class='animate-slide'>
-    <span ng-click='toggleModal()' id='close-modal'>&times;</span>
+    <h3 class='selected-photo-title hide-for-large'>{{selectedImage.name}}</h3>
+    <h3 class='selected-photo-subtitle hide-for-large'>Panado Ranch</h3>
+    <span ng-click='modalShown = !modalShown' id='close-modal'>&times;</span>
   
     <div class='rows slideshow-content'>
-      <div class='large-9 columns'>
+      <div class='large-9 columns slide-container'>
 
         <img id='slide' ng-repeat='image in images' ng-src='{{image.url}}' ng-hide='!isCurrentSlideIndex($index)'>
 
@@ -23,8 +25,8 @@
       </div>
   
       <div class='large-3 columns selected-photo-description-container'>
-        <h3 id='selected-photo-title'>{{selectedImage.name}}</h3>
-        <h3 id='selected-photo-subtitle'>Panado Ranch</h3>
+        <h3 class='selected-photo-title show-for-large'>{{selectedImage.name}}</h3>
+        <h3 class='selected-photo-subtitle show-for-large'>Panado Ranch</h3>
         <p class='selected-photo-details'>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, dicta labore rerum itaque ipsa nihil repellat ad modi iste totam, quaerat eveniet ab quam. Harum fuga sunt libero ad deserunt?
         </p>
@@ -45,8 +47,6 @@
   
     </div>
   </div>
-
-  <span>{{commercial}}</span>
 
   <div>
     <ul id='filter'> 

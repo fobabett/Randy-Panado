@@ -2,6 +2,12 @@
 @import 'variables';
 @import 'typography';
 
+.header-container.ng-hide {
+
+  @include respond-to('large') {
+    display: block !important;
+  }
+}
 .header {
   font-size: 14px;
 

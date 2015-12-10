@@ -10,10 +10,11 @@ body {
   @include respond-to('medium-small') {
     margin-top: 80px;
   }
-  
-  @include respond-to('large') {
-    // max-width: $largest-width;
-    // margin: 50px;
+}
+.page-content-container.modalOpen {
+
+  @include respond-to('medium-small') {
+    margin-top: 0;
   }
 }
 .title,
@@ -22,4 +23,7 @@ body {
 }
 .title {
   color: #4B4B4B;
+}
+.columns {
+  padding: 0;
 }

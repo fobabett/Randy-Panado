@@ -3478,12 +3478,19 @@ body {
     .page-content-container {
       margin-top: 80px; } }
 
+@media (max-width: 1029px) {
+  .page-content-container.modalOpen {
+    margin-top: 0; } }
+
 .title,
 .subtitle {
   text-transform: uppercase; }
 
 .title {
   color: #4B4B4B; }
+
+.columns {
+  padding: 0; }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -3535,25 +3542,44 @@ table {
 #slideshow-modal {
   background-color: #464646;
   position: relative;
-  font-family: 'Novecento Sans Light';
-  padding: 50px; }
+  font-family: 'Novecento Sans Light'; }
+  @media (max-width: 599px) {
+    #slideshow-modal {
+      padding: 15px;
+      height: auto;
+      overflow: auto; } }
+  @media (min-width: 1030px) {
+    #slideshow-modal {
+      padding: 50px; } }
 
 #close-modal {
   position: absolute;
   right: 0;
   top: 0;
   color: #898989;
-  font-size: 40px;
-  cursor: pointer;
-  margin: 20px; }
+  font-size: 70px;
+  cursor: pointer; }
+  @media (min-width: 1030px) {
+    #close-modal {
+      margin-right: 20px; } }
 
 #slide {
-  width: 100%;
-  height: 400px; }
+  width: 100%; }
+  @media (max-width: 599px) {
+    #slide {
+      margin-top: 15px; } }
+  @media (min-width: 1030px) {
+    #slide {
+      height: 400px; } }
 
 .slideshow-nav-dots {
-  text-align: center;
-  margin-top: 20px; }
+  text-align: center; }
+  @media (max-width: 599px) {
+    .slideshow-nav-dots {
+      margin-top: 15px; } }
+  @media (min-width: 1030px) {
+    .slideshow-nav-dots {
+      margin-top: 20px; } }
 
 li.dot {
   display: inline-block; }
@@ -3567,13 +3593,27 @@ li.dot {
 img.active {
   border: 5px solid #CFCFCF; }
 
-#selected-photo-title {
-  font-size: 32px;
-  color: #CFCFCF; }
+@media (min-width: 1030px) {
+  .selected-photo-description-container {
+    padding-left: 50px; } }
 
-#selected-photo-subtitle {
-  font-size: 14px;
+.selected-photo-title {
+  color: #CFCFCF; }
+  @media (max-width: 599px) {
+    .selected-photo-title {
+      font-size: 20px; } }
+  @media (min-width: 1030px) {
+    .selected-photo-title {
+      font-size: 32px; } }
+
+.selected-photo-subtitle {
   color: #95BABA; }
+  @media (max-width: 599px) {
+    .selected-photo-subtitle {
+      font-size: 12px; } }
+  @media (min-width: 1030px) {
+    .selected-photo-subtitle {
+      font-size: 14px; } }
 
 .selected-photo-details {
   color: #B8B8B8;
@@ -3608,16 +3648,21 @@ img.active {
     font-family: 'Novecento Sans';
     font-size: 14px; }
 
-.animate-slide {
-  height: 632px; }
+@media (min-width: 1030px) {
+  .animate-slide {
+    height: 95vh;
+    overflow: auto; } }
 
-.animate-slide.ng-hide-add.ng-hide-add-active,
-.animate-slide.ng-hide-remove.ng-hide-remove-active {
-  -webkit-transition: all linear 0.5s;
-  transition: all linear 0.5s; }
+@media (min-width: 1030px) {
+  .animate-slide.ng-hide-add.ng-hide-add-active,
+  .animate-slide.ng-hide-remove.ng-hide-remove-active {
+    -webkit-transition: all linear 0.5s;
+    transition: all linear 0.5s; } }
 
-.animate-slide.ng-hide {
-  height: 0; }
+@media (min-width: 1030px) {
+  .animate-slide.ng-hide {
+    height: 0;
+    overflow: none; } }
 
 @font-face {
   font-family: 'Novecento Sans';
@@ -3642,6 +3687,10 @@ img.active {
 @font-face {
   font-family: 'Caviar Dreams Italic';
   src: url("../../assets/fonts/caviarDreams/caviarDreams_Italic.WOFF"); }
+
+@media (min-width: 1030px) {
+  .header-container.ng-hide {
+    display: block !important; } }
 
 .header {
   font-size: 14px; }
