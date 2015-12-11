@@ -11,7 +11,7 @@ module.exports = /*@ngInject*/
     var mockData = [
       {
         name: 'one of a kind',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/250x200',
         types: [
           {value: 'commercial'},
           {value: 'narrative'}
@@ -19,14 +19,14 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'kitty cat',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/250x200',
         types: [
           {value: 'commercial'}
         ]
       },
       {
         name: 'awesomeness',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/250x200',
         types: [
           {value: 'creative'},
           {value: 'narrative'}
@@ -34,14 +34,14 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'blah',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/250x200',
         types: [
           {value: 'narrative'}
         ]
       },
       {
         name: 'dsfdsf',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/250x200',
         types: [
           {value: 'creative'},
           {value: 'commercial'}
@@ -49,7 +49,7 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'boooo',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/250x200',
         types: [
           {value: 'creative'},
           {value: 'narrative'},
@@ -58,7 +58,7 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'one of a kind',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/250x200',
         types: [
           {value: 'commercial'},
           {value: 'narrative'}
@@ -66,14 +66,14 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'kitty cat',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/250x200',
         types: [
           {value: 'creative'}
         ]
       },
       {
         name: 'awesomeness',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/250x200',
         types: [
           {value: 'creative'},
           {value: 'narrative'}
@@ -81,14 +81,14 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'blah',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/250x200',
         types: [
           {value: 'narrative'}
         ]
       },
       {
         name: 'dsfdsf',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/250x200',
         types: [
           {value: 'commercial'},
           {value: 'creative'}
@@ -96,7 +96,7 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'boooo',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/250x200',
         type: ['commercial', 'creative', 'narrative']
       }
     ];
@@ -129,7 +129,7 @@ module.exports = /*@ngInject*/
     $scope.setSelectedImage = function(image) {
       $scope.selectedImage = image;
       $scope.types = image.types;
-    }
+    };
 
     $scope.currentIndex = 0;
     $scope.setCurrentSlideIndex = function (index) {
@@ -141,24 +141,24 @@ module.exports = /*@ngInject*/
 
     $scope.commercialFilter = function() {
       if ($scope.commercial === '') {
-        return $scope.commercial = 'commercial';
+        $scope.commercial = 'commercial';
       } else {
-        return $scope.commercial = '';
+        $scope.commercial = '';
       }
-    }
+    };
     $scope.narrativeFilter = function() {
       if ($scope.narrative === '') {
-        return $scope.narrative = 'narrative';
+        $scope.narrative = 'narrative';
       } else {
-        return $scope.narrative = '';
+        $scope.narrative = '';
       }
-    }
+    };
     $scope.creativeFilter = function() {
       if ($scope.creative === '') {
-        return $scope.creative = 'creative';
+        $scope.creative = 'creative';
       } else {
-        return $scope.creative = '';
+        $scope.creative = '';
       }
-    }
+    };
 
   };

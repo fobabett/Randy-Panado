@@ -3,48 +3,50 @@
   <div ng-hide='modalShown' class='header-container' ng-include="'common/partials/_nav.html'"></div>
 
   <div ng-show='modalShown' id='slideshow-modal' class='animate-slide'>
-    <h3 class='selected-photo-title hide-for-large'>{{selectedImage.name}}</h3>
-    <h3 class='selected-photo-subtitle hide-for-large'>Panado Ranch</h3>
-    <span ng-click='modalShown = !modalShown' id='close-modal'>&times;</span>
+    <div class='modal-content'>
+
+      <h3 class='selected-photo-title hide-for-large'>{{selectedImage.name}}</h3>
+      <h3 class='selected-photo-subtitle hide-for-large'>Panado Ranch</h3>
+      <span ng-click='modalShown = !modalShown' id='close-modal'>&times;</span>
   
-    <div class='rows slideshow-content'>
-      <div class='large-9 columns slide-container'>
+      <div class='rows slideshow-content'>
+        <div class='large-9 columns slide-container'>
 
-        <img id='slide' ng-repeat='image in images' ng-src='{{image.url}}' ng-hide='!isCurrentSlideIndex($index)'>
+          <img id='slide' ng-repeat='image in images' ng-src='{{image.url}}' ng-hide='!isCurrentSlideIndex($index)'>
 
-        <nav class="slideshow-nav">
-          <div class="wrapper">
-            <ul class="slideshow-nav-dots">
-              <li class="dot" ng-repeat="image in images | limitTo: 3">
-                <img href="#" ng-class="{'active':isCurrentSlideIndex($index)}" class='slide-image' ng-click="setCurrentSlideIndex($index); setSelectedImage(image)" ng-src='{{image.url}}'>
-              </li>
-            </ul>
+          <nav class="slideshow-nav">
+            <div class="wrapper">
+              <ul class="slideshow-nav-dots">
+                <li class="dot" ng-repeat="image in images | limitTo: 3">
+                  <img href="#" ng-class="{'active':isCurrentSlideIndex($index)}" class='slide-image' ng-click="setCurrentSlideIndex($index); setSelectedImage(image)" ng-src='{{image.url}}'>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+        </div>
+  
+        <div class='large-3 columns selected-photo-description-container'>
+          <h3 class='selected-photo-title show-for-large'>{{selectedImage.name}}</h3>
+          <h3 class='selected-photo-subtitle show-for-large'>Panado Ranch</h3>
+          <p class='selected-photo-details'>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, dicta labore rerum itaque ipsa nihil repellat ad modi iste totam, quaerat eveniet ab quam. Harum fuga sunt libero ad deserunt?
+          </p>
+
+          <p class='selected-photo-details'>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, dicta labore rerum itaque ipsa nihil repellat ad modi iste totam, quaerat eveniet ab quam. Harum fuga sunt libero ad deserunt?
+          </p>
+
+          <div class='filter-tags'>
+            <span class='selected-tag' ng-repeat='type in types'>{{type.value}}</span>
           </div>
-        </nav>
 
-      </div>
-  
-      <div class='large-3 columns selected-photo-description-container'>
-        <h3 class='selected-photo-title show-for-large'>{{selectedImage.name}}</h3>
-        <h3 class='selected-photo-subtitle show-for-large'>Panado Ranch</h3>
-        <p class='selected-photo-details'>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, dicta labore rerum itaque ipsa nihil repellat ad modi iste totam, quaerat eveniet ab quam. Harum fuga sunt libero ad deserunt?
-        </p>
-
-        <p class='selected-photo-details'>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, dicta labore rerum itaque ipsa nihil repellat ad modi iste totam, quaerat eveniet ab quam. Harum fuga sunt libero ad deserunt?
-        </p>
-
-        <div class='filter-tags'>
-          <span class='selected-tag' ng-repeat='type in types'>{{type.value}}</span>
-        </div>
-
-        <div id='related-blog-post'>
-          <h3 class='subtitle'>Related Blog Post</h3>
-          <h3 class='blog-title'>Kinetic Cinematography</h3>
+          <div id='related-blog-post'>
+            <h3 class='subtitle'>Related Blog Post</h3>
+            <h3 class='blog-title'>Kinetic Cinematography</h3>
+          </div>
         </div>
       </div>
-  
     </div>
   </div>
 
@@ -63,10 +65,10 @@
 
       <div class='photo-grid clearfix'>
         
-        <div class='photo-item' ng-repeat='rows in chunkedData'>
-          <img ng-click='toggleModal(image); setCurrentSlideIndex($index)' ng-src="{{image.url}}" alt="{{image.name}}" ng-repeat='image in rows | filter: commercial | filter: narrative | filter: creative'>
+        <!-- <div class='photo-item'> -->
+          <img ng-click='toggleModal(image); setCurrentSlideIndex($index)' ng-src="{{image.url}}" alt="{{image.name}}" ng-repeat='image in images | filter: commercial | filter: narrative | filter: creative'>
           <!-- <span class='photo-details' ng-click='toggleModal(image)'><span>{{image.name}}</span></span> -->
-        </div>
+        <!-- </div> -->
 
       </div>  
 
