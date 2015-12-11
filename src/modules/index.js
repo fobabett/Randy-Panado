@@ -4,5 +4,6 @@
 require('angular');
   require('angular-animate');
   require('angular-ui-router');
+  require('angular-isotope');
 //app entry point
 require('./app');
