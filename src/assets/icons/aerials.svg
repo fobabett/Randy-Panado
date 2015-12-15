@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.2 (15855) - http://www.bohemiancoding.com/sketch -->
+    <title>aerials</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="-Icons" sketch:type="MSArtboardGroup" transform="translate(-681.000000, -308.000000)">
+            <g id="aerials" sketch:type="MSLayerGroup" transform="translate(682.000000, 310.000000)">
+                <circle id="Oval" stroke="#635C56" stroke-width="3" sketch:type="MSShapeGroup" cx="20.8324324" cy="20.0567568" r="19.9459459"></circle>
+                <g id="Group" transform="translate(6.648649, 13.297297)" sketch:type="MSShapeGroup">
+                    <g transform="translate(7.756757, 7.756757)" fill="#635C56">
+                        <path d="M0.664864865,0.110810811 L0.664864865,7.64594595 L11.8567568,7.64594595 L11.8567568,0.110810811 L0.664864865,0.110810811 L0.664864865,0.110810811 Z M6.20540541,6.31621622 C4.87567568,6.31621622 3.76756757,5.20810811 3.76756757,3.87837838 C3.76756757,2.54864865 4.87567568,1.44054054 6.20540541,1.44054054 C7.53513514,1.44054054 8.64324324,2.54864865 8.64324324,3.87837838 C8.64324324,5.20810811 7.53513514,6.31621622 6.20540541,6.31621622 L6.20540541,6.31621622 Z" id="Shape"></path>
+                        <circle id="Oval" cx="6.20540541" cy="3.87837838" r="1.21891892"></circle>
+                    </g>
+                    <g id="Shape" stroke="#635C56">
+                        <g transform="translate(3.324324, 5.540541)" stroke-width="1.5">
+                            <path d="M3.32432432,0 L0.221621622,7.42432432"></path>
+                            <path d="M17.9513514,0 L21.0540541,7.42432432"></path>
+                        </g>
+                        <path d="M23.2702703,0.775675676 L23.2702703,5.54054054 L4.65405405,5.54054054 L4.65405405,0.775675676" stroke-width="1.5"></path>
+                        <path d="M0,1.77297297 L9.1972973,1.77297297" stroke-width="2"></path>
+                        <path d="M18.727027,1.77297297 L27.9243243,1.77297297" stroke-width="2"></path>
+                    </g>
+                    <ellipse id="Oval" stroke="#635C56" stroke-width="1.5" cx="13.9067568" cy="7.09189189" rx="-0.0554054054" ry="1.44054054"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

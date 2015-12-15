@@ -11,7 +11,7 @@ module.exports = /*@ngInject*/
     var mockData = [
       {
         name: 'one of a kind',
-        url: 'http://placehold.it/250x200',
+        url: 'http://placehold.it/300x200',
         types: [
           {value: 'commercial'},
           {value: 'narrative'}
@@ -19,14 +19,14 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'kitty cat',
-        url: 'http://placehold.it/250x200',
+        url: 'http://placehold.it/300x200',
         types: [
           {value: 'commercial'}
         ]
       },
       {
         name: 'awesomeness',
-        url: 'http://placehold.it/250x200',
+        url: 'http://placehold.it/300x200',
         types: [
           {value: 'creative'},
           {value: 'narrative'}
@@ -34,14 +34,14 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'blah',
-        url: 'http://placehold.it/250x200',
+        url: 'http://placehold.it/300x200',
         types: [
           {value: 'narrative'}
         ]
       },
       {
         name: 'dsfdsf',
-        url: 'http://placehold.it/250x200',
+        url: 'http://placehold.it/300x200',
         types: [
           {value: 'creative'},
           {value: 'commercial'}
@@ -49,7 +49,7 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'boooo',
-        url: 'http://placehold.it/250x200',
+        url: 'http://placehold.it/300x200',
         types: [
           {value: 'creative'},
           {value: 'narrative'},
@@ -58,7 +58,7 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'one of a kind',
-        url: 'http://placehold.it/250x200',
+        url: 'http://placehold.it/300x200',
         types: [
           {value: 'commercial'},
           {value: 'narrative'}
@@ -66,14 +66,14 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'kitty cat',
-        url: 'http://placehold.it/250x200',
+        url: 'http://placehold.it/300x200',
         types: [
           {value: 'creative'}
         ]
       },
       {
         name: 'awesomeness',
-        url: 'http://placehold.it/250x200',
+        url: 'http://placehold.it/300x200',
         types: [
           {value: 'creative'},
           {value: 'narrative'}
@@ -81,14 +81,14 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'blah',
-        url: 'http://placehold.it/250x200',
+        url: 'http://placehold.it/300x200',
         types: [
           {value: 'narrative'}
         ]
       },
       {
         name: 'dsfdsf',
-        url: 'http://placehold.it/250x200',
+        url: 'http://placehold.it/300x200',
         types: [
           {value: 'commercial'},
           {value: 'creative'}
@@ -96,24 +96,12 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'boooo',
-        url: 'http://placehold.it/250x200',
+        url: 'http://placehold.it/300x200',
         type: ['commercial', 'creative', 'narrative']
       }
     ];
 
     $scope.images = mockData;
-
-    function chunk(arr, size) {
-      var newArr = [];
-      for (var i=0; i<arr.length; i+=size) {
-        newArr.push(arr.slice(i, i+size));
-      }
-      return newArr;
-    }
-
-    $scope.chunkedData = chunk($scope.images, 4);
-
-    console.log($scope.chunkedData);
 
     $scope.modalShown = false;
     $scope.toggleModal = function(image) {

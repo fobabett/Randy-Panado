@@ -48,10 +48,8 @@
   }
 }
 .logo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #545454;
+  width: 70px;
+  height: 70px;
   display: inline-block;
 
   @include respond-to('medium-small') {
@@ -100,7 +98,6 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #635C56;
 }
 .blog-logo-container, 
 .blog-nav-section {
@@ -110,7 +107,6 @@
 .toggle-dropdown {
   width: 30px;
   height: 30px;
-  background-color: #A4A4A4;
 }
 .blog-dropdown-nav {
   display: inline-block;

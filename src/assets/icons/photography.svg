@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.2 (15855) - http://www.bohemiancoding.com/sketch -->
+    <title>photography</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="-Icons" sketch:type="MSArtboardGroup" transform="translate(-336.000000, -308.000000)">
+            <g id="photography" sketch:type="MSLayerGroup" transform="translate(337.750000, 309.500000)">
+                <circle id="Oval" stroke="#635C56" stroke-width="3" sketch:type="MSShapeGroup" cx="19.9459459" cy="20.1675676" r="19.9459459"></circle>
+                <g id="Group" transform="translate(8.864865, 8.864865)" sketch:type="MSShapeGroup">
+                    <g fill="#635C56">
+                        <path d="M7.64594595,2.43783784 L7.64594595,0.110810811 L3.32432432,0.110810811 L3.32432432,2.43783784 L0.997297297,2.43783784 L0.997297297,16.0675676 L21.1648649,16.0675676 L21.1648649,2.43783784 L7.64594595,2.43783784 L7.64594595,2.43783784 Z M11.0810811,13.6297297 C8.64324324,13.6297297 6.75945946,11.6351351 6.75945946,9.30810811 C6.75945946,6.98108108 8.75405405,4.98648649 11.0810811,4.98648649 C13.4081081,4.98648649 15.4027027,6.98108108 15.4027027,9.30810811 C15.4027027,11.6351351 13.5189189,13.6297297 11.0810811,13.6297297 L11.0810811,13.6297297 Z" id="Shape"></path>
+                        <ellipse id="Oval" cx="11.0810811" cy="9.30810811" rx="3.21351351" ry="3.21351351"></ellipse>
+                    </g>
+                    <path d="M10.6378378,15.9567568 L3.54594595,23.6027027" id="Shape" stroke="#635C56" stroke-width="1.8473"></path>
+                    <path d="M11.5243243,15.9567568 L18.6162162,23.6027027" id="Shape" stroke="#635C56" stroke-width="1.8473"></path>
+                    <path d="M11.0810811,15.9567568 L11.0810811,23.3810811" id="Shape" stroke="#635C56" stroke-width="1.8473"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
