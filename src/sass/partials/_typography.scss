@@ -1,28 +1,40 @@
 @font-face {
+  font-family: 'Novecento Sans Light';
+  src: url('../../assets/fonts/novecento_sans/2FE2AA_1_0.woff');
+}
+@font-face {
+  font-family: 'Novecento Sans Thin';
+  src: url('../../assets/fonts/novecento_sans/2FE2AA_3_0.woff');
+}
+@font-face {
   font-family: 'Novecento Sans';
   src: url('../../assets/fonts/novecento_sans/2FE2AA_4_0.woff');
 }
-
 @font-face {
-  font-family: 'Novecento Sans Light';
-  src: url('../../assets/fonts/novecento_sans/2FE2AA_5_0.woff');
+  font-family: 'Novecento Sans Bold';
+  src: url('../../assets/fonts/novecento_sans/2FE2AA_0_0.woff');
 }
+@font-face {
+  font-family: 'Novecento Sans DemiBold';
+  src: url('../../assets/fonts/novecento_sans/2FE2AA_2_0.woff');
+}
+// @font-face {
+//   font-family: 'Novecento Sans Light';
+//   src: url('../../assets/fonts/novecento_sans/2FE2AA_5_0.woff');
+// }
 
 @font-face {
   font-family: 'Caviar Dreams';
   src: url('../../assets/fonts/caviarDreams/caviarDreams.WOFF');
 }
-
 @font-face {
   font-family: 'Caviar Dreams Bold';
   src: url('../../assets/fonts/caviarDreams/caviarDreams_Bold.WOFF');
 }
-
 @font-face {
   font-family: 'Caviar Dreams BoldItalic';
   src: url('../../assets/fonts/caviarDreams/caviarDreams_BoldItalic.WOFF');
 }
-
 @font-face {
   font-family: 'Caviar Dreams Italic';
   src: url('../../assets/fonts/caviarDreams/caviarDreams_Italic.WOFF');

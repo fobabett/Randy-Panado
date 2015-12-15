@@ -3808,12 +3808,24 @@ img.active {
   height: 0; }
 
 @font-face {
+  font-family: 'Novecento Sans Light';
+  src: url("../../assets/fonts/novecento_sans/2FE2AA_1_0.woff"); }
+
+@font-face {
+  font-family: 'Novecento Sans Thin';
+  src: url("../../assets/fonts/novecento_sans/2FE2AA_3_0.woff"); }
+
+@font-face {
   font-family: 'Novecento Sans';
   src: url("../../assets/fonts/novecento_sans/2FE2AA_4_0.woff"); }
 
 @font-face {
-  font-family: 'Novecento Sans Light';
-  src: url("../../assets/fonts/novecento_sans/2FE2AA_5_0.woff"); }
+  font-family: 'Novecento Sans Bold';
+  src: url("../../assets/fonts/novecento_sans/2FE2AA_0_0.woff"); }
+
+@font-face {
+  font-family: 'Novecento Sans DemiBold';
+  src: url("../../assets/fonts/novecento_sans/2FE2AA_2_0.woff"); }
 
 @font-face {
   font-family: 'Caviar Dreams';
@@ -3855,7 +3867,7 @@ img.active {
   width: 50%; }
   .logo-container h2 {
     color: #B3B3B2;
-    font-family: 'Novecento Sans'; }
+    font-family: 'Novecento Sans DemiBold'; }
 
 #header-info {
   display: inline-block; }
