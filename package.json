@@ -32,11 +32,14 @@
     "yargs": "^1.2.2"
   },
   "browser": {
-    "angular": "./bower_components/angular/angular.min.js",
+    "jquery": "./bower_components/jquery/dist/jquery.js",
+    "angular": "./bower_components/angular/angular.js",
     "angulargrid": "./bower_components/angulargrid/angulargrid.js",
-    "angular-ui-router": "./bower_components/angular-ui-router/release/angular-ui-router.min.js",
-    "jquery": "./bower_components/jquery/dist/jquery.min.js",
-    "angular-animate": "./bower_components/angular-animate/angular-animate.min.js"
+    "get-size": "./bower_components/get-size/get-size.js",
+    "fizzy-ui-utils": "./bower_components/fizzy-ui-utils/utils.js",
+    "outlayer": "./bower_components/outlayer/outlayer.js",
+    "angular-animate": "./bower_components/angular-animate/angular-animate.min.js",
+    "angular-ui-router": "./bower_components/angular-ui-router/release/angular-ui-router.min.js"
   },
   "browserify-shim": {},
   "dependencies": {

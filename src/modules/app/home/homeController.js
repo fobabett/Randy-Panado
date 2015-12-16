@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = /*@ngInject*/
-  function homeController($scope, $location, $anchorScroll, $window) {
+  function homeController($scope, $location, $anchorScroll, $window, angularGridInstance) {
 
     $scope.filter = {};
     $scope.commercial = '';
@@ -101,7 +101,7 @@ module.exports = /*@ngInject*/
       }
     ];
 
-    $scope.images = mockData;
+    $scope.pics = mockData;
 
     $scope.modalShown = false;
     $scope.toggleModal = function(image) {

@@ -63,11 +63,11 @@
     
     <section id='photo'>
 
-      <ul class="dynamic-grid" angular-grid="pics" grid-width="250" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="true" >
-    <li data-ng-repeat="image in images | filter: commercial | filter: narrative | filter: creative" class="grid angular-grid-item image-loaded">
-        <img src="{{image.url}}" class="grid-img image-loaded"/>
-    </li>
-  </ul>
+    <ul class="dynamic-grid" angular-grid="pics" grid-width="250" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="true" >
+      <li data-ng-repeat="pic in pics | filter: commercial | filter: narrative | filter: creative" class="grid angular-grid-item image-loaded">
+        <img src="{{pic.url}}" class="grid-img image-loaded"/>
+      </li>
+    </ul>
 
     </section>
 
