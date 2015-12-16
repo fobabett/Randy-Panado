@@ -5,20 +5,20 @@
   <div ng-show='modalShown' id='slideshow-modal' class='animate-slide'>
     <div class='modal-content'>
 
-      <h3 class='selected-photo-title hide-for-large'>{{selectedImage.name}}</h3>
+      <h3 class='selected-photo-title hide-for-large'>{{selectedPic.name}}</h3>
       <h3 class='selected-photo-subtitle hide-for-large'>Panado Ranch</h3>
       <span ng-click='modalShown = !modalShown' id='close-modal'>&times;</span>
   
       <div class='rows slideshow-content'>
         <div class='large-9 columns slide-container'>
 
-          <img id='slide' ng-repeat='image in images' ng-src='{{image.url}}' ng-hide='!isCurrentSlideIndex($index)'>
+          <img id='slide' ng-repeat='pic in pics' ng-src='{{pic.url}}' ng-hide='!isCurrentSlideIndex($index)'>
 
           <nav class="slideshow-nav">
             <div class="wrapper">
               <ul class="slideshow-nav-dots">
-                <li class="dot" ng-repeat="image in images | limitTo: 3">
-                  <img href="#" ng-class="{'active':isCurrentSlideIndex($index)}" class='slide-image' ng-click="setCurrentSlideIndex($index); setSelectedImage(image)" ng-src='{{image.url}}'>
+                <li class="dot" ng-repeat="pic in pics | limitTo: 3">
+                  <img href="#" ng-class="{'active':isCurrentSlideIndex($index)}" class='slide-image' ng-click="setCurrentSlideIndex($index); setSelectedPic(pic)" ng-src='{{pic.url}}'>
                 </li>
               </ul>
             </div>
@@ -27,7 +27,7 @@
         </div>
   
         <div class='large-3 columns selected-photo-description-container'>
-          <h3 class='selected-photo-title show-for-large'>{{selectedImage.name}}</h3>
+          <h3 class='selected-photo-title show-for-large'>{{selectedPic.name}}</h3>
           <h3 class='selected-photo-subtitle show-for-large'>Panado Ranch</h3>
           <p class='selected-photo-details'>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, dicta labore rerum itaque ipsa nihil repellat ad modi iste totam, quaerat eveniet ab quam. Harum fuga sunt libero ad deserunt?
@@ -63,11 +63,13 @@
     
     <section id='photo'>
 
-    <ul class="dynamic-grid" angular-grid="pics" grid-width="250" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="true" >
-      <li data-ng-repeat="pic in pics | filter: commercial | filter: narrative | filter: creative" class="grid angular-grid-item image-loaded">
-        <img src="{{pic.url}}" class="grid-img image-loaded"/>
-      </li>
-    </ul>
+      <ul class="dynamic-grid" angular-grid="pics" grid-width="250" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="true" >
+        <li data-ng-repeat="pic in pics | filter: commercial | filter: narrative | filter: creative" class="grid angular-grid-item image-loaded">
+          <img src="{{pic.url}}" class="grid-img image-loaded" ng-click='toggleModal(pic); setCurrentSlideIndex($index)'/>
+        </li>
+      </ul>
+
+      </div>  
 
     </section>
 
@@ -82,9 +84,9 @@
           <h3 class='title blog-category-title'>Tools & Techniques</h3>
           <div class='article-snippet-content'>
             <img src="http://placehold.it/350x150">
-            <h1 class='article-title snippet'>DJI Inspire 1 Log Color</h1>
+            <h1 class='title article-title snippet'>DJI Inspire 1 Log Color</h1>
             <span class='article-date'>5 months ago 123 views</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
+            <p class='article-snippet-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
           </div>  
         </div>
 
@@ -93,9 +95,9 @@
           <h3 class='title blog-category-title'>Adventure & Travel</h3>
           <div class='article-snippet-content'>
             <img src="http://placehold.it/350x150">
-            <h1 class='article-title snippet'>Trip to San Diego</h1>
+            <h1 class='title article-title snippet'>Trip to San Diego</h1>
             <span class='article-date'>Oct 21, 2015</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
+            <p class='article-snippet-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
           </div>
         </div>
 
@@ -104,9 +106,9 @@
           <h3 class='title blog-category-title'>Aerials</h3>
           <div class='article-snippet-content'>
             <img src="http://placehold.it/350x150">
-            <h1 class='article-title snippet'>Crimson Creative</h1>
+            <h1 class='title article-title snippet'>Crimson Creative</h1>
             <span class='article-date'>Oct 1, 2013</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
+            <p class='article-snippet-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
           </div>  
         </div>
 
@@ -126,7 +128,7 @@
         
         <div class='large-6 columns show-for-large' id='about-section'>
           <div id='about-section-content'>
-            <h3 class='title'>Randy Panado</h3>
+            <h3 class='title section-title'>Randy Panado</h3>
             <img src="http://placehold.it/350x300">
             <div id='about-section-snippet'>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum ab exercitationem ut dicta, dolor eius sed. Doloribus, sed totam, odio fuga, amet commodi consectetur accusantium officiis eaque magnam adipisci hic?</p>
@@ -136,7 +138,7 @@
         </div>
 
         <div class='large-6 columns' id='contact-section'>
-          <h3 class='title'>Contact</h3>
+          <h3 class='title section-title'>Contact</h3>
           <form action="" name='contact_form' ng-model='contact_form'>
             <input type="text" name='name' ng-model='name' placeholder='name'>
             <input type="text" name='phone' ng-model='phone' placeholder='phone'>

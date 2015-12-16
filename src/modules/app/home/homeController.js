@@ -104,19 +104,19 @@ module.exports = /*@ngInject*/
     $scope.pics = mockData;
 
     $scope.modalShown = false;
-    $scope.toggleModal = function(image) {
-      console.log(image);
+    $scope.toggleModal = function(pic) {
+      console.log(pic);
       $scope.modalShown = !$scope.modalShown;
-      $scope.selectedImage = image;
-      $scope.types = image.types;
+      $scope.selectedPic = pic;
+      $scope.types = pic.types;
       // $location.hash('slidesow-modal');
       // $anchorScroll();
       // $window.scrollTo(0,165);
     };
 
-    $scope.setSelectedImage = function(image) {
-      $scope.selectedImage = image;
-      $scope.types = image.types;
+    $scope.setSelectedPic = function(pic) {
+      $scope.selectedPic = pic;
+      $scope.types = pic.types;
     };
 
     $scope.currentIndex = 0;

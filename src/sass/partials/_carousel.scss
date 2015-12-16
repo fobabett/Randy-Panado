@@ -76,17 +76,19 @@ img.active {
 }
 .selected-photo-title {
   color: #CFCFCF;
+  font-family: 'proxima-nova';
 
   @include respond-to('small') {
     font-size: 20px;
   }
 
   @include respond-to('large') {
-    font-size: 32px;
+    font-size: 36px;
   }
 }
 .selected-photo-subtitle {
   color: #95BABA;
+  font-family: 'Novecento Sans';
 
   @include respond-to('small') {
     font-size: 12px;
@@ -101,6 +103,7 @@ img.active {
   margin-top: 30px;
   font-family: 'Novecento Sans';
   font-size: 14px;
+  font-family: 'proxima-nova';
 }
 .filter-tags {
   margin-top: 30px;
@@ -116,6 +119,7 @@ img.active {
   padding-right: 10px;
   border-radius: 2px;
   font-family: 'Novecento Sans';
+  font-size: 14px;
 }
 #related-blog-post {
   border-left: 5px solid #ACDADA;
@@ -125,11 +129,12 @@ img.active {
     color: #ACDADA;
     text-transform: uppercase;
     font-size: 12px;
+    font-family: 'Novecento Sans';
   }
 
   .blog-title {
     color: #CDCDCD;
-    font-family: 'Novecento Sans';
+    font-family: 'proxima-nova';
     font-size: 14px;
   }
 }

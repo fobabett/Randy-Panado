@@ -39,3 +39,37 @@
   font-family: 'Caviar Dreams Italic';
   src: url('../../assets/fonts/caviarDreams/caviarDreams_Italic.WOFF');
 }
+
+.title {
+  font-family: 'Caviar Dreams Bold';
+  letter-spacing: 2px;
+}
+.subtitle {
+  font-family: 'Novecento Sans';
+}
+.title.blog-category-title {
+  font-family: 'Novecento Sans';
+  font-size: 20px;
+}
+.title.article-title.snippet {
+  font-family: 'proxima-nova';
+  font-size: 20px;
+  letter-spacing: 0;
+}
+.article-date {
+  font-family: 'proxima-nova';
+}
+.article-snippet-text {
+  font-family: 'proxima-nova';
+}
+.title.section-title {
+  font-family: 'Novecento Sans';
+  font-size: 20px;
+}
+#about-section-snippet {
+  font-family: 'proxima-nova';
+  font-size: 14px;
+}
+.footer-notes {
+  font-family: 'proxima-nova';
+}
