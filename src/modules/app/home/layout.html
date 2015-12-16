@@ -53,9 +53,9 @@
   <div>
     <ul id='filter'> 
       <li>Type</li>
-      <li class='filter-type' ng-click='commercialFilter()' ng-class='{"selected-tag": commercial == "commercial"}'>Commercial</li>
-      <li class='filter-type' ng-click='narrativeFilter()' ng-class='{"selected-tag": narrative == "narrative"}'>Narrative</li>
-      <li class='filter-type' ng-click='creativeFilter()' ng-class='{"selected-tag": creative == "creative"}'>Creative</li>
+      <li class='filter-type' ng-click='commercialFilter(); refresh()' ng-class='{"selected-tag": commercial == "commercial"}'>Commercial</li>
+      <li class='filter-type' ng-click='narrativeFilter(); refresh()' ng-class='{"selected-tag": narrative == "narrative"}'>Narrative</li>
+      <li class='filter-type' ng-click='creativeFilter(); refresh()' ng-class='{"selected-tag": creative == "creative"}'>Creative</li>
     </ul>
   </div>
 
@@ -63,14 +63,11 @@
     
     <section id='photo'>
 
-      <div class='photo-grid clearfix'>
-        
-        <!-- <div class='photo-item'> -->
-          <img ng-click='toggleModal(image); setCurrentSlideIndex($index)' ng-src="{{image.url}}" alt="{{image.name}}" ng-repeat='image in images | filter: commercial | filter: narrative | filter: creative'>
-          <!-- <span class='photo-details' ng-click='toggleModal(image)'><span>{{image.name}}</span></span> -->
-        <!-- </div> -->
-
-      </div>  
+      <ul class="dynamic-grid" angular-grid="pics" grid-width="250" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="true" >
+    <li data-ng-repeat="image in images | filter: commercial | filter: narrative | filter: creative" class="grid angular-grid-item image-loaded">
+        <img src="{{image.url}}" class="grid-img image-loaded"/>
+    </li>
+  </ul>
 
     </section>
 

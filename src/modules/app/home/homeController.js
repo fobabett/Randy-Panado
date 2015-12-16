@@ -149,4 +149,8 @@ module.exports = /*@ngInject*/
       }
     };
 
+    $scope.refresh = function(){
+      angularGridInstance.gallery.refresh();
+    };
+
   };

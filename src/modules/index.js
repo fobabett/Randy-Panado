@@ -4,5 +4,6 @@
 require('angular');
   require('angular-ui-router');
   require('angular-animate');
+  require('angulargrid');
 //app entry point
 require('./app');
