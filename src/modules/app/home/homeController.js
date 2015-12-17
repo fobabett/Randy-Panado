@@ -20,7 +20,7 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'Excision',
-        url: 'https://youtu.be/1Cz-53Ud2Wc',
+        url: 'https://www.youtube.com/embed/3epVHIzso-s',
         type: 'video',
         categories: [
           {value: 'commercial'}
@@ -129,6 +129,11 @@ module.exports = /*@ngInject*/
       // $anchorScroll();
       // $window.scrollTo(0,165);
     };
+
+    $scope.stopVideo = function() {
+      var iframe = document.getElementsByTagName('iframe')[0].contentWindow;
+      iframe.postMessage('{"event":"command","func":"' + 'stopVideo' +   '","args":""}', '*');
+    }
 
     $scope.setSelectedPic = function(pic) {
       $scope.selectedPic = pic;

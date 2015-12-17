@@ -7,12 +7,14 @@
 
       <h3 class='selected-photo-title hide-for-large'>{{selectedPic.name}}</h3>
       <h3 class='selected-photo-subtitle hide-for-large'>Panado Ranch</h3>
-      <span ng-click='modalShown = !modalShown' id='close-modal'>&times;</span>
+      <span ng-click='modalShown = !modalShown; stopVideo()' id='close-modal'>&times;</span>
   
       <div class='rows slideshow-content'>
         <div class='large-9 columns slide-container'>
 
-          <img id='slide' ng-repeat='pic in pics' ng-src='{{pic.url}}' ng-hide='!isCurrentSlideIndex($index)'>
+          <img ng-if='pic.type == "image"' id='slide' ng-repeat='pic in pics' ng-src='{{pic.url}}' ng-hide='!isCurrentSlideIndex($index)'>
+          <!-- iframe width='300' height='200' ng-if='pic.type == "video"' src="{{pic.url | trustAsResourceUrl}}" class="grid-img image-loaded" ng-click='toggleModal(pic); setCurrentSlideIndex($index)'></iframe> -->
+          <!-- <iframe ng-if='pic.type == "video"' ng-repeat='pic in pics' width='500px' height='500px' id='video' src="{{pic.url + '?rel=0&autoplay=1' | trustAsResourceUrl}}" allowfullscreen allowscriptaccess="always" ng-hide='!isCurrentSlideIndex($index)'></iframe> -->
 
           <nav class="slideshow-nav">
             <div class="wrapper">
@@ -66,7 +68,9 @@
       <ul class="dynamic-grid" angular-grid="pics" grid-width="250" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="true" >
         <li data-ng-repeat="pic in pics | filter: commercial | filter: narrative | filter: creative" class="grid angular-grid-item image-loaded">
           <img ng-if='pic.type == "image"' src="{{pic.url}}" class="grid-img image-loaded" ng-click='toggleModal(pic); setCurrentSlideIndex($index)'/>
-          <iframe width='300' height='200' ng-if='pic.type == "video"' src="{{pic.url | trustAsResourceUrl}}" class="grid-img image-loaded" ng-click='toggleModal(pic); setCurrentSlideIndex($index)'></iframe>
+          <!-- iframe width='300' height='200' ng-if='pic.type == "video"' src="{{pic.url | trustAsResourceUrl}}" class="grid-img image-loaded" ng-click='toggleModal(pic); setCurrentSlideIndex($index)'></iframe> -->
+          <iframe ng-if='pic.type == "video"' width="300" height="200" src="{{pic.url | trustAsResourceUrl}}" allowfullscreen ng-click='toggleModal(pic); setCurrentSlideIndex($index)'></iframe>
+          <div class='click-over' ng-if='pic.type == "video"'  ng-click='toggleModal(pic); setCurrentSlideIndex($index)'></div>
         </li>
       </ul>
 

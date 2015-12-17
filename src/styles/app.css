@@ -3789,20 +3789,31 @@ img.active {
 @media (min-width: 1030px) {
   .animate-slide {
     height: 600px;
-    display: inline-block;
-    position: absolute;
-    width: 100%; } }
+    opacity: 1; } }
 
 @media (min-width: 1030px) {
   .animate-slide.ng-hide-add.ng-hide-add-active,
   .animate-slide.ng-hide-remove.ng-hide-remove-active {
-    -moz-transition: 2s ease-in-out;
-    transition: 2s ease-in-out;
-    -webkit-transition: 2s ease-in-out; } }
+    -moz-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s; } }
 
 @media (min-width: 1030px) {
   .animate-slide.ng-hide {
-    height: 0; } }
+    height: 0;
+    opacity: 0; } }
+
+.click-over {
+  width: 300px;
+  height: 200px;
+  z-index: 1;
+  z-index: 1;
+  position: absolute;
+  top: 0; }
 
 @font-face {
   font-family: 'Novecento Sans Light';
@@ -4027,7 +4038,6 @@ img.active {
     opacity: 1; } }
 
 #filter {
-  margin-top: 20px;
   margin-bottom: 20px;
   font-family: 'Novecento Sans';
   color: #737272;
