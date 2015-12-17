@@ -38,17 +38,17 @@
     -moz-animation-name: logoSlideIn;
     -moz-animation-iteration-count: 1;
     -moz-animation-timing-function: ease-in;
-    -moz-animation-duration: 0.3s;
+    -moz-animation-duration: 0.5s;
 
     -webkit-animation-name: logoSlideIn;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: ease-in;
-    -webkit-animation-duration: 0.3s;
+    -webkit-animation-duration: 0.5s;
 
     animation-name: logoSlideIn;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
-    animation-duration: 0.3s;
+    animation-duration: 0.5s;
   }
 
   h2 {
@@ -58,8 +58,8 @@
 }
 #header-info {
   display: inline-block;
+  white-space: nowrap;
   vertical-align: top;
-  background-color: blue;
 }
 #header-title {
   font-size: 26px;
@@ -180,43 +180,6 @@
     opacity: 0;
   }
   100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes slideFromLogo {
-  0% {
-    // width: 0%;
-    -moz-transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    // width: 100%;
-    -moz-transform: translateX(0);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes slideFromLogo {
-  0% {
-    // width: 0%;
-    -webkit-transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    // width: 100%;
-    -webkit-transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes slideFromLogo {
-  0% {
-    // width: 0%;
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    // width: 100%;
     transform: translateX(0);
     opacity: 1;
   }

@@ -12,22 +12,25 @@ module.exports = /*@ngInject*/
       {
         name: 'one of a kind',
         url: 'http://placehold.it/300x200',
-        types: [
+        type: 'image',
+        categories: [
           {value: 'commercial'},
           {value: 'narrative'}
         ]
       },
       {
-        name: 'kitty cat',
-        url: 'http://placehold.it/300x200',
-        types: [
+        name: 'Excision',
+        url: 'https://youtu.be/1Cz-53Ud2Wc',
+        type: 'video',
+        categories: [
           {value: 'commercial'}
         ]
       },
       {
         name: 'awesomeness',
         url: 'http://placehold.it/300x200',
-        types: [
+        type: 'image',
+        categories: [
           {value: 'creative'},
           {value: 'narrative'}
         ]
@@ -35,14 +38,16 @@ module.exports = /*@ngInject*/
       {
         name: 'blah',
         url: 'http://placehold.it/300x200',
-        types: [
+        type: 'image',
+        categories: [
           {value: 'narrative'}
         ]
       },
       {
         name: 'dsfdsf',
         url: 'http://placehold.it/300x200',
-        types: [
+        type: 'image',
+        categories: [
           {value: 'creative'},
           {value: 'commercial'}
         ]
@@ -50,7 +55,8 @@ module.exports = /*@ngInject*/
       {
         name: 'boooo',
         url: 'http://placehold.it/300x200',
-        types: [
+        type: 'image',
+        categories: [
           {value: 'creative'},
           {value: 'narrative'},
           {value: 'commercial'}
@@ -59,7 +65,8 @@ module.exports = /*@ngInject*/
       {
         name: 'one of a kind',
         url: 'http://placehold.it/300x200',
-        types: [
+        type: 'image',
+        categories: [
           {value: 'commercial'},
           {value: 'narrative'}
         ]
@@ -67,14 +74,16 @@ module.exports = /*@ngInject*/
       {
         name: 'kitty cat',
         url: 'http://placehold.it/300x200',
-        types: [
+        type: 'image',
+        categories: [
           {value: 'creative'}
         ]
       },
       {
         name: 'awesomeness',
         url: 'http://placehold.it/300x200',
-        types: [
+        type: 'image',
+        categories: [
           {value: 'creative'},
           {value: 'narrative'}
         ]
@@ -82,14 +91,16 @@ module.exports = /*@ngInject*/
       {
         name: 'blah',
         url: 'http://placehold.it/300x200',
-        types: [
+        type: 'image',
+        categories: [
           {value: 'narrative'}
         ]
       },
       {
         name: 'dsfdsf',
         url: 'http://placehold.it/300x200',
-        types: [
+        type: 'image',
+        categories: [
           {value: 'commercial'},
           {value: 'creative'}
         ]
@@ -97,7 +108,12 @@ module.exports = /*@ngInject*/
       {
         name: 'boooo',
         url: 'http://placehold.it/300x200',
-        type: ['commercial', 'creative', 'narrative']
+        type: 'image',
+        categories: [
+          {value: 'commercial'},
+          {value: 'creative'},
+          {value: 'narrative'}
+        ]
       }
     ];
 

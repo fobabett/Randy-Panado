@@ -14,4 +14,3 @@ module.exports =
   })
   .controller('homeController', require('./homeController'))
   .directive('modalDirective', require('./modalDirective'));
-
