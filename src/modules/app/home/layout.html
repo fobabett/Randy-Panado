@@ -68,7 +68,8 @@
       <ul class="dynamic-grid" angular-grid="pics" grid-width="250" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="true" >
         <li data-ng-repeat="pic in pics | filter: commercial | filter: narrative | filter: creative" class="grid angular-grid-item image-loaded">
           <img ng-if='pic.type == "image"' src="{{pic.url}}" class="grid-img image-loaded" ng-click='toggleModal(pic); setCurrentSlideIndex($index)'/>
-          <embed-video ng-if='pic.type == "video"' iframe-id="test" api="1" player_id="test" ng-href="{{pic.url | trustAsResourceUrl}}" ng-click='pauseVideo()'><a href="{{pic.url | trustAsResourceUrl}}"></a></embed-video>
+          <embed-video ng-if='pic.type == "video"' iframe-id="test" api="1" player_id="test" width='300' height='200' ng-href="{{pic.url | trustAsResourceUrl}}" ng-click='pauseVideo()'><a href="{{pic.url | trustAsResourceUrl}}"></a></embed-video>
+          <!-- <img ng-if='pic.type == "video"' src="{{pic.thumbUrl}}" class="grid-img image-loaded" ng-click='toggleModal(pic); setCurrentSlideIndex($index)'/> -->
           <div class='click-over' ng-if='pic.type == "video"'  ng-click='toggleModal(pic); setCurrentSlideIndex($index)'></div>
         </li>
       </ul>

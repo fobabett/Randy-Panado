@@ -5,13 +5,19 @@
 @import "../../bower_components/foundation-sites/scss/foundation";
 @import "../../bower_components/foundation-sites/foundation-sites";
 
+// components
+@import "./partials/components/carousel";
+@import "./partials/components/filters";
+@import "./partials/components/masonry";
+@import "./partials/components/nav-bar";
+
+// pages
+@import "./partials/pages/blog";
+@import "./partials/pages/home";
+
+//utils
+@import "./partials/utils/mixins";
+@import "./partials/utils/reset";
+@import "./partials/utils/variables";
+
 @import "./partials/base";
-@import "./partials/blog";
-@import "./partials/reset";
-@import "./partials/carousel";
-@import "./partials/nav-bar";
-@import "./partials/filters";
-@import "./variables";
-@import "./partials/mixins";
-@import "./partials/home";
-@import "./partials/masonry";

@@ -1,6 +1,6 @@
-@import 'mixins';
-@import 'variables';
-@import 'typography';
+@import '../utils/mixins';
+@import '../utils/variables';
+@import '../typography';
 
 .header-container.ng-hide {
 

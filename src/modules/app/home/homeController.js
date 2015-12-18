@@ -21,6 +21,8 @@ module.exports = /*@ngInject*/
       {
         name: 'Adventure Time',
         url: '//vimeo.com/74611159',
+        id: '74611159',
+        // thumbUrl: 'http://vimeo.com/api/v2/video/' + id + '.json?callback=showThumb',
         type: 'video',
         categories: [
           {value: 'commercial'}
@@ -172,6 +174,12 @@ module.exports = /*@ngInject*/
     //Vimeo API
     var vimeoPlayer = null; 
     var isVimeoPlayerReady = false;
+
+    $scope.pauseVideo = function() {
+      if(isVimeoPlayerReady) {
+        vimeoPlayer.api('pause');
+      }
+    }
     
     function loadVimeoPlayer() { 
       vimeoPlayer = $f(document.getElementById("vimeo1"));
