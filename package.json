@@ -39,7 +39,9 @@
     "fizzy-ui-utils": "./bower_components/fizzy-ui-utils/utils.js",
     "outlayer": "./bower_components/outlayer/outlayer.js",
     "angular-animate": "./bower_components/angular-animate/angular-animate.min.js",
-    "angular-ui-router": "./bower_components/angular-ui-router/release/angular-ui-router.min.js"
+    "angular-ui-router": "./bower_components/angular-ui-router/release/angular-ui-router.min.js",
+    "ng-videosharing-embed": "./bower_components/ng-videosharing-embed/build/ng-videosharing-embed.min.js",
+    "froogaloop": "./bower_components/froogaloop/froogaloop.min.js"
   },
   "browserify-shim": {},
   "dependencies": {

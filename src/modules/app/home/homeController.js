@@ -19,8 +19,8 @@ module.exports = /*@ngInject*/
         ]
       },
       {
-        name: 'Excision',
-        url: 'https://www.youtube.com/embed/3epVHIzso-s',
+        name: 'Adventure Time',
+        url: '//vimeo.com/74611159',
         type: 'video',
         categories: [
           {value: 'commercial'}
@@ -130,11 +130,6 @@ module.exports = /*@ngInject*/
       // $window.scrollTo(0,165);
     };
 
-    $scope.stopVideo = function() {
-      var iframe = document.getElementsByTagName('iframe')[0].contentWindow;
-      iframe.postMessage('{"event":"command","func":"' + 'stopVideo' +   '","args":""}', '*');
-    }
-
     $scope.setSelectedPic = function(pic) {
       $scope.selectedPic = pic;
       $scope.types = pic.types;
@@ -172,6 +167,21 @@ module.exports = /*@ngInject*/
 
     $scope.refresh = function(){
       angularGridInstance.gallery.refresh();
+    };
+
+    //Vimeo API
+    var vimeoPlayer = null; 
+    var isVimeoPlayerReady = false;
+    
+    function loadVimeoPlayer() { 
+      vimeoPlayer = $f(document.getElementById("vimeo1"));
+      vimeoPlayer.addEvent('ready', function() {
+        isVimeoPlayerReady = true;
+      });
+    }
+    
+    window.onload = function() {
+      loadVimeoPlayer();
     };
 
   };

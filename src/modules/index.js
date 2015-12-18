@@ -5,5 +5,8 @@ require('angular');
   require('angular-ui-router');
   require('angulargrid');
   require('angular-animate');
+  require('ng-videosharing-embed');
+  require('froogaloop');
+  require('jquery');
 //app entry point
 require('./app');
