@@ -12,9 +12,17 @@
       <div class='rows slideshow-content'>
         <div class='large-9 columns slide-container'>
 
-          <img ng-if='pic.type == "image"' id='slide' ng-repeat='pic in pics' ng-src='{{pic.url}}' ng-hide='!isCurrentSlideIndex($index)'>
+          <div ng-repeat='pic in pics'>
+          
+            <img ng-if='pic.type == "image"' id='slide' ng-src='{{pic.url}}' ng-hide='!isCurrentSlideIndex($index)'>
 
-          <embed-video ng-repeat='pic in pics' width='700' height='400' ng-if='pic.type == "video"' id='slide' iframe-id="vimeo1" api="1" player_id="vimeo1" ng-href="{{pic.url | trustAsResourceUrl}}" ng-hide='!isCurrentSlideIndex($index)'><a href="{{pic.url | trustAsResourceUrl}}"></a></embed-video>
+            <embed-video width='700' height='400' ng-if='pic.type == "vimeo"' id='slide' iframe-id="vimeo1" api="1" player_id="vimeo1" ng-hide='!isCurrentSlideIndex($index)' ng-href="{{pic.url | trustAsResourceUrl}}"><a href="{{pic.url | trustAsResourceUrl}}"></a></embed-video>
+
+            <!-- <youtube-video ng-if='pic.type == "youtube"' video-url="pic.url" player='video' id='slide' ng-hide='!isCurrentSlideIndex($index)'></youtube-video> -->
+
+          </div>
+
+          
 
           <nav class="slideshow-nav">
             <div class="wrapper">
@@ -67,10 +75,12 @@
 
       <ul class="dynamic-grid" angular-grid="pics" grid-width="250" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="true" >
         <li data-ng-repeat="pic in pics | filter: commercial | filter: narrative | filter: creative" class="grid angular-grid-item image-loaded">
-          <img ng-if='pic.type == "image"' src="{{pic.url}}" class="grid-img image-loaded" ng-click='toggleModal(pic); setCurrentSlideIndex($index)'/>
-          <embed-video ng-if='pic.type == "video"' iframe-id="test" api="1" player_id="test" width='300' height='200' ng-href="{{pic.url | trustAsResourceUrl}}" ng-click='pauseVideo()'><a href="{{pic.url | trustAsResourceUrl}}"></a></embed-video>
-          <!-- <img ng-if='pic.type == "video"' src="{{pic.thumbUrl}}" class="grid-img image-loaded" ng-click='toggleModal(pic); setCurrentSlideIndex($index)'/> -->
-          <div class='click-over' ng-if='pic.type == "video"'  ng-click='toggleModal(pic); setCurrentSlideIndex($index)'></div>
+
+          <img ng-if='pic.type == "image"' src="{{pic.url}}" class="grid-img image-loaded" ng-click='toggleModal(pic); setCurrentSlideIndex($index); pauseVideo()'/>
+
+          <embed-video ng-if='pic.type == "vimeo"' iframe-id="test" api="1" player_id="test" width='300' height='200' ng-href="{{pic.url | trustAsResourceUrl}}" ng-click='pauseVideo(); toggleModal(pic); setCurrentSlideIndex($index)'><a href="{{pic.url | trustAsResourceUrl}}"></a></embed-video>
+
+          <!-- <youtube-video ng-if='pic.type == "youtube"' player-width='300'  player-height='200' video-url="pic.url" player='video' id='video' ng-click='pauseVideo(); toggleModal(pic); setCurrentSlideIndex($index)'></youtube-video> -->
         </li>
       </ul>
 

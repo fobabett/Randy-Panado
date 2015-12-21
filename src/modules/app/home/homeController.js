@@ -7,6 +7,7 @@ module.exports = /*@ngInject*/
     $scope.commercial = '';
     $scope.narrative = '';
     $scope.creative = '';
+    var video = document.getElementsByTagName('iframe');
 
     var mockData = [
       {
@@ -21,15 +22,13 @@ module.exports = /*@ngInject*/
       {
         name: 'Adventure Time',
         url: '//vimeo.com/74611159',
-        id: '74611159',
-        // thumbUrl: 'http://vimeo.com/api/v2/video/' + id + '.json?callback=showThumb',
-        type: 'video',
+        type: 'vimeo',
         categories: [
           {value: 'commercial'}
         ]
       },
       {
-        name: 'awesomeness',
+        name: 'Star Wars',
         url: 'http://placehold.it/300x200',
         type: 'image',
         categories: [
@@ -179,6 +178,7 @@ module.exports = /*@ngInject*/
       if(isVimeoPlayerReady) {
         vimeoPlayer.api('pause');
       }
+      // video.stopVideo();
     }
     
     function loadVimeoPlayer() { 

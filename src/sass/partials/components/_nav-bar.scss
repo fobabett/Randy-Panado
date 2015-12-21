@@ -29,12 +29,11 @@
   }
 }
 .logo-container {
-  width: 50%;
   float: left;
   display: inline-block;
 
   @include respond-to('large') {
-    width: 50%;
+    width: 30%;
     -moz-animation-name: logoSlideIn;
     -moz-animation-iteration-count: 1;
     -moz-animation-timing-function: ease-in;
@@ -75,6 +74,7 @@
   width: 70px;
   height: 70px;
   display: inline-block;
+  vertical-align: middle;
 
   @include respond-to('medium-small') {
     width: 30px;
@@ -83,7 +83,6 @@
 }
 .nav-section {
   font-family: 'Novecento Sans';
-  background-color: red;
   float: right;
 
   @include respond-to('large') {
@@ -119,24 +118,69 @@
   border-bottom: 1px solid #ADDDDD;
   background-color: #EAE9E4;
   visibility: hidden;
+  z-index: 1;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 #blog-nav.show-nav {
   visibility: visible;
 }
-// .icon temporary placeholder
-.icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-.blog-logo-container, 
-.blog-nav-section {
+.logo-container.blog-logo-container, 
+.nav-section.blog-nav-section {
   float: none;
   display: inline-block;
+  vertical-align: middle;
+}
+.blog-nav-section {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;
+}
+.blog-nav-item {
+  color: #635C56;
+  
+  img {
+    -moz-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+  }
+
+  h1 {
+    // display: none;
+    opacity: 0;
+    -moz-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    font-family: 'Novecento Sans Bold';
+    text-transform: uppercase;
+  }
+}
+.blog-nav-item:hover {
+
+  img {
+    transform: translateY(-0.5rem);
+    -moz-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+  }
+
+  h1 {
+    // display: block;
+    opacity: 1;
+    -moz-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+  }
 }
 .toggle-dropdown {
   width: 30px;
   height: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 30px;
 }
 .blog-dropdown-nav {
   display: inline-block;

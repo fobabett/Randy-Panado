@@ -3799,7 +3799,7 @@ img.active {
 
 .title.section-title {
   font-family: 'Novecento Sans';
-  font-size: 20px; }
+  font-size: 26px; }
 
 #about-section-snippet {
   font-family: 'proxima-nova';
@@ -3831,12 +3831,11 @@ img.active {
       margin: 50px; } }
 
 .logo-container {
-  width: 50%;
   float: left;
   display: inline-block; }
   @media (min-width: 1030px) {
     .logo-container {
-      width: 50%;
+      width: 30%;
       -moz-animation-name: logoSlideIn;
       -moz-animation-iteration-count: 1;
       -moz-animation-timing-function: ease-in;
@@ -3870,7 +3869,8 @@ img.active {
 .logo {
   width: 70px;
   height: 70px;
-  display: inline-block; }
+  display: inline-block;
+  vertical-align: middle; }
   @media (max-width: 1029px) {
     .logo {
       width: 30px;
@@ -3878,7 +3878,6 @@ img.active {
 
 .nav-section {
   font-family: 'Novecento Sans';
-  background-color: red;
   float: right; }
   @media (min-width: 1030px) {
     .nav-section {
@@ -3907,24 +3906,60 @@ img.active {
   width: 100%;
   border-bottom: 1px solid #ADDDDD;
   background-color: #EAE9E4;
-  visibility: hidden; }
+  visibility: hidden;
+  z-index: 1;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px; }
 
 #blog-nav.show-nav {
   visibility: visible; }
 
-.icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%; }
-
-.blog-logo-container,
-.blog-nav-section {
+.logo-container.blog-logo-container,
+.nav-section.blog-nav-section {
   float: none;
-  display: inline-block; }
+  display: inline-block;
+  vertical-align: middle; }
+
+.blog-nav-section {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0; }
+
+.blog-nav-item {
+  color: #635C56; }
+  .blog-nav-item img {
+    -moz-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out; }
+  .blog-nav-item h1 {
+    opacity: 0;
+    -moz-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    font-family: 'Novecento Sans Bold';
+    text-transform: uppercase; }
+
+.blog-nav-item:hover img {
+  transform: translateY(-0.5rem);
+  -moz-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out; }
+
+.blog-nav-item:hover h1 {
+  opacity: 1;
+  -moz-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out; }
 
 .toggle-dropdown {
   width: 30px;
-  height: 30px; }
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 30px; }
 
 .blog-dropdown-nav {
   display: inline-block; }
@@ -4322,3 +4357,72 @@ body {
 
 .columns {
   padding: 0; }
+
+@font-face {
+  font-family: 'Novecento Sans Light';
+  src: url("../../assets/fonts/novecento_sans/2FE2AA_1_0.woff"); }
+
+@font-face {
+  font-family: 'Novecento Sans Thin';
+  src: url("../../assets/fonts/novecento_sans/2FE2AA_3_0.woff"); }
+
+@font-face {
+  font-family: 'Novecento Sans';
+  src: url("../../assets/fonts/novecento_sans/2FE2AA_4_0.woff"); }
+
+@font-face {
+  font-family: 'Novecento Sans Bold';
+  src: url("../../assets/fonts/novecento_sans/2FE2AA_0_0.woff"); }
+
+@font-face {
+  font-family: 'Novecento Sans DemiBold';
+  src: url("../../assets/fonts/novecento_sans/2FE2AA_2_0.woff"); }
+
+@font-face {
+  font-family: 'Caviar Dreams';
+  src: url("../../assets/fonts/caviarDreams/caviarDreams.WOFF"); }
+
+@font-face {
+  font-family: 'Caviar Dreams Bold';
+  src: url("../../assets/fonts/caviarDreams/caviarDreams_Bold.WOFF"); }
+
+@font-face {
+  font-family: 'Caviar Dreams BoldItalic';
+  src: url("../../assets/fonts/caviarDreams/caviarDreams_BoldItalic.WOFF"); }
+
+@font-face {
+  font-family: 'Caviar Dreams Italic';
+  src: url("../../assets/fonts/caviarDreams/caviarDreams_Italic.WOFF"); }
+
+.title {
+  font-family: 'Caviar Dreams Bold';
+  letter-spacing: 2px; }
+
+.subtitle {
+  font-family: 'Novecento Sans'; }
+
+.title.blog-category-title {
+  font-family: 'Novecento Sans';
+  font-size: 20px; }
+
+.title.article-title.snippet {
+  font-family: 'proxima-nova';
+  font-size: 20px;
+  letter-spacing: 0; }
+
+.article-date {
+  font-family: 'proxima-nova'; }
+
+.article-snippet-text {
+  font-family: 'proxima-nova'; }
+
+.title.section-title {
+  font-family: 'Novecento Sans';
+  font-size: 26px; }
+
+#about-section-snippet {
+  font-family: 'proxima-nova';
+  font-size: 14px; }
+
+.footer-notes {
+  font-family: 'proxima-nova'; }

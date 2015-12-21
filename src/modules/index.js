@@ -5,6 +5,7 @@ require('angular');
   require('angular-ui-router');
   require('angulargrid');
   require('angular-animate');
+  require('angular-youtube-embed');
   require('ng-videosharing-embed');
   require('froogaloop');
   require('jquery');
