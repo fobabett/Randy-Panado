@@ -18,6 +18,7 @@ module.exports =
     require('./chronicles').name,
     require('./category').name,
     require('./about').name,
+    require('./post').name,
     //load extra app modules here, e.g.:
     //require('./frontend').name,
     //require('./admin').name
