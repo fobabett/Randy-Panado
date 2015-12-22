@@ -2,4 +2,4 @@
 
 module.exports =
   angular.module('Pando.common.services', []);
-  //.factory('fooService', require('./fooService'));
+  // .factory('categoryService', require('./categoryService'));

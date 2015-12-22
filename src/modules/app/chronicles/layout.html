@@ -10,28 +10,28 @@
   <div class='nav-section blog-nav-section'>
     <ul class='nav-list blog-nav-list'>
       <li class='nav-item blog-nav-item'>
-        <img src='../../../assets/icons/all-posts.svg' class='nav-item-icon' ui-sref='category'>
-        <h1 for="">Label</h1>
+        <img src='../../../assets/icons/all-posts.svg' class='nav-item-icon' ui-sref='chronicles'>
+        <h1>Label</h1>
       </li>  
       <li class='nav-item blog-nav-item'>
-        <img src='../../../assets/icons/photography.svg' class='nav-item-icon' ui-sref='category'>
-        <h1 for="">Label</h1>
+        <img src='../../../assets/icons/photography.svg' class='nav-item-icon' ui-sref='category({category: "tools & techniques"})'>
+        <h1>Label</h1>
       </li>  
       <li class='nav-item blog-nav-item'>
-        <img src='../../../assets/icons/adventure.svg' class='nav-item-icon' ui-sref='category'>
-        <h1 for="">Label</h1>
+        <img src='../../../assets/icons/adventure.svg' class='nav-item-icon' ui-sref='category({category: "adventures"})'>
+        <h1>Label</h1>
       </li>  
       <li class='nav-item blog-nav-item'>
-        <img src='../../../assets/icons/aerials.svg' class='nav-item-icon' ui-sref='category'>
-        <h1 for="">Label</h1>
+        <img src='../../../assets/icons/aerials.svg' class='nav-item-icon' ui-sref='category({category: "aerials"})'>
+        <h1>Label</h1>
       </li>  
       <li class='nav-item blog-nav-item'>
-        <img src='../../../assets/icons/gear-talk.svg' class='nav-item-icon' ui-sref='category'>
-        <h1 for="">Label</h1>
+        <img src='../../../assets/icons/gear-talk.svg' class='nav-item-icon' ui-sref='category({category: "gear talk"})'>
+        <h1>Label</h1>
       </li>  
       <li class='nav-item blog-nav-item'>
-        <img src='../../../assets/icons/corporate.svg' class='nav-item-icon' ui-sref='category'>
-        <h1 for="">Label</h1>
+        <img src='../../../assets/icons/corporate.svg' class='nav-item-icon' ui-sref='category({category: "corporate"})'>
+        <h1>Label</h1>
       </li>  
     </ul>
   </div>
@@ -63,26 +63,22 @@
       
       <div class='large-9 columns blog-content-wrapper'>
 
-        <div class='blog-content'>
+        <div class='blog-content' ng-repeat='article in articles | limitTo: 2'>
           <div class='icon article-icon hide-for-large'></div>
 
 
           <div class='blog-image-wrapper'>
-            <img src="http://placehold.it/700x450" alt="">
+            <img ng-src="{{article.image}}" alt="">
           </div>
 
           <div class='article-content'>
             <img src='../../../assets/icons/photography.svg' class='icon category-icon show-for-large'>
-            <h3 class='article-title'>Kinetic Cinematography</h3>
-            <h4 class='article-subtitle'>Tools & Techniques</h4>
+            <h3 class='article-title'>{{article.title}}</h3>
+            <h4 class='article-subtitle'>{{article.category}}</h4>
             <span class='article-date date'>1 week ago | 123 comments</span>
             <p class='article-text'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia delectus, eum quod minima vel error incidunt laborum voluptatibus magni nobis tenetur id eius voluptatem fugiat adipisci quia odit at? Reiciendis.
+              {{article.text}}
             </p>
-            <p class='article-text'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptatum aliquam magnam minus magni doloribus libero ducimus, assumenda vitae distinctio cupiditate, soluta rerum perspiciatis voluptatibus suscipit, neque deleniti esse odio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore in, facilis adipisci. Optio quisquam ab sint consequuntur recusandae hic architecto vel, aliquid expedita accusantium, eveniet totam laudantium eius magnam omnis.
-            </p>
-
             <div class='social-media-icons'>
               <img src='../../../assets/icons/facebook.svg' class='icon facebook'>
               <img src='../../../assets/icons/twitter.svg' class='icon twitter'>
@@ -90,35 +86,6 @@
             </div>
           </div>
           
-
-        </div>
-
-        <div class='blog-content'>
-          <div class='icon article-icon hide-for-large'></div>
-
-          <div class='blog-image-wrapper'>
-            <img src="http://placehold.it/700x450" alt="">
-          </div>
-          
-          <div class='article-content'>
-            <img src='../../../assets/icons/adventure.svg' class='icon category-icon show-for-large'>
-            <h3 class='article-title'>Trip to San Diego</h3>
-            <h4 class='article-subtitle'>Adventures</h4>
-            <span class='article-date date'>2 week ago | 123 comments</span>
-            <p class='article-text'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia delectus, eum quod minima vel error incidunt laborum voluptatibus magni nobis tenetur id eius voluptatem fugiat adipisci quia odit at? Reiciendis.
-            </p>
-            <p class='article-text'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptatum aliquam magnam minus magni doloribus libero ducimus, assumenda vitae distinctio cupiditate, soluta rerum perspiciatis voluptatibus suscipit, neque deleniti esse odio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore in, facilis adipisci. Optio quisquam ab sint consequuntur recusandae hic architecto vel, aliquid expedita accusantium, eveniet totam laudantium eius magnam omnis.
-            </p>
-
-            <div class='social-media-icons'>
-              <img src='../../../assets/icons/facebook.svg' class='icon facebook'>
-              <img src='../../../assets/icons/twitter.svg' class='icon twitter'>
-              <img src='../../../assets/icons/instagram.svg' class='icon instagram'>
-            </div>
-
-          </div>  
 
         </div>
 

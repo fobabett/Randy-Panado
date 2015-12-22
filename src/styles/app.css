@@ -3991,7 +3991,8 @@ img.active {
     transition: 0.2s ease-in-out;
     -webkit-transition: 0.2s ease-in-out;
     font-family: 'Novecento Sans Bold';
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-size: 12px; }
 
 .nav-item-icon {
   width: 40px;
