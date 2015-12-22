@@ -47,9 +47,20 @@
   font-family: 'Novecento Sans';
   position: relative;
 
-  @include respond-to('medium-small') {
+  @include respond-to('small') {
     padding: 15px;
+  }
+
+  @include respond-to('medium-small') {
     border-top: 2px solid #BDE0E0;
+  }
+
+  @include respond-to('medium') {
+    padding: 30px;
+  }
+
+  @include respond-to('large') {
+    margin: 50px;
   }
 }
 .blog-image-wrapper {
@@ -61,14 +72,15 @@
   }
 }
 .article-content {
-
-  @include respond-to('large') {
-    max-width: 700px;
-    margin: 0 auto; 
-  }
+  max-width: 700px;
+  margin: 0 auto; 
 }
 .article-title {
   color: #515151;
+
+  @include respond-to('medium') {
+    margin: 30px;
+  }
 
   @include respond-to('medium-small'){
     font-size: 20px;
@@ -92,8 +104,9 @@
 .category-icon {
 
   @include respond-to('large') {
-    position: absolute;
-    left: 60px;
+    position: relative;
+    right: 50px;
+    top: 40px;
   }
 }
 .date {
@@ -134,13 +147,24 @@
 
 #instagram-sidebar {
   font-family: 'Novecento Sans';
+  text-align: center;
 }
 .icon.instagram {
-  margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 .instagram-content {
+  text-align: left;
+
+  @include respond-to('small') {
+    padding: 15px;
+    padding-top: 0;
+  }
+
+  @include respond-to('medium') {
+    padding: 30px;
+    padding-top: 0;
+  }
 
   @include respond-to('large') {
     padding: 50px;

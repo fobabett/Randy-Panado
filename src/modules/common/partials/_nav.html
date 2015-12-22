@@ -13,13 +13,12 @@
   <div class='nav-section'>
 
     <img src='../../../assets/icons/menu.svg' class='toggle-dropdown hide-for-large' ng-click='toggleNav=!toggleNav'>
-
     <ul ng-class='{"toggle-nav": toggleNav}' class='nav-list'>
-      <li class='nav-item'><a ui-sref='home'>Work</a></li>
-      <li class='nav-item'><a ui-sref='about'>About</a></li>
-      <li class='nav-item'><a ui-sref='about'>Equipment</a></li>
-      <li class='nav-item'><a ui-sref='chronicles'>Chronicles</a></li>
-      <li class='nav-item'><a ui-sref='home'>Contact</a></li>
+      <li ng-class='{active: activeTab == "home"}' class='nav-item'><a ui-sref='home'>Work</a></li>
+      <li ng-class='{active: activeTab == "about"}' class='nav-item'><a ui-sref='about'>About</a></li>
+      <li ng-class='{active: activeTab == "equipment"}' class='nav-item'><a ui-sref='about'>Equipment</a></li>
+      <li ng-class='{active: activeTab == "chronicles"}' class='nav-item'><a ui-sref='chronicles'>Chronicles</a></li>
+      <li ng-class='{active: activeTab == "contact"}' class='nav-item'><a ui-sref='home'>Contact</a></li>
     </ul>
   </div>
 

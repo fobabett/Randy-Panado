@@ -7,22 +7,21 @@
 section#photo {
   text-align: center;
 
-  @include respond-to('large') {
-    // margin: 50px;
-    // background-color: red;
+  @include respond-to('small') {
+    padding: 15px;
   }
 
-  img {
-    // margin: 5px;
+  @include respond-to('medium') {
+    padding: 30px;
   }
-}
-.dynamic-grid {
-  background-color: pink;
+
+  @include respond-to('large') {
+    padding: 50px;
+  }
 }
 .photo-item {
   position: relative;
   text-align: center;
-  background-color: blue;
 
   @include respond-to('medium-small') {
     margin-bottom: 15px;
@@ -74,6 +73,21 @@ section#photo {
   margin-top: 200px;
   margin-bottom: 200px;
   text-align: center;
+
+   @include respond-to('small') {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  @include respond-to('medium') {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  @include respond-to('large') {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
 }
 .section-title {
   font-family: 'Caviar Dreams Bold';
@@ -112,6 +126,8 @@ section#photo {
   font-family: 'Novecento Sans';
   color: #717171;
   padding-bottom: 50px;
+  max-width: 350px;
+  margin: 0 auto;
 
   .article-title.snippet,
   .article-date,
@@ -156,6 +172,22 @@ section#photo {
     color: #92A7A3;
   }
 }
+#footer-section {
+   @include respond-to('small') {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  @include respond-to('medium') {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  @include respond-to('large') {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
 #about-section-snippet {
   text-align: left;
   margin-bottom: 30px;
@@ -165,10 +197,13 @@ section#photo {
     color: #878685;
   }
 }
-
 #contact-section {
   border-left: 2px solid #D7D7D6;
   text-align: center;
+
+  @include respond-to('medium-small') {
+    width: 100%;
+  }
 
   input,
   select,
@@ -190,10 +225,21 @@ section#photo {
     padding: 15px;
   }
 }
-form {
-  margin-right: 80px;
-  margin-left: 80px;
+#contact-form {
+  margin: 0 auto;
   margin-top: 30px;
+  
+  @include respond-to('small') {
+    padding: 15px;
+  }
+
+  @include respond-to('medium') {
+    padding: 30px;
+  }
+
+  @include respond-to('large') {
+    padding: 50px;
+  }
 }
 
 .footer-notes {

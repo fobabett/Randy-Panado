@@ -8,6 +8,9 @@
 
   @include respond-to('small') {
     padding: 15px;
+  }
+
+  @include respond-to('medium-small') {
     height: auto;
     overflow: auto;
   }
@@ -17,6 +20,10 @@
   }
 }
 .modal-content {
+
+  @include respond-to('medium') {
+    padding: 30px;
+  }
 
   @include respond-to('large') {
     padding: 50px;
@@ -40,7 +47,7 @@
   @include respond-to('small') {
     margin-top: 15px;
   }
-  
+
   @include respond-to('large') {
     height: 400px;
   }

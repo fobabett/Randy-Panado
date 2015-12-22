@@ -1,8 +1,9 @@
 'use strict';
 
 module.exports = /*@ngInject*/
-  function homeController($scope, $location, $anchorScroll, $window, angularGridInstance) {
+  function homeController($scope, $location, $anchorScroll, $window, angularGridInstance, $state) {
 
+    $scope.activeTab = $state.current.name;
     $scope.filter = {};
     $scope.commercial = '';
     $scope.narrative = '';
@@ -21,8 +22,10 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'Adventure Time',
-        url: '//vimeo.com/74611159',
-        type: 'vimeo',
+        // url: '//vimeo.com/74611159',
+        url: 'http://placehold.it/300x200',
+        // type: 'vimeo',
+        type: 'image',
         categories: [
           {value: 'commercial'}
         ]

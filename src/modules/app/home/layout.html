@@ -1,7 +1,7 @@
+<div ng-hide='modalShown' class='header-container' ng-include="'common/partials/_nav.html'"></div>
+
 <div class='page-content-container' ng-class='{modalOpen: modalShown == true}' id='home-page'>
-
-  <div ng-hide='modalShown' class='header-container' ng-include="'common/partials/_nav.html'"></div>
-
+  
   <div ng-show='modalShown' id='slideshow-modal' class='animate-slide'>
     <div class='modal-content'>
 
@@ -154,7 +154,7 @@
 
         <div class='large-6 columns' id='contact-section'>
           <h3 class='title section-title'>Contact</h3>
-          <form action="" name='contact_form' ng-model='contact_form'>
+          <form action="" id='contact-form' name='contact_form' ng-model='contact_form'>
             <input type="text" name='name' ng-model='name' placeholder='name'>
             <input type="text" name='phone' ng-model='phone' placeholder='phone'>
             <input type="text" name='email' ng-model='email' placeholder='email'>

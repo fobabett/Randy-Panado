@@ -1,56 +1,57 @@
-<div class='page-content-container' id='blog-page'>
-  
-  <div ng-include="'common/partials/_nav.html'"></div>
+<div ng-include="'common/partials/_nav.html'"></div>
 
-  <div id='blog-nav' ng-class='{"show-nav":boolChangeClass}'>
+<div id='blog-nav' ng-class='{"show-nav":boolChangeClass}'>
 
-    <div class='logo-container blog-logo-container'>
-      <img class='logo' src="../../../assets/icons/logo.svg" alt="">
-      <h1 id='header-title'>Randy Panado</h1>
-    </div>
-    
-    <div class='nav-section blog-nav-section'>
-      <ul class='nav-list blog-nav-list'>
-        <li class='nav-item blog-nav-item'>
-          <img src='../../../assets/icons/all-posts.svg' class='nav-item-icon' ui-sref='category'>
-          <h1 for="">Label</h1>
-        </li>  
-        <li class='nav-item blog-nav-item'>
-          <img src='../../../assets/icons/photography.svg' class='nav-item-icon' ui-sref='category'>
-          <h1 for="">Label</h1>
-        </li>  
-        <li class='nav-item blog-nav-item'>
-          <img src='../../../assets/icons/adventure.svg' class='nav-item-icon' ui-sref='category'>
-          <h1 for="">Label</h1>
-        </li>  
-        <li class='nav-item blog-nav-item'>
-          <img src='../../../assets/icons/aerials.svg' class='nav-item-icon' ui-sref='category'>
-          <h1 for="">Label</h1>
-        </li>  
-        <li class='nav-item blog-nav-item'>
-          <img src='../../../assets/icons/gear-talk.svg' class='nav-item-icon' ui-sref='category'>
-          <h1 for="">Label</h1>
-        </li>  
-        <li class='nav-item blog-nav-item'>
-          <img src='../../../assets/icons/corporate.svg' class='nav-item-icon' ui-sref='category'>
-          <h1 for="">Label</h1>
-        </li>  
-      </ul>
-    </div>
-    
-    <img src='../../../assets/icons/menu.svg' class='toggle-dropdown' ng-click='toggleDropdown=!toggleDropdown'>
-
-    <div class='blog-dropdown-nav'>
-      <ul ng-show='toggleDropdown' class='nav-list'>
-        <li class='nav-item'><a ui-sref='home'>Work</a></li>
-        <li class='nav-item'><a ui-sref='about'>About</a></li>
-        <li class='nav-item'><a ui-sref='about'>Equipment</a></li>
-        <li class='nav-item'><a ui-sref='chronicles'>Chronicles</a></li>
-        <li class='nav-item'><a ui-sref='home'>Contact</a></li>
-      </ul>
-    </div>
-
+  <div class='logo-container blog-logo-container'>
+    <img class='logo' src="../../../assets/icons/logo.svg" alt="">
+    <h1 id='header-title'>Randy Panado</h1>
   </div>
+    
+  <div class='nav-section blog-nav-section'>
+    <ul class='nav-list blog-nav-list'>
+      <li class='nav-item blog-nav-item'>
+        <img src='../../../assets/icons/all-posts.svg' class='nav-item-icon' ui-sref='category'>
+        <h1 for="">Label</h1>
+      </li>  
+      <li class='nav-item blog-nav-item'>
+        <img src='../../../assets/icons/photography.svg' class='nav-item-icon' ui-sref='category'>
+        <h1 for="">Label</h1>
+      </li>  
+      <li class='nav-item blog-nav-item'>
+        <img src='../../../assets/icons/adventure.svg' class='nav-item-icon' ui-sref='category'>
+        <h1 for="">Label</h1>
+      </li>  
+      <li class='nav-item blog-nav-item'>
+        <img src='../../../assets/icons/aerials.svg' class='nav-item-icon' ui-sref='category'>
+        <h1 for="">Label</h1>
+      </li>  
+      <li class='nav-item blog-nav-item'>
+        <img src='../../../assets/icons/gear-talk.svg' class='nav-item-icon' ui-sref='category'>
+        <h1 for="">Label</h1>
+      </li>  
+      <li class='nav-item blog-nav-item'>
+        <img src='../../../assets/icons/corporate.svg' class='nav-item-icon' ui-sref='category'>
+        <h1 for="">Label</h1>
+      </li>  
+    </ul>
+  </div>
+    
+  <img src='../../../assets/icons/menu.svg' class='toggle-dropdown blog-toggle' ng-click='toggleDropdown=!toggleDropdown'>
+
+  <div class='blog-dropdown-nav'>
+    <ul ng-show='toggleDropdown' class='nav-list'>
+      <li class='nav-item'><a ui-sref='home'>Work</a></li>
+      <li class='nav-item'><a ui-sref='about'>About</a></li>
+      <li class='nav-item'><a ui-sref='about'>Equipment</a></li>
+      <li class='nav-item'><a ui-sref='chronicles'>Chronicles</a></li>
+      <li class='nav-item'><a ui-sref='home'>Contact</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<div class='page-content-container' id='blog-page'>
+
 
   <div class='title-banner' scroll>
     <h1 class='page-title title'>Chronicles</h1>
