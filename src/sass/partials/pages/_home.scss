@@ -6,6 +6,7 @@
 }
 section#photo {
   text-align: center;
+  background-color: #FBFAF7;
 
   @include respond-to('small') {
     padding: 15px;
@@ -16,7 +17,8 @@ section#photo {
   }
 
   @include respond-to('large') {
-    padding: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 .photo-item {
@@ -70,9 +72,8 @@ section#photo {
 }
 
 #chronicles-section {
-  margin-top: 200px;
-  margin-bottom: 200px;
   text-align: center;
+  background-color: #FFFFFF;
 
    @include respond-to('small') {
     padding-right: 15px;
@@ -173,7 +174,12 @@ section#photo {
   }
 }
 #footer-section {
-   @include respond-to('small') {
+  background-color: #FBFAF7;
+  background-image: url('./assets/images/bg4.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+
+  @include respond-to('small') {
     padding-right: 15px;
     padding-left: 15px;
   }
@@ -245,7 +251,7 @@ section#photo {
 .footer-notes {
   text-align: center;
   margin-top: 80px;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 
   li {
     display: inline-block;
@@ -259,5 +265,28 @@ section#photo {
     &:last-child {
       border: none;
     }
+  }
+}
+
+.bg2 {
+  background-image: url('../assets/images/bg2.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 100%;
+  height: 219px;
+
+  @include respond-to('medium-small') {
+    display: none;
+  }
+}
+.bg3 {
+  background-image: url('../assets/images/bg3.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 100%;
+  height: 219px;
+
+  @include respond-to('medium-small') {
+    display: none;
   }
 }

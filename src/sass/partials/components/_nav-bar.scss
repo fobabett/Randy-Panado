@@ -12,6 +12,9 @@
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  background-image: url('../assets/images/bg1.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
 
   @include respond-to('small') {
     padding-left: 15px;
@@ -147,7 +150,9 @@
   top: 0;
   width: 100%;
   border-bottom: 1px solid #ADDDDD;
-  background-color: #EAE9E4;
+  background-image: url('../assets/images/bg1.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
   visibility: hidden;
   z-index: 1;
   padding-left: 30px;

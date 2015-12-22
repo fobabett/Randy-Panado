@@ -1,0 +1,9 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.page-content-container#category {
+
+  .page-title {
+    font-size: 26px;
+  }
+}

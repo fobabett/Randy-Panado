@@ -2,8 +2,9 @@
 @import '../utils/variables';
 
 #filter {
+  background-color: #FBFAF7;
   // margin-top: 20px;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   font-family: 'Novecento Sans';
   color: #737272;
   font-size: 14px;
@@ -15,7 +16,7 @@
   @include respond-to('large') {
     text-align: right;
     // margin-left: 50px;
-    // margin-right: 50px;
+    padding-right: 50px;
   }
 
   li {
