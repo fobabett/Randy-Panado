@@ -3,7 +3,7 @@
 module.exports = /*@ngInject*/
   function categoryController($scope, $stateParams) {
 
-    console.log($stateParams.category);
+    $scope.activeTab = 'chronicles';
     $scope.category = $stateParams.category
 
     var mockContent = [
