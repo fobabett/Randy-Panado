@@ -1,0 +1,53 @@
+<div ng-include="'common/partials/_nav.html'"></div>
+
+<div class='page-content-container' id='single-article'>
+
+
+  <div class='title-banner single-article-banner'>
+    <h1>Back to all tools & techniques</h1>
+  </div>
+
+  <div class='content-container'>
+    <div class='rows'>
+      
+      <div class='large-12 columns blog-content-wrapper'>
+
+        <div class='blog-content'>
+          <div class='icon article-icon hide-for-large'></div>
+
+
+          <div class='blog-image-wrapper'>
+            <img ng-src="{{article.image}}" alt="">
+          </div>
+
+          <div class='article-content'>
+            <img src='../../../assets/icons/photography.svg' class='icon category-icon show-for-large'>
+            <h3 class='article-title'>{{article.title}}</h3>
+            <h4 class='article-subtitle'>{{article.category.name}}</h4>
+            <span class='article-date date'>1 week ago | 123 comments</span>
+            <p class='article-text'>
+              {{article.text}}
+            </p>
+            <div class='social-media-icons'>
+              <img src='../../../assets/icons/facebook.svg' class='icon facebook'>
+              <img src='../../../assets/icons/twitter.svg' class='icon twitter'>
+              <img src='../../../assets/icons/instagram.svg' class='icon instagram'>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    <div class='footer large-12 columns show-for-large'>
+      <div class='footer-notes'>
+        <ul>
+          <li>&copy;2015 Panado</li>
+          <li>Designed by GomaGames</li>
+          <li>Built With AirshipCMS</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>

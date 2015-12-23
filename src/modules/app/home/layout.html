@@ -96,36 +96,14 @@
 
       <div class='row blog-content-snippets'>
 
-        <div class='large-4 columns article-snippet-container'>
-          <img class='icon blog-category-icon' src="../../../assets/icons/photography.svg" alt="">
-          <h3 class='title blog-category-title'>Tools & Techniques</h3>
+        <div class='large-4 columns article-snippet-container' ng-repeat='article in articles | limitTo: 3'>
+          <img class='icon blog-category-icon' ng-src="{{article.categoryIcon}}" alt="">
+          <h3 class='title blog-category-title'>{{article.category.name}}</h3>
           <div class='article-snippet-content'>
-            <img src="http://placehold.it/350x150">
-            <h1 class='title article-title snippet'>DJI Inspire 1 Log Color</h1>
+            <img ng-src="{{article.image}}" ng-click='openArticle($index, article.id)'>
+            <h1 class='title article-title snippet'>{{article.title}}</h1>
             <span class='article-date'>5 months ago 123 views</span>
-            <p class='article-snippet-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
-          </div>  
-        </div>
-
-        <div class='large-4 columns article-snippet-container'>
-          <img src='../../../assets/icons/adventure.svg' class='icon blog-category-icon'>
-          <h3 class='title blog-category-title'>Adventure & Travel</h3>
-          <div class='article-snippet-content'>
-            <img src="http://placehold.it/350x150">
-            <h1 class='title article-title snippet'>Trip to San Diego</h1>
-            <span class='article-date'>Oct 21, 2015</span>
-            <p class='article-snippet-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
-          </div>
-        </div>
-
-        <div class='large-4 columns article-snippet-container'>
-          <img src='../../../assets/icons/aerials.svg' class='icon blog-category-icon'>
-          <h3 class='title blog-category-title'>Aerials</h3>
-          <div class='article-snippet-content'>
-            <img src="http://placehold.it/350x150">
-            <h1 class='title article-title snippet'>Crimson Creative</h1>
-            <span class='article-date'>Oct 1, 2013</span>
-            <p class='article-snippet-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quia quae. Eius ex quis aliquid, sunt repudiandae veritatis tempora reprehenderit! Perspiciatis, officiis quo odio iste, architecto optio corporis aspernatur minima.</p>
+            <p class='article-snippet-text'>{{article.text}}</p>
           </div>  
         </div>
 

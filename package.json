@@ -48,6 +48,7 @@
   "dependencies": {
     "angular-simple-slideshow": "0.0.3",
     "angular-youtube-embed": "^1.1.1",
+    "express": "^4.13.3",
     "foundation-sites": "^6.0.5",
     "gulp-sass": "^2.1.0"
   }

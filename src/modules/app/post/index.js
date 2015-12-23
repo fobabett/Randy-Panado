@@ -7,7 +7,7 @@ module.exports =
   .config(function ($stateProvider) {
     $stateProvider
     .state('post',{
-      url: '/post',
+      url: '/post/:id',
       templateUrl: 'app/post/layout.html',
       controller: 'postController'
     });

@@ -8,7 +8,7 @@ module.exports =
   .config(function ($stateProvider) {
     $stateProvider
     .state('category', {
-      url: '/category/:category',
+      url: '/chronicles/:category',
       templateUrl: 'app/category/layout.html',
       controller: 'categoryController'
     });

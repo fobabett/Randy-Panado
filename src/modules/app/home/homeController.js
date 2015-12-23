@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = /*@ngInject*/
-  function homeController($scope, $location, $anchorScroll, $window, angularGridInstance, $state) {
+  function homeController($scope, $location, $anchorScroll, $window, angularGridInstance, $state, blogService) {
 
     $scope.activeTab = $state.current.name;
     $scope.filter = {};
@@ -134,6 +134,14 @@ module.exports = /*@ngInject*/
       // $window.scrollTo(0,165);
     };
 
+    $scope.openArticle = function(index, id) {
+      console.log(index, id);
+      return blogService.getSingleArticle(id)
+        .success(function(res) {
+          $state.go('post', {id: id});
+        });
+    };
+
     $scope.setSelectedPic = function(pic) {
       $scope.selectedPic = pic;
       $scope.types = pic.types;
@@ -194,5 +202,10 @@ module.exports = /*@ngInject*/
     window.onload = function() {
       loadVimeoPlayer();
     };
+
+    return blogService.getBlogArticles()
+      .success(function(res) {
+        $scope.articles = res;
+      });
 
   };
