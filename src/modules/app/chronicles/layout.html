@@ -74,7 +74,7 @@
           <div class='article-content'>
             <img ng-src='{{article.categoryIcon}}' class='icon category-icon show-for-large'>
             <h3 class='article-title'>{{article.title}}</h3>
-            <h4 class='article-subtitle'>{{article.category.name}}</h4>
+            <h4 class='article-subtitle' ng-repeat='category in article.category'>{{category.name}}</h4>
             <span class='article-date date'>1 week ago | 123 comments</span>
             <p class='article-text'>
               {{article.text}}

@@ -14,7 +14,7 @@
   letter-spacing: 2px;
   background-image: url('../assets/images/bg1.png');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 
   @include respond-to('small') {
     padding-left: 15px;
@@ -122,17 +122,25 @@
   }
 }
 .nav-list {
+  background-color: #ffffff;
+  transition: all .6s ease;
 
   @include respond-to('medium-small') {
     display: none;
+    position: absolute;
+    top: 50px;
+    margin-top: 30px;
+    width: 100%;
+    left: 0;
+    // height: 0;
   }
 }
 .nav-list.toggle-nav {
   display: block;
+  transition: all .6s ease;
 }
 .nav-item {
   display: inline-block;
-  margin-right: 20px;
 
   a {
     color: #505050;
@@ -140,10 +148,19 @@
 
   @include respond-to('medium-small') {
     display: block;
+    padding: 20px;
+    border-bottom: 1px solid #AAD9D9;
+  }
+
+  @include respond-to('large') {
+    margin-right: 20px;
   }
 }
 .nav-item.active {
-  border-bottom: 3px solid #AAD9D9;
+
+  @include respond-to('large') {
+    border-bottom: 3px solid #AAD9D9;
+  }
 }
 #blog-nav {
   position: fixed;
