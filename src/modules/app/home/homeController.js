@@ -134,6 +134,17 @@ module.exports = /*@ngInject*/
       // $window.scrollTo(0,165);
     };
 
+    $scope.scrollToEquipment = function() {
+      $location.hash('equipment-section');
+      $anchorScroll();
+    }
+
+    $scope.scrollToContact = function() {
+      console.log('scroll');
+      $location.hash('contact-section');
+      $anchorScroll();
+    }
+
     $scope.openArticle = function(index, id) {
       console.log(index, id);
       return blogService.getSingleArticle(id)
@@ -190,7 +201,7 @@ module.exports = /*@ngInject*/
         vimeoPlayer.api('pause');
       }
       // video.stopVideo();
-    }
+    };
     
     function loadVimeoPlayer() { 
       vimeoPlayer = $f(document.getElementById("vimeo1"));

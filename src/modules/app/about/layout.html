@@ -1,6 +1,22 @@
+<div ng-include="'common/partials/_nav.html'"></div>
+
+<div id='blog-nav' ng-class='{"show-nav":boolChangeClass}'>
+
+  <div class='logo-container blog-logo-container'>
+    <img class='logo' src="../../../assets/icons/logo.svg" alt="">
+    <h1 id='header-title'>Randy Panado</h1>
+  </div>
+    
+  <div class='nav-section blog-nav-section'>
+    <ul class='nav-list blog-nav-list'>
+      <li class='page-nav-item' ng-click='scrollToAbout()' ng-class='{active: activeSection == "about"}'>About</li>
+      <li class='page-nav-item' ng-click='scrollToCredits()' ng-class='{active: activeSection == "credits"}'>Credits</li>
+      <li class='page-nav-item' ng-click='scrollToEquipment()' ng-class='{active: activeSection == "equipment"}'>Equipment</li>
+    </ul>
+  </div>
+</div>  
+
 <div id='about-page'>
-  
-  <div ng-include="'common/partials/_nav.html'"></div>
 
   <div class='title-banner'>
     <h1 class='page-title title'>About Randy Panado</h1>
@@ -9,9 +25,9 @@
 
   <div id='page-nav'>
     <ul class='page-nav-list'>
-      <li class='page-nav-item'>About</li>
-      <li class='page-nav-item'>Credits</li>
-      <li class='page-nav-item'>Equipment</li>
+      <li class='page-nav-item' ng-class='{active: activeSection == "about"}' ng-click='scrollToAbout()'>About</li>
+      <li class='page-nav-item' ng-class='{active: activeSection == "credits"}' ng-click='scrollToCredits()'>Credits</li>
+      <li class='page-nav-item' ng-class='{active: activeSection == "equipment"}' ng-click='scrollToEquipment()'>Equipment</li>
     </ul>
   </div>
 
@@ -26,7 +42,7 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil nostrum iure quod, sed sit suscipit animi illo incidunt, molestiae, sequi iste cumque in inventore ab repellat aut, blanditiis velit architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus voluptate quas neque nulla placeat optio iusto numquam laborum illo aliquam rem obcaecati, quos, assumenda reprehenderit minus quam eos alias sed.
       </p>
 
-      <div class='rows about-photos clearfix'>
+      <div class='rows about-photos clearfix' scroll>
         <div class='large-6 columns photo-container'>
           <img src="http://placehold.it/300" alt="">
         </div>
