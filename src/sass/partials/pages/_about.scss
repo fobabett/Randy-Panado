@@ -1,15 +1,54 @@
 @import '../utils/mixins';
 @import '../utils/variables';
 
+#about-page .title-banner {
+
+  @include respond-to('medium-small') {
+    margin-top: 80px;
+  }
+
+  .title {
+
+    @include respond-to('medium-small') {
+      font-size: 26px;
+    }
+  }
+
+  .subtitle {
+
+    @include respond-to('medium-small') {
+      font-size: 12px;
+    }
+  }
+}
+#about-page {
+
+  .title.section-title {
+
+    @include respond-to('medium-small') {
+      color: #89B8B9;
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}
 #page-nav {
   text-align: center;
   padding: 30px;
   border-bottom: 1px solid #BDE0E0;
+  border-top: 1px solid #BDE0E0;
   font-family: 'Novecento Sans';
   text-transform: uppercase;
   color: #6E6E6E;
   font-size: 14px;
   background-color: #FBFAF6;
+}
+.page-nav-list {
+
+  .page-nav-item {
+    display: inline-block;
+    margin-right: 15px;
+  }
 }
 #about {
   margin: 0 auto;
@@ -21,6 +60,19 @@
   p {
     margin-top: 30px;
     margin-bottom: 30px;
+    font-family: 'proxima-nova';
+
+    @include respond-to('small') {
+      color: #838382;
+    }
+  }
+  
+  @include respond-to('small') {
+    padding: 15px;
+  }
+
+  @include respond-to('medium') {
+    padding: 30px;
   }
 
   @include respond-to('large') {
@@ -33,39 +85,70 @@
   position: relative;
   width: 100%; 
   overflow: hidden;
-
-  .right {
-    border-right: 1px solid #D7D7D6;
-  }
+}
+.photo-container {
+  width: 45%;
+  box-sizing: border-box;
 }
 
 #credits-section,
 #equipment-section {
   border-bottom: 1px solid #BDE0E0;
-  text-align: center;
   font-family: 'Novecento Sans';
   // max-width: 700px;
-  padding-left: 150px;
-  padding-right: 150px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  text-align: center;
   margin: 0 auto;
   width: 100%; 
   position: relative;
   overflow: hidden;
 
+  @include respond-to('small') {
+    padding: 15px;
+  }
+
+  @include respond-to('large') {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   div:first-child {
-    border-right: 1px solid #D7D7D6;
+
+    @include respond-to('large') {
+      border-right: 1px solid #D7D7D6;
+    }
   }
 
   h3 {
     text-transform: uppercase;
-    font-size: 20px;
     color: #616160;
+    margin-bottom: 5px;
+
+    @include respond-to('medium-small') {
+      font-size: 14px;
+    }
+
+    @include respond-to('large') {
+      font-size: 20px;
+    }
   }
 
   p {
     color: #A5A5A4;
+    margin-bottom: 20px;
+
+    @include respond-to('medium-small') {
+      font-size: 14px;
+    }
+  }
+}
+#credits,
+#equipment {
+  margin-top: 50px;
+
+  @include respond-to('medium-small') {
+    text-align: left;
   }
 }
 #credits-section {

@@ -1,4 +1,4 @@
-<div>
+<div id='about-page'>
   
   <div ng-include="'common/partials/_nav.html'"></div>
 
@@ -8,16 +8,17 @@
   </div>
 
   <div id='page-nav'>
-    <ul class='nav-list'>
-      <li class='nav-item'>About</li>
-      <li class='nav-item'>Credits</li>
-      <li class='nav-item'>Equipment</li>
+    <ul class='page-nav-list'>
+      <li class='page-nav-item'>About</li>
+      <li class='page-nav-item'>Credits</li>
+      <li class='page-nav-item'>Equipment</li>
     </ul>
   </div>
 
   <div class='content-container'>
 
     <section id='about'>
+      <h3 class='title section-title hide-for-large'>about</h3>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur eveniet totam quis, voluptatum id dignissimos, quisquam illum temporibus ipsa unde ab quae provident nobis aliquam dicta mollitia a praesentium, sunt.
       </p>
@@ -25,11 +26,11 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil nostrum iure quod, sed sit suscipit animi illo incidunt, molestiae, sequi iste cumque in inventore ab repellat aut, blanditiis velit architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus voluptate quas neque nulla placeat optio iusto numquam laborum illo aliquam rem obcaecati, quos, assumenda reprehenderit minus quam eos alias sed.
       </p>
 
-      <div class='rows about-photos'>
-        <div class='large-6 columns right'>
+      <div class='rows about-photos clearfix'>
+        <div class='large-6 columns photo-container'>
           <img src="http://placehold.it/300" alt="">
         </div>
-        <div class='large-6 columns left'>
+        <div class='large-6 columns photo-container'>
           <img src="http://placehold.it/300" alt="">
         </div>
       </div>
@@ -41,12 +42,12 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe corporis quod harum est deserunt, voluptate labore velit praesentium accusamus consequuntur assumenda quam, atque sunt explicabo quas voluptas id adipisci nemo? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis facere iste, aliquam, excepturi vero commodi sequi pariatur ab maiores magnam dignissimos eligendi odit necessitatibus! Reprehenderit distinctio temporibus, et in provident!
       </p>
 
-      <img src="http://placehold.it/700x300" alt="">
+      <img src="http://placehold.it/700x300" alt="" class='show-for-large'>
     </section>
 
     <section id='credits-section'>
       <h3 class='section-title title'>Credits</h3>
-      <div class='rows'>
+      <div class='rows' id='credits'>
         <div class='large-6 columns'>
           <h3>Lorem Ipsum Dolor</h3>
           <p>Consectrtur adipiscing</p>
@@ -75,8 +76,8 @@
     </section>
 
     <section id='equipment-section'>
-      <h3 class='section-title'>Equipment</h3>
-      <div class='rows'>
+      <h3 class='section-title title'>Equipment</h3>
+      <div class='rows' id='equipment'>
         <div class='large-6 columns'>
           <h3>Lorem Ipsum Dolor</h3>
           <p>Consectrtur adipiscing</p>

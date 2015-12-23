@@ -20,15 +20,21 @@
     font-family: 'Novecento Sans';
   }
 }
+#blog-page .content-container {
+  
+  @include respond-to('medium-small') {
+    padding-top: 20px;
+  }
+}
 .icon.article-icon {
   width: 30px;
   height: 30px;
-  background-color: #ABD9D9;
   position: absolute;
   top: -15px;
   right: 0;
   left: 0;
   margin: auto;
+  z-index: 1;
 }
 .page-title {
   font-family: 'Caviar Dreams';
@@ -151,6 +157,7 @@
 
   @include respond-to('medium-small') {
     text-align: center;
+    margin-top: 30px;
   }
 }
 

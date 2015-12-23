@@ -1,0 +1,6 @@
+#single-article .content-container {
+  
+  @include respond-to('medium-small') {
+    padding-top: 20px;
+  }
+}
