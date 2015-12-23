@@ -41,6 +41,12 @@
     margin-right: 20px;
   }
 }
+.slide-container {
+
+  @include respond-to('large') {
+    width: 70%;
+  }
+}
 #slide {
   width: 100%;
 
@@ -78,7 +84,7 @@ img.active {
 .selected-photo-description-container {
 
   @include respond-to('large') {
-    padding-left: 50px;
+    padding: 50px;
   }
 }
 .selected-photo-title {
@@ -146,44 +152,26 @@ img.active {
   }
 }
 .animate-slide {
+  opacity: 1;
 
   @include respond-to('large') {
     // height: 95vh;
-    height: 600px;
-    // display: inline-block;
-    // width: 100%;
-    opacity: 1;
+    max-height: 600px;
+    display: inline-block;
+    overflow-y: hidden;
   }
 }
 .animate-slide.ng-hide-add.ng-hide-add-active,
 .animate-slide.ng-hide-remove.ng-hide-remove-active {
-  
-  @include respond-to('large') {
-    -moz-transition: 0.2s ease-in-out;
-    transition: 0.2s ease-in-out;
-    -webkit-transition: 0.2s ease-in-out;
-    -webkit-transition-delay: 0.5s;
-    -moz-transition-delay: 0.5s;
-    -o-transition-delay: 0.5s;
-    transition-delay: 0.5s;
-  }
+  -moz-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  // -webkit-transition-delay: 0.5s;
+  // -moz-transition-delay: 0.5s;
+  // -o-transition-delay: 0.5s;
+  // transition-delay: 0.5s;
 }
 .animate-slide.ng-hide {
-
-  @include respond-to('large') {
-    height: 0;
-    opacity: 0;
-  }
-}
-
-
-// remove 
-.click-over {
-  // background-color: red;
-  width: 300px;
-  height: 200px;
-  z-index: 1;
-  z-index: 1;
-    position: absolute;
-    top: 0;
+  max-height: 0;
+  opacity: 0;
 }

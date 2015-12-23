@@ -2,7 +2,20 @@
 @import '../utils/variables';
 
 #home-page {
-  font-family: 'Novecento Sans'
+  font-family: 'Novecento Sans';
+
+  .content-container {
+    @include respond-to('medium-small') {
+      padding-top: 30px;
+    }
+  }
+
+  // .content-container.ng-hide {
+
+  //   @include respond-to('large') {
+  //     display: block !important;
+  //   }
+  // }
 }
 section#photo {
   text-align: center;
@@ -204,11 +217,21 @@ section#photo {
   }
 }
 #contact-section {
-  border-left: 2px solid #D7D7D6;
   text-align: center;
 
   @include respond-to('medium-small') {
     width: 100%;
+  }
+
+  @include respond-to('large') {
+    border-left: 2px solid #D7D7D6;
+  }
+
+  &.ng-hide {
+    
+    @include respond-to('large') {
+      // display: block !important;
+    }
   }
 
   input,
@@ -247,11 +270,14 @@ section#photo {
     padding: 50px;
   }
 }
-
 .footer-notes {
   text-align: center;
   margin-top: 80px;
   padding-bottom: 50px;
+
+  @include respond-to('medium-small') {
+    display: none;
+  }
 
   li {
     display: inline-block;

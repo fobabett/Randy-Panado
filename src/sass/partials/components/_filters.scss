@@ -9,8 +9,16 @@
   color: #737272;
   font-size: 14px;
 
+  @include respond-to('small') {
+    padding-top: 15px;
+  }
+
   @include respond-to('medium-small') {
     text-align: center;
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    z-index: 1;
   }
 
   @include respond-to('large') {
@@ -27,6 +35,14 @@
   cursor: pointer;
   text-transform: uppercase;
   font-size: 14px;
+  padding: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 5px;
+
+  @include respond-to('small') {
+    padding: 0;
+  }
 
   @include respond-to('medium-small') {
     margin-left: 10px;
@@ -41,7 +57,6 @@
 .filter-type.selected-tag {
 
   @include respond-to('medium-small') {
-    padding: 0;
     background-color: transparent;
     border-bottom: 3px solid #ABD9D9;
   }

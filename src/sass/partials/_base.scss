@@ -3,6 +3,7 @@
 
 .page-content-container {
   margin: 0 auto;
+  cursor: default;
 
   @include respond-to('medium-small') {
     margin-top: 80px;
