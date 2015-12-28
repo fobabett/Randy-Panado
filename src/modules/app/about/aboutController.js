@@ -1,9 +1,12 @@
 'use strict';
 
 module.exports = /*@ngInject*/
-  function aboutController($scope, $state, $location, $anchorScroll) {
+  function aboutController($scope, $state, $location, $anchorScroll, $rootScope) {
     $scope.activeTab = $state.current.name;
     $scope.activeSection = 'about';
+
+    $rootScope.previousState;
+    $rootScope.currentState;
 
     $scope.scrollToAbout = function() {
       $scope.activeSection = 'about';

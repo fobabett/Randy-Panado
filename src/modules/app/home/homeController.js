@@ -134,13 +134,7 @@ module.exports = /*@ngInject*/
       // $window.scrollTo(0,165);
     };
 
-    $scope.scrollToEquipment = function() {
-      $location.hash('equipment-section');
-      $anchorScroll();
-    }
-
     $scope.scrollToContact = function() {
-      console.log('scroll');
       $location.hash('contact-section');
       $anchorScroll();
     }
