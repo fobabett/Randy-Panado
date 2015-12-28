@@ -9,9 +9,9 @@
     
   <div class='nav-section blog-nav-section'>
     <ul class='nav-list blog-nav-list'>
-      <li class='page-nav-item' ng-click='scrollToAbout()' ng-class='{active: activeSection == "about"}'>About</li>
-      <li class='page-nav-item' ng-click='scrollToCredits()' ng-class='{active: activeSection == "credits"}'>Credits</li>
-      <li class='page-nav-item' ng-click='scrollToEquipment()' ng-class='{active: activeSection == "equipment"}'>Equipment</li>
+      <li class='page-nav-item' ng-click='scrollToAbout()' du-scrollspy='about'>About</li>
+      <li class='page-nav-item' ng-click='scrollToCredits()' du-scrollspy='credits-section'>Credits</li>
+      <li class='page-nav-item' ng-click='scrollToEquipment()' du-scrollspy='equipment-section'>Equipment</li>
     </ul>
   </div>
 </div>  

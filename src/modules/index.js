@@ -9,5 +9,6 @@ require('angular');
   require('angular-youtube-embed');
   require('ng-videosharing-embed');
   require('froogaloop');
+  require('angular-scroll');
 //app entry point
 require('./app');

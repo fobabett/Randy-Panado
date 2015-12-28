@@ -42,7 +42,8 @@
     "angular-ui-router": "./bower_components/angular-ui-router/release/angular-ui-router.min.js",
     "angular-youtube-embed": "./node_modules/angular-youtube-embed/dist/angular-youtube-embed.min.js",
     "ng-videosharing-embed": "./bower_components/ng-videosharing-embed/build/ng-videosharing-embed.min.js",
-    "froogaloop": "./bower_components/froogaloop/froogaloop.min.js"
+    "froogaloop": "./bower_components/froogaloop/froogaloop.min.js",
+    "angular-scroll": "./bower_components/angular-scroll/angular-scroll.min.js"
   },
   "browserify-shim": {},
   "dependencies": {
