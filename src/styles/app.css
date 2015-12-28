@@ -4166,7 +4166,8 @@ img.active {
   font-family: 'proxima-nova';
   position: relative;
   overflow: hidden;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  background-color: red; }
   #about p {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -4213,8 +4214,8 @@ img.active {
     #equipment-section {
       padding-left: 150px;
       padding-right: 150px;
-      padding-top: 50px;
-      padding-bottom: 50px; } }
+      padding-top: 80px;
+      padding-bottom: 80px; } }
   @media (min-width: 1024px) {
     #credits-section div:first-child,
     #equipment-section div:first-child {
