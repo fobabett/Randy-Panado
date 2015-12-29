@@ -10,6 +10,7 @@
     "ng-videosharing-embed": "~0.3.4",
     "froogaloop": "~1.0.0",
     "angular-youtube-embed": "~1.0.2",
-    "angular-scroll": "~1.0.0"
+    "angular-scroll": "~1.0.0",
+    "foundation-sites": "~6.0.5"
   }
 }
