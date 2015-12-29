@@ -114,6 +114,12 @@
     padding-bottom: 80px;
   }
 
+  .title.section-title {
+    font-family: 'Caviar Dreams Bold';
+    font-size: 26px;
+    color: #4F5054;
+  }
+
   div:first-child {
 
     @include respond-to('large') {
@@ -125,6 +131,8 @@
     text-transform: uppercase;
     color: #616160;
     margin-bottom: 5px;
+    font-family: 'Novecento Sans DemiBold';
+    letter-spacing: 2px;
 
     @include respond-to('medium-small') {
       font-size: 14px;

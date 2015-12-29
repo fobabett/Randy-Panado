@@ -99,15 +99,16 @@ section#photo {
 }
 .section-title {
   font-family: 'Caviar Dreams Bold';
+  margin-bottom: 10px;
 
   @include respond-to('large') {
-    font-size: 32px;
     color: #4E4E4E;
   }
 }
 .section-subtitle {
   color: #A0C6C6;
-  font-size: 12px;
+  font-size: 14px;
+  letter-spacing: 2px;
 }
 .blog-content-snippets {
   margin-top: 50px;
@@ -131,7 +132,7 @@ section#photo {
 }
 .article-snippet-content {
   text-align: left;
-  font-family: 'Novecento Sans';
+  font-family: 'Novecento Sans DemiBold';
   color: #717171;
   padding-bottom: 50px;
   max-width: 350px;
@@ -144,7 +145,7 @@ section#photo {
   }
 
   .article-title {
-    font-family: 'Caviar Dreams Bold';
+    font-family: 'proxima-nova';
   }
 
   .article-date {
@@ -181,8 +182,13 @@ section#photo {
     margin-bottom: 30px;
   }
 
+  p {
+    font-family: 'proxima-nova';
+  }
+
   a {
     color: #92A7A3;
+    font-family: 'Novecento Sans DemiBold';
   }
 
   @include respond-to('medium-small') {
@@ -209,6 +215,11 @@ section#photo {
     padding-right: 50px;
     padding-left: 50px;
   }
+
+  .title.section-title {
+    font-size: 24px;
+    font-family: 'Novecento Sans';
+  }
 }
 #about-section-snippet {
   text-align: left;
@@ -221,6 +232,8 @@ section#photo {
 }
 #contact-section {
   text-align: center;
+  font-family: 'proxima-nova';
+  text-transform: uppercase;
 
   @include respond-to('medium-small') {
     width: 100%;
@@ -260,7 +273,8 @@ section#photo {
 #contact-form {
   margin: 0 auto;
   margin-top: 30px;
-  
+  font-weight: 700;
+
   @include respond-to('small') {
     padding: 15px;
   }

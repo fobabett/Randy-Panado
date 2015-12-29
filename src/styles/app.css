@@ -3647,8 +3647,8 @@ img.active {
   text-transform: uppercase;
   font-size: 14px;
   padding: 2px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   margin-right: 5px; }
   @media (max-width: 639px) {
     .filter-type {
@@ -3779,6 +3779,10 @@ img.active {
   src: url("../../assets/fonts/novecento_sans/2FE2AA_2_0.woff"); }
 
 @font-face {
+  font-family: 'Novecento Sans Wide';
+  src: url("../../assets/fonts/novecento_sans/2FE2AA_2_0.woff"); }
+
+@font-face {
   font-family: 'Caviar Dreams';
   src: url("../../assets/fonts/caviarDreams/caviarDreams.WOFF"); }
 
@@ -3796,10 +3800,10 @@ img.active {
 
 .title {
   font-family: 'Caviar Dreams Bold';
-  letter-spacing: 2px; }
+  letter-spacing: 3px; }
 
 .subtitle {
-  font-family: 'Novecento Sans'; }
+  font-family: 'Novecento Sans DemiBold'; }
 
 .title.blog-category-title {
   font-family: 'Novecento Sans';
@@ -3818,7 +3822,7 @@ img.active {
 
 .title.section-title {
   font-family: 'Novecento Sans';
-  font-size: 26px; }
+  font-size: 30px; }
 
 #about-section-snippet {
   font-family: 'proxima-nova';
@@ -3859,17 +3863,22 @@ img.active {
       margin: 0 auto; } }
   @media (min-width: 1024px) {
     .header {
-      padding-right: 50px;
-      padding-left: 50px;
-      padding: 50px; } }
+      height: 150px; } }
 
 .logo-container {
-  display: inline-block; }
-  @media (max-width: 1023px) {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%); }
+  @media (max-width: 639px) {
     .logo-container {
-      transform: translateY(50%);
-      -webkit-transform: translateY(50%);
-      -moz-transform: translateY(50%); } }
+      margin-left: 15px; } }
+  @media (min-width: 640px) and (max-width: 1023px) {
+    .logo-container {
+      margin-left: 30px; } }
   @media (min-width: 1024px) {
     .logo-container {
       -moz-animation-name: logoSlideIn;
@@ -3883,7 +3892,9 @@ img.active {
       animation-name: logoSlideIn;
       animation-iteration-count: 1;
       animation-timing-function: ease-in;
-      animation-duration: 0.5s; } }
+      animation-duration: 0.5s;
+      margin-left: 50px;
+      vertical-align: middle; } }
   .logo-container h2 {
     color: #B3B3B2;
     font-family: 'Novecento Sans DemiBold'; }
@@ -3916,12 +3927,27 @@ img.active {
       height: 40px; } }
 
 .nav-section {
-  font-family: 'Novecento Sans';
-  float: right; }
+  font-family: 'Novecento Sans Wide'; }
+  @media (max-width: 639px) {
+    .nav-section {
+      margin-right: 15px; } }
+  @media (min-width: 640px) and (max-width: 1023px) {
+    .nav-section {
+      margin-right: 30px; } }
   @media (min-width: 1024px) {
     .nav-section {
       padding-top: 30px;
-      padding-bottom: 30px; } }
+      padding-bottom: 30px;
+      margin-right: 30px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateY(50%);
+      -webkit-transform: translateY(50%);
+      -moz-transform: translateY(50%); } }
+
+.nav-section.blog-nav-section.about-nav-section {
+  padding: 15px; }
 
 .nav-list {
   transition: 0.2s ease-in-out; }
@@ -3967,7 +3993,8 @@ img.active {
   background-repeat: no-repeat;
   background-size: cover;
   visibility: hidden;
-  z-index: 1; }
+  z-index: 1;
+  text-align: center; }
   @media (max-width: 1023px) {
     #blog-nav {
       top: 80px;
@@ -3985,27 +4012,40 @@ img.active {
       top: 0; } }
 
 #blog-nav.show-nav {
-  visibility: visible; }
+  visibility: visible;
+  height: 80px;
+  text-transform: uppercase; }
 
 @media (max-width: 1023px) {
   .logo-container.blog-logo-container {
     display: none !important; } }
 
+@media (min-width: 1024px) {
+  .logo-container.blog-logo-container {
+    margin: 15px;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0); } }
+
+.logo-container.blog-logo-container .logo {
+  width: 60px;
+  height: 60px; }
+
 .logo-container.blog-logo-container,
 .nav-section.blog-nav-section {
-  float: none;
   display: inline-block;
   vertical-align: middle; }
 
 .nav-section.blog-nav-section {
   margin: 0 auto;
   padding: 0;
-  height: 100%; }
+  height: 100%;
+  position: relative; }
   @media (min-width: 1024px) {
     .nav-section.blog-nav-section {
-      transform: translateX(50%);
-      -webkit-transform: translateX(50%);
-      -moz-transform: translateX(50%); } }
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0); } }
 
 .nav-list.blog-nav-list {
   display: block;
@@ -4023,7 +4063,8 @@ img.active {
   margin: 0;
   padding: 0;
   border: 0;
-  display: inline-block; }
+  display: inline-block;
+  margin-left: 15px; }
   @media (max-width: 1023px) {
     .nav-item.blog-nav-item {
       width: 40px;
@@ -4058,6 +4099,12 @@ img.active {
   -webkit-transition: 0.2s ease-in-out; }
 
 @media (max-width: 1023px) {
+  #blog-nav.about-nav {
+    top: 0;
+    z-index: 2;
+    background-image: none; } }
+
+@media (max-width: 1023px) {
   .toggle-dropdown.blog-toggle {
     display: none; } }
 
@@ -4075,10 +4122,13 @@ img.active {
       -moz-transform: translateY(50%); } }
   @media (min-width: 640px) and (max-width: 1023px) {
     .toggle-dropdown {
-      margin: 30px; } }
+      margin: 20px;
+      transform: translateY(50%);
+      -webkit-transform: translateY(50%);
+      -moz-transform: translateY(50%); } }
   @media (min-width: 1024px) {
     .toggle-dropdown {
-      margin: 50px; } }
+      margin: 30px; } }
 
 .blog-dropdown-nav {
   display: inline-block; }
@@ -4223,6 +4273,11 @@ img.active {
       padding-right: 150px;
       padding-top: 80px;
       padding-bottom: 80px; } }
+  #credits-section .title.section-title,
+  #equipment-section .title.section-title {
+    font-family: 'Caviar Dreams Bold';
+    font-size: 26px;
+    color: #4F5054; }
   @media (min-width: 1024px) {
     #credits-section div:first-child,
     #equipment-section div:first-child {
@@ -4231,7 +4286,9 @@ img.active {
   #equipment-section h3 {
     text-transform: uppercase;
     color: #616160;
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    font-family: 'Novecento Sans DemiBold';
+    letter-spacing: 2px; }
     @media (max-width: 1023px) {
       #credits-section h3,
       #equipment-section h3 {
@@ -4273,7 +4330,8 @@ img.active {
       padding: 100px; } }
   .title-banner .subtitle {
     color: #92BDBD;
-    font-family: 'Novecento Sans'; }
+    font-family: 'Novecento Sans DemiBold';
+    letter-spacing: 3px; }
 
 @media (max-width: 1023px) {
   #blog-page .content-container {
@@ -4289,13 +4347,14 @@ img.active {
   margin: auto;
   z-index: 1; }
 
-.page-title {
-  font-family: 'Caviar Dreams'; }
+.title.page-title {
+  font-family: 'Caviar Dreams';
+  margin-bottom: 10px; }
   @media (max-width: 1023px) {
-    .page-title {
+    .title.page-title {
       font-size: 30px; } }
   @media (min-width: 1024px) {
-    .page-title {
+    .title.page-title {
       font-size: 50px; } }
 
 .content-container {
@@ -4336,7 +4395,9 @@ img.active {
   margin: 0 auto; }
 
 .article-title {
-  color: #515151; }
+  color: #515151;
+  font-family: 'proxima-nova';
+  font-weight: 300; }
   @media (min-width: 640px) and (max-width: 1023px) {
     .article-title {
       margin: 30px; } }
@@ -4363,30 +4424,32 @@ img.active {
     right: 50px;
     top: 40px; } }
 
-@media (max-width: 1023px) {
-  .date {
-    color: #A0C6C7;
-    font-size: 12px; } }
+.date {
+  font-family: 'proxima-nova'; }
+  @media (max-width: 1023px) {
+    .date {
+      color: #A0C6C7;
+      font-size: 12px; } }
+  @media (min-width: 1024px) {
+    .date {
+      font-size: 12px;
+      color: #989796; } }
 
-@media (min-width: 1024px) {
-  .date {
-    font-size: 12px;
-    color: #989796; } }
-
-@media (max-width: 1023px) {
-  .article-text {
-    color: #858585;
-    margin-top: 15px;
-    font-size: 14px;
-    line-height: 15px; } }
-
-@media (min-width: 1024px) {
-  .article-text {
-    margin-top: 20px;
-    line-height: 20px;
-    font-size: 14px;
-    margin-bottom: 20px;
-    color: #B0B0AF; } }
+.article-text {
+  font-family: 'proxima-nova'; }
+  @media (max-width: 1023px) {
+    .article-text {
+      color: #858585;
+      margin-top: 15px;
+      font-size: 14px;
+      line-height: 15px; } }
+  @media (min-width: 1024px) {
+    .article-text {
+      margin-top: 20px;
+      line-height: 20px;
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: #B0B0AF; } }
 
 @media (max-width: 1023px) {
   .social-media-icons {
@@ -4502,15 +4565,16 @@ section#photo {
       padding-left: 50px; } }
 
 .section-title {
-  font-family: 'Caviar Dreams Bold'; }
+  font-family: 'Caviar Dreams Bold';
+  margin-bottom: 10px; }
   @media (min-width: 1024px) {
     .section-title {
-      font-size: 32px;
       color: #4E4E4E; } }
 
 .section-subtitle {
   color: #A0C6C6;
-  font-size: 12px; }
+  font-size: 14px;
+  letter-spacing: 2px; }
 
 .blog-content-snippets {
   margin-top: 50px; }
@@ -4531,7 +4595,7 @@ section#photo {
 
 .article-snippet-content {
   text-align: left;
-  font-family: 'Novecento Sans';
+  font-family: 'Novecento Sans DemiBold';
   color: #717171;
   padding-bottom: 50px;
   max-width: 350px;
@@ -4541,7 +4605,7 @@ section#photo {
   .article-snippet-content p {
     margin-top: 15px; }
   .article-snippet-content .article-title {
-    font-family: 'Caviar Dreams Bold'; }
+    font-family: 'proxima-nova'; }
   .article-snippet-content .article-date {
     font-size: 14px; }
   .article-snippet-content p {
@@ -4564,8 +4628,11 @@ section#photo {
   #about-section-content img {
     margin-top: 30px;
     margin-bottom: 30px; }
+  #about-section-content p {
+    font-family: 'proxima-nova'; }
   #about-section-content a {
-    color: #92A7A3; }
+    color: #92A7A3;
+    font-family: 'Novecento Sans DemiBold'; }
   @media (max-width: 1023px) {
     #about-section-content {
       display: none; } }
@@ -4587,6 +4654,9 @@ section#photo {
     #footer-section {
       padding-right: 50px;
       padding-left: 50px; } }
+  #footer-section .title.section-title {
+    font-size: 24px;
+    font-family: 'Novecento Sans'; }
 
 #about-section-snippet {
   text-align: left;
@@ -4596,7 +4666,9 @@ section#photo {
     color: #878685; }
 
 #contact-section {
-  text-align: center; }
+  text-align: center;
+  font-family: 'proxima-nova';
+  text-transform: uppercase; }
   @media (max-width: 1023px) {
     #contact-section {
       width: 100%; } }
@@ -4622,7 +4694,8 @@ section#photo {
 
 #contact-form {
   margin: 0 auto;
-  margin-top: 30px; }
+  margin-top: 30px;
+  font-weight: 700; }
   @media (max-width: 639px) {
     #contact-form {
       padding: 15px; } }
@@ -4678,6 +4751,13 @@ section#photo {
 @media (max-width: 1023px) {
   #single-article .content-container {
     padding-top: 20px; } }
+
+.title-banner.single-article-banner {
+  padding: 40px;
+  font-family: 'Novecento Sans DemiBold';
+  text-transform: uppercase;
+  color: #ACDADA;
+  letter-spacing: 3px; }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -4768,6 +4848,10 @@ table {
   src: url("../../assets/fonts/novecento_sans/2FE2AA_2_0.woff"); }
 
 @font-face {
+  font-family: 'Novecento Sans Wide';
+  src: url("../../assets/fonts/novecento_sans/2FE2AA_2_0.woff"); }
+
+@font-face {
   font-family: 'Caviar Dreams';
   src: url("../../assets/fonts/caviarDreams/caviarDreams.WOFF"); }
 
@@ -4785,10 +4869,10 @@ table {
 
 .title {
   font-family: 'Caviar Dreams Bold';
-  letter-spacing: 2px; }
+  letter-spacing: 3px; }
 
 .subtitle {
-  font-family: 'Novecento Sans'; }
+  font-family: 'Novecento Sans DemiBold'; }
 
 .title.blog-category-title {
   font-family: 'Novecento Sans';
@@ -4807,7 +4891,7 @@ table {
 
 .title.section-title {
   font-family: 'Novecento Sans';
-  font-size: 26px; }
+  font-size: 30px; }
 
 #about-section-snippet {
   font-family: 'proxima-nova';

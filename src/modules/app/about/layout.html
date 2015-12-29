@@ -1,13 +1,15 @@
 <div ng-include="'common/partials/_nav.html'"></div>
 
-<div id='blog-nav' ng-class='{"show-nav":boolChangeClass}'>
+<div id='blog-nav' class='about-nav' ng-class='{"show-nav":boolChangeClass}'>
 
   <div class='logo-container blog-logo-container'>
     <img class='logo' src="../../../assets/icons/logo.svg" alt="">
     <h1 id='header-title'>Randy Panado</h1>
   </div>
+
+  <img src='../../../assets/icons/menu.svg' class='toggle-dropdown show-for-large' ng-click='toggleNav=!toggleNav'>
     
-  <div class='nav-section blog-nav-section'>
+  <div class='nav-section blog-nav-section about-nav-section'>
     <ul class='nav-list blog-nav-list'>
       <li class='page-nav-item' ng-click='scrollToAbout()' du-scrollspy='about'>About</li>
       <li class='page-nav-item' ng-click='scrollToCredits()' du-scrollspy='credits-section'>Credits</li>

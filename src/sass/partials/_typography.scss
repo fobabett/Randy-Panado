@@ -18,8 +18,12 @@
   font-family: 'Novecento Sans DemiBold';
   src: url('../../assets/fonts/novecento_sans/2FE2AA_2_0.woff');
 }
+@font-face {
+  font-family: 'Novecento Sans Wide';
+  src: url('../../assets/fonts/novecento_sans/2FE2AA_2_0.woff');
+}
 // @font-face {
-//   font-family: 'Novecento Sans Light';
+//   font-family: 'Novecento Test';
 //   src: url('../../assets/fonts/novecento_sans/2FE2AA_5_0.woff');
 // }
 
@@ -42,10 +46,10 @@
 
 .title {
   font-family: 'Caviar Dreams Bold';
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 .subtitle {
-  font-family: 'Novecento Sans';
+  font-family: 'Novecento Sans DemiBold';
 }
 .title.blog-category-title {
   font-family: 'Novecento Sans';
@@ -64,7 +68,7 @@
 }
 .title.section-title {
   font-family: 'Novecento Sans';
-  font-size: 26px;
+  font-size: 30px;
 }
 #about-section-snippet {
   font-family: 'proxima-nova';

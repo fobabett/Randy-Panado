@@ -17,7 +17,8 @@
 
   .subtitle {
     color: #92BDBD;
-    font-family: 'Novecento Sans';
+    font-family: 'Novecento Sans DemiBold';
+    letter-spacing: 3px;
   }
 }
 #blog-page .content-container {
@@ -36,8 +37,9 @@
   margin: auto;
   z-index: 1;
 }
-.page-title {
+.title.page-title {
   font-family: 'Caviar Dreams';
+  margin-bottom: 10px;
 
   @include respond-to('medium-small') {
     font-size: 30px;
@@ -92,6 +94,8 @@
 }
 .article-title {
   color: #515151;
+  font-family: 'proxima-nova';
+  font-weight: 300;
 
   @include respond-to('medium') {
     margin: 30px;
@@ -125,6 +129,7 @@
   }
 }
 .date {
+  font-family: 'proxima-nova';
 
   @include respond-to('medium-small') {
     color: #A0C6C7;
@@ -137,6 +142,7 @@
   }
 }
 .article-text {
+  font-family: 'proxima-nova';
 
   @include respond-to('medium-small') {
     color: #858585;
