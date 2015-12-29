@@ -3621,6 +3621,9 @@ img.active {
   @media (max-width: 639px) {
     #filter {
       padding-top: 15px; } }
+  @media (min-width: 640px) and (max-width: 1023px) {
+    #filter {
+      padding-top: 30px; } }
   @media (max-width: 1023px) {
     #filter {
       text-align: center;
@@ -3634,6 +3637,10 @@ img.active {
       padding-right: 50px; } }
   #filter li {
     display: inline-block; }
+
+@media (min-width: 1024px) {
+  #filter.ng-hide {
+    display: block !important; } }
 
 .filter-type {
   cursor: pointer;
@@ -3921,6 +3928,7 @@ img.active {
   @media (max-width: 1023px) {
     .nav-list {
       opacity: 0;
+      display: none;
       position: absolute;
       top: 50px;
       margin-top: 30px;
@@ -3931,7 +3939,8 @@ img.active {
 
 .nav-list.toggle-nav {
   max-height: 265px;
-  opacity: 1; }
+  opacity: 1;
+  display: block; }
 
 .nav-item {
   display: inline-block; }
@@ -3958,7 +3967,7 @@ img.active {
   background-repeat: no-repeat;
   background-size: cover;
   visibility: hidden;
-  z-index: 2; }
+  z-index: 1; }
   @media (max-width: 1023px) {
     #blog-nav {
       top: 80px;
@@ -3990,7 +3999,6 @@ img.active {
 
 .nav-section.blog-nav-section {
   margin: 0 auto;
-  text-align: center;
   padding: 0;
   height: 100%; }
   @media (min-width: 1024px) {
@@ -4005,7 +4013,7 @@ img.active {
   opacity: 1;
   position: relative;
   top: 0;
-  margin: 0; }
+  margin: 0 auto; }
   @media (max-width: 1023px) {
     .nav-list.blog-nav-list {
       padding-top: 10px; } }
@@ -4166,8 +4174,7 @@ img.active {
   font-family: 'proxima-nova';
   position: relative;
   overflow: hidden;
-  padding-bottom: 50px;
-  background-color: red; }
+  padding-bottom: 50px; }
   #about p {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -4428,6 +4435,9 @@ img.active {
   @media (max-width: 1023px) {
     #home-page .content-container {
       padding-top: 30px; } }
+  @media (min-width: 1024px) {
+    #home-page .content-container.ng-hide {
+      display: block !important; } }
 
 section#photo {
   text-align: center;
@@ -4483,14 +4493,9 @@ section#photo {
 #chronicles-section {
   text-align: center;
   background-color: #FFFFFF; }
-  @media (max-width: 639px) {
+  @media (max-width: 1023px) {
     #chronicles-section {
-      padding-right: 15px;
-      padding-left: 15px; } }
-  @media (min-width: 640px) and (max-width: 1023px) {
-    #chronicles-section {
-      padding-right: 30px;
-      padding-left: 30px; } }
+      display: none; } }
   @media (min-width: 1024px) {
     #chronicles-section {
       padding-right: 50px;
@@ -4549,6 +4554,9 @@ section#photo {
 
 #about-section {
   text-align: center; }
+  @media (max-width: 1023px) {
+    #about-section {
+      display: none; } }
 
 #about-section-content {
   display: inline-block;
@@ -4558,6 +4566,9 @@ section#photo {
     margin-bottom: 30px; }
   #about-section-content a {
     color: #92A7A3; }
+  @media (max-width: 1023px) {
+    #about-section-content {
+      display: none; } }
 
 #footer-section {
   background-color: #FBFAF7;
@@ -4621,6 +4632,10 @@ section#photo {
   @media (min-width: 1024px) {
     #contact-form {
       padding: 50px; } }
+
+@media (min-width: 1024px) {
+  #contact-section.ng-hide {
+    display: block !important; } }
 
 .footer-notes {
   text-align: center;

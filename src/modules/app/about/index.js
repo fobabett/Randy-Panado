@@ -16,7 +16,7 @@ module.exports =
           console.log($location.url());
           $location.hash($stateParams.scrollTo);
           $anchorScroll();
-        }, 100)
+        }, 100);
       }
     });
   })

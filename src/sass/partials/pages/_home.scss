@@ -10,12 +10,12 @@
     }
   }
 
-  // .content-container.ng-hide {
+  .content-container.ng-hide {
 
-  //   @include respond-to('large') {
-  //     display: block !important;
-  //   }
-  // }
+    @include respond-to('large') {
+      display: block !important;
+    }
+  }
 }
 section#photo {
   text-align: center;
@@ -88,15 +88,9 @@ section#photo {
   text-align: center;
   background-color: #FFFFFF;
 
-   @include respond-to('small') {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-
-  @include respond-to('medium') {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
+   @include respond-to('medium-small') {
+    display: none;
+   }
 
   @include respond-to('large') {
     padding-right: 50px;
@@ -172,6 +166,11 @@ section#photo {
 
 #about-section {
   text-align: center;
+
+
+  @include respond-to('medium-small') {
+    display: none;
+  }
 }
 #about-section-content {
   display: inline-block;
@@ -184,6 +183,10 @@ section#photo {
 
   a {
     color: #92A7A3;
+  }
+
+  @include respond-to('medium-small') {
+    display: none;
   }
 }
 #footer-section {
@@ -268,6 +271,12 @@ section#photo {
 
   @include respond-to('large') {
     padding: 50px;
+  }
+}
+#contact-section.ng-hide {
+
+  @include respond-to('large') {
+    display: block !important;
   }
 }
 .footer-notes {

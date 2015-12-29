@@ -129,15 +129,12 @@ module.exports = /*@ngInject*/
       $scope.modalShown = !$scope.modalShown;
       $scope.selectedPic = pic;
       $scope.types = pic.types;
-      // $location.hash('slidesow-modal');
-      // $anchorScroll();
-      // $window.scrollTo(0,165);
     };
 
     $scope.scrollToContact = function() {
       $location.hash('contact-section');
       $anchorScroll();
-    }
+    };
 
     $scope.openArticle = function(index, id) {
       console.log(index, id);

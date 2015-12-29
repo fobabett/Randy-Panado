@@ -13,6 +13,10 @@
     padding-top: 15px;
   }
 
+  @include respond-to('medium') {
+    padding-top: 30px;
+  }
+
   @include respond-to('medium-small') {
     text-align: center;
     position: fixed;
@@ -29,6 +33,12 @@
 
   li {
     display: inline-block;
+  }
+}
+#filter.ng-hide {
+
+  @include respond-to('large') {
+    display: block !important;
   }
 }
 .filter-type {

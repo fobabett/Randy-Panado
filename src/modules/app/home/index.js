@@ -13,8 +13,8 @@ module.exports =
       onEnter: function ($location, $stateParams, $anchorScroll, $timeout) {
         $timeout(function() { 
           $location.hash($stateParams.scrollTo);
-          $anchorScroll()
-        }, 100)
+          $anchorScroll();
+        }, 100);
       }
     });
   })

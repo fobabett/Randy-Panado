@@ -61,7 +61,7 @@
   </div>
 
   <div>
-    <ul id='filter'> 
+    <ul id='filter' ng-hide='modalShown'> 
       <li>Type</li>
       <li class='filter-type' ng-click='commercialFilter(); refresh()' ng-class='{"selected-tag": commercial == "commercial"}'>Commercial</li>
       <li class='filter-type' ng-click='narrativeFilter(); refresh()' ng-class='{"selected-tag": narrative == "narrative"}'>Narrative</li>
@@ -69,7 +69,7 @@
     </ul>
   </div>
 
-  <div class='content-container'>
+  <div class='content-container' ng-hide='modalShown'>
     
     <section id='photo'>
 
@@ -90,7 +90,7 @@
 
     <div class='bg2'></div>
 
-    <section id='chronicles-section' class='show-for-large'>
+    <section id='chronicles-section'>
       <h1 class='section-title title'>Chronicles</h1>
       <h2 class='section-subtitle subtitle'>Blog/Articles</h2>
 
@@ -123,7 +123,7 @@
 
       <div class='row'>
         
-        <div class='large-6 columns show-for-large' id='about-section'>
+        <div class='large-6 columns' id='about-section'>
           <div id='about-section-content'>
             <h3 class='title section-title'>Randy Panado</h3>
             <img src="http://placehold.it/350x300">
@@ -134,7 +134,7 @@
           </div>
         </div>
 
-        <div class='large-6 columns' id='contact-section'>
+        <div class='large-6 columns' id='contact-section' ng-hide='modalShown'>
           <h3 class='title section-title'>Contact</h3>
           <form action="" id='contact-form' name='contact_form' ng-model='contact_form'>
             <input type="text" name='name' ng-model='name' placeholder='name'>

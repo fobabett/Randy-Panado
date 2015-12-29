@@ -1,10 +1,10 @@
 'use strict';
 
 module.exports = /*@ngInject*/
-  function categoryController($scope, $stateParams, blogService) {
+  function categoryController($scope, $stateParams, blogService, $state) {
 
     $scope.activeTab = 'chronicles';
-    $scope.category = $stateParams.category
+    $scope.category = $stateParams.category;
 
     $scope.openArticle = function(index, id) {
       console.log(index, id);
