@@ -34,7 +34,7 @@
   "browser": {
     "jquery": "./bower_components/jquery/dist/jquery.js",
     "angular": "./bower_components/angular/angular.js",
-    "angulargrid": "./bower_components/angulargrid/angulargrid.js",
+    "angulargrid": "./src/assets/js/angulargrid.js",
     "get-size": "./bower_components/get-size/get-size.js",
     "fizzy-ui-utils": "./bower_components/fizzy-ui-utils/utils.js",
     "outlayer": "./bower_components/outlayer/outlayer.js",
