@@ -51,7 +51,9 @@
     "angular-youtube-embed": "^1.1.1",
     "express": "^4.13.3",
     "foundation-sites": "^6.0.5",
+    "gulp-rimraf": "^0.1.1",
     "gulp-sass": "^2.1.0",
+    "lodash": "^3.10.1",
     "node": "0.0.0"
   }
 }
