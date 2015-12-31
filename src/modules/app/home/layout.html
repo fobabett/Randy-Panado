@@ -74,8 +74,8 @@
     <section id='photo'>
 
       <ul class="dynamic-grid" angular-grid="pics" grid-width="250" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="true" >
-        <li data-ng-repeat="pic in pics | filter: commercial | filter: narrative | filter: creative" class="grid angular-grid-item image-loaded">
-
+        <li data-ng-repeat="pic in pics | filter: byType" class="grid angular-grid-item image-loaded">
+          {{pic.categories}}
           <img ng-if='pic.type == "image"' src="{{pic.url}}" class="grid-img image-loaded" ng-click='toggleModal(pic); setCurrentSlideIndex($index); pauseVideo()'/>
 
           <embed-video ng-if='pic.type == "vimeo"' iframe-id="test" api="1" player_id="test" width='300' height='200' ng-href="{{pic.url | trustAsResourceUrl}}" ng-click='pauseVideo(); toggleModal(pic); setCurrentSlideIndex($index)'><a href="{{pic.url | trustAsResourceUrl}}"></a></embed-video>

@@ -179,6 +179,18 @@ module.exports = /*@ngInject*/
       }
     };
 
+    $scope.byType = function(pic) {
+      for(var i in pic.categories) {
+        if($scope.creative === '' && $scope.commercial === '' && $scope.narrative === '') {
+          return $scope.pics;
+        } else {
+          return pic.categories[i].value === $scope.creative ||
+               pic.categories[i].value === $scope.commercial ||
+               pic.categories[i].value === $scope.narrative;
+        }
+      }
+    };
+
     $scope.refresh = function(){
       angularGridInstance.gallery.refresh();
     };
