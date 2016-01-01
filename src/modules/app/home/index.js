@@ -12,8 +12,8 @@ module.exports =
       directive: 'modalDirective',
       onEnter: function ($location, $stateParams, $anchorScroll, $timeout) {
         $timeout(function() { 
-          $location.hash($stateParams.scrollTo);
-          $anchorScroll();
+          // $location.hash($stateParams.scrollTo);
+          // $anchorScroll();
         }, 100);
       }
     });
