@@ -131,11 +131,6 @@ module.exports = /*@ngInject*/
       $scope.types = pic.types;
     };
 
-    $scope.scrollToContact = function() {
-      $location.hash('contact-section');
-      $anchorScroll();
-    };
-
     $scope.openArticle = function(index, id) {
       console.log(index, id);
       return blogService.getSingleArticle(id)
