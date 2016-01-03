@@ -9,13 +9,7 @@ module.exports =
       url: '/home/:scrollTo',
       templateUrl: 'app/home/layout.html',
       controller: 'homeController',
-      directive: 'modalDirective',
-      onEnter: function ($location, $stateParams, $anchorScroll, $timeout) {
-        $timeout(function() { 
-          $location.hash($stateParams.scrollTo);
-          $anchorScroll();
-        }, 100);
-      }
+      directive: 'modalDirective'
     });
   })
   .controller('homeController', require('./homeController'))
