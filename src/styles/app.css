@@ -3255,7 +3255,6 @@ img.active {
   opacity: 0; }
 
 #filter {
-  background-color: #FBFAF7;
   padding-bottom: 20px;
   font-family: 'Novecento Sans';
   color: #737272;
@@ -3298,7 +3297,7 @@ li.filter-type {
   color: #737272;
   font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   font-weight: 400;
   padding: 3px 5px 2px; }
   @media (max-width: 639px) {
@@ -3479,6 +3478,11 @@ li.filter-type.selected-tag {
 .footer-notes {
   font-family: 'proxima-nova'; }
 
+body {
+  background-image: url("../assets/images/bg1.png");
+  background-repeat: no-repeat;
+  background-color: #FBFAF7; }
+
 @media (min-width: 1024px) {
   .header-container.ng-hide {
     display: block !important; } }
@@ -3487,9 +3491,6 @@ li.filter-type.selected-tag {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  background-image: url("../assets/images/bg1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   z-index: 2; }
   @media (max-width: 639px) {
     .header {

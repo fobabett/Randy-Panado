@@ -2,6 +2,12 @@
 @import '../utils/variables';
 @import '../typography';
 
+body{
+  background-image: url('../assets/images/bg1.png');
+  background-repeat: no-repeat;
+  background-color: #FBFAF7;
+}
+
 .header-container.ng-hide {
 
   @include respond-to('large') {
@@ -12,9 +18,6 @@
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  background-image: url('../assets/images/bg1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
   z-index: 2;
 
   @include respond-to('small') {
