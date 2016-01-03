@@ -3740,10 +3740,12 @@ img.active {
         color: #ffffff; }
 
 .logo-container {
-  background-color: orange;
   display: block;
   background-image: url("/assets/icons/logo.svg");
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 78px;
+  background-position: 0 center; }
   @media (min-width: 1024px) {
     .logo-container {
       transform: translateY(40px);
@@ -3767,16 +3769,18 @@ img.active {
     animation-delay: 0; } }
 
 #header-info h1#header-title {
-  font-size: 21px;
   color: #5B5B5B;
-  display: inline-block;
   font-family: 'Caviar Dreams Bold';
   vertical-align: middle;
-  margin-bottom: 4px;
-  margin-top: 10px; }
-  @media (max-width: 1023px) {
+  font-size: 20px;
+  padding-top: 27px;
+  padding-left: 48px; }
+  @media (min-width: 1024px) {
     #header-info h1#header-title {
-      font-size: 20px; } }
+      margin-bottom: 4px;
+      font-size: 20px;
+      padding-left: 0;
+      padding-top: 10px; } }
 
 #header-info h2 {
   font-size: 9px;
