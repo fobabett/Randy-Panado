@@ -3259,7 +3259,10 @@ img.active {
   padding-bottom: 20px;
   font-family: 'Novecento Sans';
   color: #737272;
-  font-size: 14px; }
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400; }
   @media (max-width: 639px) {
     #filter {
       padding-top: 15px; } }
@@ -3284,35 +3287,38 @@ img.active {
   #filter.ng-hide {
     display: block !important; } }
 
-.filter-type {
+li.filter-title {
+  margin-right: 10px; }
+  li.filter-title:after {
+    content: ":"; }
+
+li.filter-type {
   cursor: pointer;
+  font-family: 'Novecento Sans';
+  color: #737272;
+  font-size: 11px;
   text-transform: uppercase;
-  font-size: 14px;
-  padding: 2px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin-right: 5px; }
+  letter-spacing: 1px;
+  font-weight: 400;
+  padding: 3px 5px 2px; }
   @media (max-width: 639px) {
-    .filter-type {
+    li.filter-type {
       padding: 0; } }
   @media (max-width: 1023px) {
-    .filter-type {
-      margin-left: 10px;
+    li.filter-type {
       font-size: 12px;
       margin-bottom: 0; } }
+
+li.filter-type.selected-tag {
+  margin-bottom: 0; }
+  @media (max-width: 1023px) {
+    li.filter-type.selected-tag {
+      background-color: transparent;
+      border-bottom: 3px solid #ABD9D9; } }
   @media (min-width: 1024px) {
-    .filter-type {
-      margin-left: 20px; } }
-
-@media (max-width: 1023px) {
-  .filter-type.selected-tag {
-    background-color: transparent;
-    border-bottom: 3px solid #ABD9D9; } }
-
-@media (min-width: 1024px) {
-  .filter-type.selected-tag {
-    background-color: #CCE5E1;
-    color: #777E7D; } }
+    li.filter-type.selected-tag {
+      background-color: #CCE5E1;
+      color: #777E7D; } }
 
 .dynamic-grid {
   position: relative;
@@ -3552,7 +3558,12 @@ img.active {
 .nav-item {
   display: inline-block; }
   .nav-item a {
-    color: #505050; }
+    font-family: 'Novecento Sans';
+    color: #737272;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400; }
   @media (max-width: 1023px) {
     .nav-item {
       display: block;
@@ -3564,6 +3575,7 @@ img.active {
 
 @media (min-width: 1024px) {
   .nav-item.active {
+    padding-bottom: 3px;
     border-bottom: 3px solid #AAD9D9; } }
 
 #blog-nav {
