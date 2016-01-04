@@ -5,6 +5,11 @@
 @import "../../bower_components/foundation-sites/scss/foundation";
 @include foundation-everything;
 
+//utils
+@import "./partials/utils/mixins";
+@import "./partials/utils/reset";
+@import "./partials/utils/variables";
+
 // components
 @import "./partials/components/carousel";
 @import "./partials/components/filters";
@@ -17,11 +22,6 @@
 @import "./partials/pages/category";
 @import "./partials/pages/home";
 @import "./partials/pages/post";
-
-//utils
-@import "./partials/utils/mixins";
-@import "./partials/utils/reset";
-@import "./partials/utils/variables";
 
 @import "./partials/base";
 @import "./partials/typography";

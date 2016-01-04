@@ -180,13 +180,14 @@ module.exports = /*@ngInject*/
     };
 
     $scope.byType = function(pic) {
-      for(var i in pic.categories) {
+      console.log(pic);
+      for(var i=0; i<pic.categories.length; i++) {
         if($scope.creative === '' && $scope.commercial === '' && $scope.narrative === '') {
           return $scope.pics;
         } else {
           return pic.categories[i].value === $scope.creative ||
-               pic.categories[i].value === $scope.commercial ||
-               pic.categories[i].value === $scope.narrative;
+                 pic.categories[i].value === $scope.commercial ||
+                 pic.categories[i].value === $scope.narrative;
         }
       }
     };
