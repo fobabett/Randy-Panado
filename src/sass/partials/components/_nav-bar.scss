@@ -1,5 +1,11 @@
 @import '../typography';
 
+body{
+  background-image: url('../assets/images/bg1.png');
+  background-repeat: no-repeat;
+  background-color: #FBFAF7;
+}
+
 .header-container.ng-hide {
 
   @include respond-to('large') {
@@ -10,9 +16,6 @@
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  background-image: url('../assets/images/bg1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
   z-index: 2;
 
   @include respond-to('small') {
@@ -43,68 +46,6 @@
     height: 150px;
   }
 }
-.logo-container {
-  // float: left;
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translateY(50%);
-
-  @include respond-to('small') {
-    margin-left: 15px;
-  }
-
-  @include respond-to('medium') {
-    margin-left: 30px;
-  }
-
-  @include respond-to('large') {
-    animation-name: logoSlideIn;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 0.5s;
-    margin-left: 50px;
-    // padding-top: 30px;
-    // padding-bottom: 30px;
-    vertical-align: middle;
-  }
-
-  h2 {
-    color: #B3B3B2;
-    font-family: 'Novecento Sans DemiBold';
-  }
-}
-#header-info {
-  display: inline-block;
-  white-space: nowrap;
-
-  @include respond-to('large') {
-    vertical-align: top;
-  }
-}
-#header-title {
-  font-size: 26px;
-  color: #5B5B5B;
-  display: inline-block;
-  font-family: 'Caviar Dreams Bold';
-  vertical-align: middle;
-
-  @include respond-to('medium-small') {
-    font-size: 20px;
-  }
-}
-.logo {
-  width: 70px;
-  height: 70px;
-  display: inline-block;
-  vertical-align: middle;
-
-  @include respond-to('medium-small') {
-    width: 40px;
-    height: 40px;
-  }
-}
 .nav-section {
   font-family: 'Novecento Sans Wide';
 
@@ -124,6 +65,8 @@
     right: 0;
     top: 0;
     transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
   }
 }
 .nav-section.blog-nav-section.about-nav-section {
@@ -154,7 +97,12 @@
   display: inline-block;
 
   a {
-    color: #505050;
+    font-family: 'Novecento Sans';
+    color: #737272;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
   }
 
   @include respond-to('medium-small') {
@@ -170,6 +118,7 @@
 .nav-item.active {
 
   @include respond-to('large') {
+    padding-bottom: 3px;
     border-bottom: 3px solid #AAD9D9;
   }
 }
@@ -215,6 +164,8 @@
   @include respond-to('large') {
     margin: 15px;
     transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
   }
 
   .logo {
@@ -235,6 +186,8 @@
 
   @include respond-to('large') {
     transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
   }
 }
 .nav-list.blog-nav-list {
@@ -263,13 +216,17 @@
   }
   
   img {
+    -moz-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
   }
 
   h1 {
     // display: none;
     opacity: 0;
+    -moz-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
     font-family: 'Novecento Sans Bold';
     text-transform: uppercase;
     font-size: 12px;
@@ -283,13 +240,17 @@
 
   img {
     transform: translateY(-0.5rem);
+    -moz-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
   }
 
   h1 {
     // display: block;
     opacity: 1;
+    -moz-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
   }
 }
 #blog-nav.about-nav {
@@ -316,11 +277,15 @@
   @include respond-to('small') {
     margin: 15px;
     transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
   }
 
   @include respond-to('medium') {
     margin: 20px;
     transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
   }
 
   @include respond-to('large') {
@@ -338,6 +303,8 @@
     text-transform: uppercase;
     font-family: 'Novecento Sans';
     font-size: 12px;
+    -webkit-box-shadow: 1px 1px 2px 2px #E3E2DE;
+    -moz-box-shadow: 1px 1px 2px 2px #E3E2DE;
     box-shadow: 1px 1px 2px 2px #E3E2DE;
     text-align: right;
     border-radius: 2px;
@@ -363,11 +330,99 @@
   }
 }
 
+// Logo Animation
+
+.logo-container {
+  display: block;
+  background-image: url('/assets/icons/logo.svg');
+  background-repeat: no-repeat;
+
+  width: 250px;
+  height: 78px;
+  background-position: 0 center;
+
+  @include respond-to('large') {
+    transform: translateY(40px);
+
+    width: 300px;
+    height: 75px;
+    background-size: 50px auto;
+    background-position: 45px center;
+
+    padding-left: 105px;
+
+    animation-name: logoSlideIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-delay: 0;
+  }
+}
+
+#header-info {
+
+  @include respond-to('large') {
+    animation-name: logoTextSlideIn;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-delay: 0;
+  }
+
+  h1#header-title {
+    color: #5B5B5B;
+    font-family: 'Caviar Dreams Bold';
+    vertical-align: middle;
+  
+    font-size: 20px;
+    padding-top:27px;
+    padding-left: 48px;
+
+    @include respond-to('large') {
+      margin-bottom: 4px;
+      font-size: 20px;
+      padding-left: 0;
+      padding-top: 10px;
+    }
+  }
+
+  h2 {
+    font-size: 9px;
+    padding-left: 1px;
+    margin-bottom: 3px;
+    color: #9B9B9B;
+    font-family: 'Novecento Sans DemiBold';
+  }
+}
+
 @keyframes logoSlideIn {
   0% {
-    transform: translateX(-100px);
+    transform: translateX(-100px) translateY(40px);
     opacity: 0;
   }
+
+  25% {
+    transform: translateX(-100px) translateY(40px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0) translateY(40px);
+    opacity: 1;
+  }
+}
+
+@keyframes logoTextSlideIn {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+
+  30% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+
   100% {
     transform: translateX(0);
     opacity: 1;

@@ -1,10 +1,12 @@
 #filter {
-  background-color: #FBFAF7;
   // margin-top: 20px;
   padding-bottom: 20px;
   font-family: 'Novecento Sans';
   color: #737272;
-  font-size: 14px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
 
   @include respond-to('small') {
     padding-top: 15px;
@@ -38,30 +40,43 @@
     display: block !important;
   }
 }
-.filter-type {
+
+li.filter-title{
+  margin-right: 10px;
+  &:after{
+    content: ":";
+  }
+}
+
+li.filter-type {
   cursor: pointer;
+
+  font-family: 'Novecento Sans';
+  color: #737272;
+  font-size: 11px;
   text-transform: uppercase;
-  font-size: 14px;
-  padding: 2px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin-right: 5px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  padding: 3px 5px 2px;
+  // margin-left: 5px;
 
   @include respond-to('small') {
     padding: 0;
   }
 
   @include respond-to('medium-small') {
-    margin-left: 10px;
+    // margin-left: 10px;
     font-size: 12px;
     margin-bottom: 0;
   }
 
   @include respond-to('large') {
-    margin-left: 20px;
+    // margin-left: 5px;
   }
 }
-.filter-type.selected-tag {
+
+li.filter-type.selected-tag {
+  margin-bottom: 0;
 
   @include respond-to('medium-small') {
     background-color: transparent;
