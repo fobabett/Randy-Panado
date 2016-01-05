@@ -56,9 +56,6 @@ section#photo {
   }
 
   @include respond-to('large') {
-    -webkit-transition: opacity 500ms;
-    -moz-transition: opacity 500ms;
-    -o-transition: opacity 500ms;
     transition: opacity 500ms;
     color: #FEFEFE;
     display: table;
@@ -250,8 +247,6 @@ section#photo {
   input,
   select,
   textarea {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     border: 0;
     box-shadow: none;
