@@ -1,6 +1,3 @@
-@import '../utils/mixins';
-@import '../utils/variables';
-
 #about-page .title-banner {
 
   @include respond-to('medium-small') {
