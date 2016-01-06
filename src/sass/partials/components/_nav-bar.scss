@@ -70,8 +70,13 @@ body{
   }
 }
 .nav-section.blog-nav-section.about-nav-section {
-  padding: 15px;
+  // padding: 15px;
+  top: 79px;
+  @include respond-to('large') {
+    top:0;
+  }
 }
+
 .nav-list {
   // transition: 0.2s ease-in-out;
 
@@ -159,34 +164,16 @@ body{
   height: 80px;
   text-transform: uppercase;
 }
-.logo-container.blog-logo-container {
 
-  @include respond-to('medium-small') {
-    display: none !important;
-  }
 
-  @include respond-to('large') {
-    margin: 15px;
-    transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-  }
-
-  .logo {
-    width: 60px;
-    height: 60px;
-  }
-}
-.logo-container.blog-logo-container, 
 .nav-section.blog-nav-section {
-  display: inline-block;
-  vertical-align: middle;
-}
-.nav-section.blog-nav-section {
+  // background-color: pink;
   margin: 0 auto;
   padding: 0;
   height: 100%;
-  position: relative;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
 
   @include respond-to('large') {
     transform: translateY(0);
@@ -258,7 +245,6 @@ body{
   }
 }
 #blog-nav.about-nav {
-
   @include respond-to('medium-small') {
     top: 0;
     z-index: 2;
@@ -277,6 +263,11 @@ body{
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 10;
+
+  &:hover{
+    cursor: pointer;
+  }
 
   @include respond-to('small') {
     margin: 15px;
@@ -430,5 +421,34 @@ body{
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+// Compressed Nav Logo
+
+#blog-nav.about-nav .logo-container{
+
+  display: none;
+  
+  @include respond-to('large'){
+    display: block;
+    position: absolute;
+    transform: translateY(0);
+    top:0;
+    left:0;
+    background-size: 40px auto;
+    background-position: 28px 15px;
+    padding-left: 80px;
+
+    #header-info h1#header-title{
+      background-color: pink;
+      padding:0;
+      line-height: 79px;
+      text-align: left;
+    }
+
+    #header-info h2{
+      display: none;
+    }
   }
 }
