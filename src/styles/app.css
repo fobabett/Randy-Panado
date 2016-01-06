@@ -3572,24 +3572,27 @@ body {
 .nav-section.blog-nav-section.about-nav-section {
   padding: 15px; }
 
-.nav-list {
-  transition: 0.2s ease-in-out; }
-  @media (max-width: 1023px) {
-    .nav-list {
-      opacity: 0;
-      display: none;
-      position: absolute;
-      top: 50px;
-      margin-top: 30px;
-      width: 100%;
-      left: 0;
-      max-height: 0;
-      background-color: #ffffff; } }
+@media (max-width: 1023px) {
+  .nav-list {
+    opacity: 0;
+    transform: translateY(30px);
+    position: absolute;
+    max-height: 0;
+    width: 100%;
+    left: 0;
+    max-height: 0;
+    background-color: #ffffff;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.5, 1, 0.5, 1); } }
 
 .nav-list.toggle-nav {
-  max-height: 265px;
   opacity: 1;
-  display: block; }
+  max-height: 265px;
+  overflow-y: hidden;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.5, 1, 0.5, 1); }
 
 .nav-item {
   display: inline-block; }

@@ -9,8 +9,10 @@ module.exports =
       url: '/home/:scrollTo',
       templateUrl: 'app/home/layout.html',
       controller: 'homeController',
-      directive: 'modalDirective'
+      directive: 'modalDirective',
+      filter: 'selectedTags'
     });
   })
   .controller('homeController', require('./homeController'))
-  .directive('modalDirective', require('./modalDirective'));
+  .directive('modalDirective', require('./modalDirective'))
+  .filter('selectedTags', require('./selectedTags'));

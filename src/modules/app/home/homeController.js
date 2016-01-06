@@ -9,18 +9,15 @@ module.exports = /*@ngInject*/
     }, 100);
 
     $scope.activeTab = $state.current.name;
-    $scope.filter = {};
-    $scope.commercial = '';
-    $scope.narrative = '';
-    $scope.creative = '';
+    $scope.selectedTags = [];
+    $scope.tags = ['commercial', 'narrative', 'creative'];
     var video = document.getElementsByTagName('iframe');
-
     var mockData = [
       {
         name: 'one of a kind',
         url: 'http://placehold.it/300x200',
         type: 'image',
-        categories: [
+        tags: [
           {value: 'commercial'},
           {value: 'narrative'}
         ]
@@ -31,7 +28,7 @@ module.exports = /*@ngInject*/
         url: 'http://placehold.it/300x200',
         // type: 'vimeo',
         type: 'image',
-        categories: [
+        tags: [
           {value: 'commercial'}
         ]
       },
@@ -39,7 +36,7 @@ module.exports = /*@ngInject*/
         name: 'Star Wars',
         url: 'http://placehold.it/300x200',
         type: 'image',
-        categories: [
+        tags: [
           {value: 'creative'},
           {value: 'narrative'}
         ]
@@ -48,7 +45,7 @@ module.exports = /*@ngInject*/
         name: 'blah',
         url: 'http://placehold.it/300x200',
         type: 'image',
-        categories: [
+        tags: [
           {value: 'narrative'}
         ]
       },
@@ -56,7 +53,7 @@ module.exports = /*@ngInject*/
         name: 'dsfdsf',
         url: 'http://placehold.it/300x200',
         type: 'image',
-        categories: [
+        tags: [
           {value: 'creative'},
           {value: 'commercial'}
         ]
@@ -65,7 +62,7 @@ module.exports = /*@ngInject*/
         name: 'boooo',
         url: 'http://placehold.it/300x200',
         type: 'image',
-        categories: [
+        tags: [
           {value: 'creative'},
           {value: 'narrative'},
           {value: 'commercial'}
@@ -75,7 +72,7 @@ module.exports = /*@ngInject*/
         name: 'one of a kind',
         url: 'http://placehold.it/300x200',
         type: 'image',
-        categories: [
+        tags: [
           {value: 'commercial'},
           {value: 'narrative'}
         ]
@@ -84,7 +81,7 @@ module.exports = /*@ngInject*/
         name: 'kitty cat',
         url: 'http://placehold.it/300x200',
         type: 'image',
-        categories: [
+        tags: [
           {value: 'creative'}
         ]
       },
@@ -92,7 +89,7 @@ module.exports = /*@ngInject*/
         name: 'awesomeness',
         url: 'http://placehold.it/300x200',
         type: 'image',
-        categories: [
+        tags: [
           {value: 'creative'},
           {value: 'narrative'}
         ]
@@ -101,7 +98,7 @@ module.exports = /*@ngInject*/
         name: 'blah',
         url: 'http://placehold.it/300x200',
         type: 'image',
-        categories: [
+        tags: [
           {value: 'narrative'}
         ]
       },
@@ -109,7 +106,7 @@ module.exports = /*@ngInject*/
         name: 'dsfdsf',
         url: 'http://placehold.it/300x200',
         type: 'image',
-        categories: [
+        tags: [
           {value: 'commercial'},
           {value: 'creative'}
         ]
@@ -118,15 +115,25 @@ module.exports = /*@ngInject*/
         name: 'boooo',
         url: 'http://placehold.it/300x200',
         type: 'image',
-        categories: [
+        tags: [
           {value: 'commercial'},
           {value: 'creative'},
           {value: 'narrative'}
         ]
       }
     ];
-
     $scope.pics = mockData;
+
+    function removeA(arr) {
+      var what, a = arguments, L = a.length, ax;
+      while (L > 1 && arr.length) {
+        what = a[--L];
+        while ((ax= arr.indexOf(what)) !== -1) {
+          arr.splice(ax, 1);
+        }
+      }
+      return arr;
+    }
 
     $scope.modalShown = false;
     $scope.toggleModal = function(pic) {
@@ -157,42 +164,19 @@ module.exports = /*@ngInject*/
       return $scope.currentIndex === index;
     };
 
-    $scope.commercialFilter = function() {
-      if ($scope.commercial === '') {
-        $scope.commercial = 'commercial';
+    $scope.selectTag = function(index, tag) {
+      if($scope.selectedTags.length === 0) {
+        $scope.selectedTags.push(tag);
       } else {
-        $scope.commercial = '';
-      }
-    };
-    $scope.narrativeFilter = function() {
-      if ($scope.narrative === '') {
-        $scope.narrative = 'narrative';
-      } else {
-        $scope.narrative = '';
-      }
-    };
-    $scope.creativeFilter = function() {
-      if ($scope.creative === '') {
-        $scope.creative = 'creative';
-      } else {
-        $scope.creative = '';
-      }
-    };
-
-    $scope.categories = [];
-
-    $scope.byType = function(pic) {
-      // console.log(pic);
-      for(var i=0; i<pic.categories.length; i++) {
-        if($scope.creative === '' && $scope.commercial === '' && $scope.narrative === '') {
-          return $scope.pics;
-        } else {
-          return pic.categories[i].value === $scope.creative ||
-                 pic.categories[i].value === $scope.commercial ||
-                 pic.categories[i].value === $scope.narrative;
+        for(var i in $scope.selectedTags) {
+          if($scope.selectedTags[i] === tag) {
+            removeA($scope.selectedTags, tag);
+          } else {
+            $scope.selectedTags.push(tag);
+          }
         }
       }
-    };
+    }
 
     $scope.refresh = function(){
       angularGridInstance.gallery.refresh();
