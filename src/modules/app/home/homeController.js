@@ -130,14 +130,14 @@ module.exports = /*@ngInject*/
 
     $scope.modalShown = false;
     $scope.toggleModal = function(pic) {
-      console.log(pic);
+      // console.log(pic);
       $scope.modalShown = !$scope.modalShown;
       $scope.selectedPic = pic;
       $scope.types = pic.types;
     };
 
     $scope.openArticle = function(index, id) {
-      console.log(index, id);
+      // console.log(index, id);
       return blogService.getSingleArticle(id)
         .success(function(res) {
           $state.go('post', {id: id});
@@ -179,8 +179,10 @@ module.exports = /*@ngInject*/
       }
     };
 
+    $scope.categories = [];
+
     $scope.byType = function(pic) {
-      console.log(pic);
+      // console.log(pic);
       for(var i=0; i<pic.categories.length; i++) {
         if($scope.creative === '' && $scope.commercial === '' && $scope.narrative === '') {
           return $scope.pics;

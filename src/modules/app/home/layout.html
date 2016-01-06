@@ -63,7 +63,7 @@
   <div>
     <ul id='filter' ng-hide='modalShown'> 
       <li class='filter-title'>Type</li>
-      <li class='filter-type' ng-click='commercialFilter(); refresh()' ng-class='{"selected-tag": commercial == "commercial"}'>Commercial</li>
+      <li class='filter-type' ng-click='commercialFilter(); refresh()'ng-class='{"selected-tag": commercial == "commercial"}'>Commercial</li>
       <li class='filter-type' ng-click='narrativeFilter(); refresh()' ng-class='{"selected-tag": narrative == "narrative"}'>Narrative</li>
       <li class='filter-type' ng-click='creativeFilter(); refresh()' ng-class='{"selected-tag": creative == "creative"}'>Creative</li>
     </ul>
@@ -74,7 +74,7 @@
     <section id='photo'>
 
       <ul class="dynamic-grid" angular-grid="pics" grid-width="250" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="true" >
-        <li data-ng-repeat="pic in pics | filter: byType" class="grid angular-grid-item image-loaded">
+        <li data-ng-repeat="pic in pics | filter:byType" class="grid angular-grid-item image-loaded">
           {{pic.categories}}
           <img ng-if='pic.type == "image"' src="{{pic.url}}" class="grid-img image-loaded" ng-click='toggleModal(pic); setCurrentSlideIndex($index); pauseVideo()'/>
 

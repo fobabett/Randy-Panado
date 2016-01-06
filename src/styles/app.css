@@ -3293,9 +3293,7 @@ img.active {
 
 .animate-slide.ng-hide-add.ng-hide-add-active,
 .animate-slide.ng-hide-remove.ng-hide-remove-active {
-  -moz-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-  -webkit-transition: 0.2s ease-in-out; }
+  transition: 0.2s ease-in-out; }
 
 .animate-slide.ng-hide {
   max-height: 0;
@@ -3379,14 +3377,11 @@ li.filter-type.selected-tag {
   list-style: none;
   background: #ffffff;
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out; }
 
 .grid-img {
   width: 100%;
   vertical-align: middle;
-  -webkit-transition: opacity 0.6s ease-out;
   transition: opacity 0.6s ease-out;
   background-color: #fff;
   opacity: 0;
@@ -3409,30 +3404,23 @@ li.filter-type.selected-tag {
   list-style: none;
   background: #ffffff;
   box-sizing: border-box;
-  -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
   overflow: hidden; }
 
 .grid.ng-leave {
-  -webkit-transition: all ease 400ms;
   transition: all ease 400ms; }
 
 .grid.ng-leave.ng-leave-active {
-  -webkit-transform: scale(0.5);
   transform: scale(0.5);
   opacity: 0; }
 
 .grid.ng-enter {
-  -webkit-transition: all ease 400ms;
   transition: all ease 400ms;
-  -webkit-transition-delay: 500ms;
   transition-delay: 500ms;
-  -webkit-transform: scale(0.5);
   transform: scale(0.5);
   opacity: 0; }
 
 .grid.ng-enter.ng-enter-active {
-  -webkit-transform: scale(1);
   transform: scale(1);
   opacity: 1; }
 
@@ -4232,9 +4220,6 @@ section#photo {
       font-size: 14px; } }
   @media (min-width: 1024px) {
     .photo-details {
-      -webkit-transition: opacity 500ms;
-      -moz-transition: opacity 500ms;
-      -o-transition: opacity 500ms;
       transition: opacity 500ms;
       color: #FEFEFE;
       display: table;
@@ -4375,8 +4360,6 @@ section#photo {
   #contact-section input,
   #contact-section select,
   #contact-section textarea {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     border: 0;
     box-shadow: none;
