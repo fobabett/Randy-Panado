@@ -1,9 +1,32 @@
-
 <div ng-hide='modalShown' class='header-container' ng-include="'common/partials/_nav.html'"></div>
+
+<div class='compressed-nav' ng-class='{"show-nav":boolChangeClass}'>
+
+  <div class='logo-container'>
+    <div id='header-info'>
+      <h1 id='header-title'>Randy Panado</h1>
+      <h2 class='show-for-large'>Director of Photography</h2>
+      <h2 class='show-for-large'>Aerial Cinematographer</h2>
+    </div>
+  </div>
+
+   <img src='../../../assets/icons/menu.svg' class='toggle-dropdown desktop-toggle' ng-click='toggleDropdown=!toggleDropdown'>
+
+  <div class='desktop-dropdown-nav'>
+    <ul ng-show='toggleDropdown' class='nav-list'>
+      <li class='nav-item'><a ui-sref='home'>Work</a></li>
+      <li class='nav-item'><a ui-sref='about'>About</a></li>
+      <li class='nav-item'><a ui-sref='about'>Equipment</a></li>
+      <li class='nav-item'><a ui-sref='chronicles'>Chronicles</a></li>
+      <li class='nav-item'><a ui-sref='home'>Contact</a></li>
+    </ul>
+  </div>
+    
+</div>  
 
 <div class='page-content-container' ng-class='{modalOpen: modalShown == true}' id='home-page'>
   
-  <div ng-show='modalShown' id='slideshow-modal' class='animate-slide'>
+  <div ng-show='modalShown' id='slideshow-modal' class='animate-slide' scroll>
     <div class='modal-content'>
 
       <h3 class='selected-photo-title hide-for-large'>{{selectedPic.name}}</h3>
@@ -74,7 +97,6 @@
 
       <ul class="dynamic-grid" angular-grid="pics" grid-width="250" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="true">
         <li data-ng-repeat="pic in pics | selectedTags:selectedTags" class="grid angular-grid-item image-loaded" ng-init='getTags(pic)'>
-          {{pic.tags}}
           <img ng-if='pic.type == "image"' src="{{pic.url}}" class="grid-img image-loaded" ng-click='toggleModal(pic); setCurrentSlideIndex($index); pauseVideo()'/>
 
           <embed-video ng-if='pic.type == "vimeo"' iframe-id="test" api="1" player_id="test" width='300' height='200' ng-href="{{pic.url | trustAsResourceUrl}}" ng-click='pauseVideo(); toggleModal(pic); setCurrentSlideIndex($index)'><a href="{{pic.url | trustAsResourceUrl}}"></a></embed-video>

@@ -1,6 +1,6 @@
 <div ng-include="'common/partials/_nav.html'"></div>
 
-<div id='blog-nav' class='about-nav' ng-class='{"show-nav":boolChangeClass}'>
+<div class='compressed-nav' ng-class='{"show-nav":boolChangeClass}'>
 
   <div class='logo-container'>
     <div id='header-info'>
@@ -10,10 +10,20 @@
     </div>
   </div>
 
-  <img src='../../../assets/icons/menu.svg' class='toggle-dropdown show-for-large' ng-click='toggleNav=!toggleNav'>
+  <img src='../../../assets/icons/menu.svg' class='toggle-dropdown desktop-toggle' ng-click='toggleDropdown=!toggleDropdown'>
+
+  <div class='desktop-dropdown-nav'>
+    <ul ng-show='toggleDropdown' class='nav-list'>
+      <li class='nav-item'><a ui-sref='home'>Work</a></li>
+      <li class='nav-item'><a ui-sref='about'>About</a></li>
+      <li class='nav-item'><a ui-sref='about'>Equipment</a></li>
+      <li class='nav-item'><a ui-sref='chronicles'>Chronicles</a></li>
+      <li class='nav-item'><a ui-sref='home'>Contact</a></li>
+    </ul>
+  </div>
     
-  <div class='nav-section blog-nav-section about-nav-section'>
-    <ul class='nav-list blog-nav-list'>
+  <div class='about-nav-section'>
+    <ul class='about-nav-list'>
       <li class='page-nav-item' duration='1000' du-smooth-scroll='about' du-scrollspy='about'>About</li>
       <li class='page-nav-item' duration='1000' du-smooth-scroll='credits-section' du-scrollspy='credits-section'>Credits</li>
       <li class='page-nav-item' duration='1000' du-smooth-scroll='equipment-section' du-scrollspy='equipment-section'>Equipment</li>

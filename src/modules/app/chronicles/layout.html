@@ -1,6 +1,6 @@
 <div ng-include="'common/partials/_nav.html'"></div>
 
-<div id='blog-nav' ng-class='{"show-nav":boolChangeClass}'>
+<div class='compressed-nav' ng-class='{"show-nav":boolChangeClass}'>
 
   <div class='logo-container'>
     <div id='header-info'>
@@ -10,38 +10,38 @@
     </div>
   </div>
     
-  <div class='nav-section blog-nav-section'>
-    <ul class='nav-list blog-nav-list'>
-      <li class='nav-item blog-nav-item'>
+  <div class='category-container'>
+    <ul class='category-list'>
+      <li class='category-item'>
         <img src='../../../assets/icons/all-posts.svg' class='nav-item-icon' ui-sref='chronicles'>
         <h1>Label</h1>
       </li>  
-      <li class='nav-item blog-nav-item'>
+      <li class='category-item'>
         <img src='../../../assets/icons/photography.svg' class='nav-item-icon' ui-sref='category({category: "tools & techniques"})'>
         <h1>Label</h1>
       </li>  
-      <li class='nav-item blog-nav-item'>
+      <li class='category-item'>
         <img src='../../../assets/icons/adventure.svg' class='nav-item-icon' ui-sref='category({category: "adventures"})'>
         <h1>Label</h1>
       </li>  
-      <li class='nav-item blog-nav-item'>
+      <li class='category-item'>
         <img src='../../../assets/icons/aerials.svg' class='nav-item-icon' ui-sref='category({category: "aerials"})'>
         <h1>Label</h1>
       </li>  
-      <li class='nav-item blog-nav-item'>
+      <li class='category-item'>
         <img src='../../../assets/icons/gear-talk.svg' class='nav-item-icon' ui-sref='category({category: "gear talk"})'>
         <h1>Label</h1>
       </li>  
-      <li class='nav-item blog-nav-item'>
+      <li class='category-item'>
         <img src='../../../assets/icons/corporate.svg' class='nav-item-icon' ui-sref='category({category: "corporate"})'>
         <h1>Label</h1>
       </li>  
     </ul>
   </div>
     
-  <img src='../../../assets/icons/menu.svg' class='toggle-dropdown blog-toggle' ng-click='toggleDropdown=!toggleDropdown'>
+  <img src='../../../assets/icons/menu.svg' class='toggle-dropdown desktop-toggle' ng-click='toggleDropdown=!toggleDropdown'>
 
-  <div class='blog-dropdown-nav'>
+  <div class='desktop-dropdown-nav'>
     <ul ng-show='toggleDropdown' class='nav-list'>
       <li class='nav-item'><a ui-sref='home'>Work</a></li>
       <li class='nav-item'><a ui-sref='about'>About</a></li>
