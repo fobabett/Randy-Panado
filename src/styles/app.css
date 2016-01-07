@@ -3624,6 +3624,7 @@ body {
 
 .compressed-nav {
   position: fixed;
+  top: 0;
   width: 100%;
   border-bottom: 1px solid #ADDDDD;
   background-image: url("../assets/images/bg1.png");
@@ -3642,13 +3643,6 @@ body {
       width: 100%;
       height: 60px;
       left: 0; } }
-  @media (min-width: 1024px) {
-    .compressed-nav {
-      padding-left: 30px;
-      padding-right: 30px;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      top: 0; } }
 
 .compressed-nav * {
   opacity: 0; }
