@@ -3620,7 +3620,7 @@ body {
     padding-bottom: 3px;
     border-bottom: 3px solid #AAD9D9; } }
 
-.compressed-nav {
+.condensed-nav {
   position: fixed;
   top: 0;
   width: 100%;
@@ -3634,7 +3634,7 @@ body {
   transition: 0.5s ease-in-out;
   transform: translateY(-80px); }
   @media (max-width: 1023px) {
-    .compressed-nav {
+    .condensed-nav {
       top: 80px;
       text-align: center;
       position: fixed;
@@ -3642,13 +3642,13 @@ body {
       height: 60px;
       left: 0; } }
 
-.compressed-nav * {
+.condensed-nav * {
   opacity: 0; }
 
-.compressed-nav.show-nav * {
+.condensed-nav.show-nav * {
   opacity: 1; }
 
-.compressed-nav.show-nav {
+.condensed-nav.show-nav {
   visibility: visible;
   height: 80px;
   text-transform: uppercase;
@@ -3806,6 +3806,17 @@ body {
     transform: translateX(0) translateY(40px);
     opacity: 1; } }
 
+@keyframes logoSlideInCompressed {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 0; }
+  25% {
+    transform: translateX(0) translateY(0);
+    opacity: 0; }
+  100% {
+    transform: translateX(0) translateY(0);
+    opacity: 1; } }
+
 @keyframes logoTextSlideIn {
   0% {
     transform: translateX(-30px);
@@ -3817,10 +3828,10 @@ body {
     transform: translateX(0);
     opacity: 1; } }
 
-.compressed-nav .logo-container {
+.condensed-nav .logo-container {
   display: none; }
   @media (min-width: 1024px) {
-    .compressed-nav .logo-container {
+    .condensed-nav .logo-container {
       display: block;
       position: absolute;
       transform: translateY(0);
@@ -3828,13 +3839,14 @@ body {
       left: 0;
       background-size: 40px auto;
       background-position: 28px 15px;
-      padding-left: 80px; }
-      .compressed-nav .logo-container #header-info h1#header-title {
+      padding-left: 80px;
+      animation-name: logoSlideInCompressed; }
+      .condensed-nav .logo-container #header-info h1#header-title {
         background-color: pink;
         padding: 0;
         line-height: 79px;
         text-align: left; }
-      .compressed-nav .logo-container #header-info h2 {
+      .condensed-nav .logo-container #header-info h2 {
         display: none; } }
 
 @media (max-width: 1023px) {

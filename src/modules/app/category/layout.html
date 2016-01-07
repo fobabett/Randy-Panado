@@ -1,4 +1,57 @@
-<div ng-include="'common/partials/_nav.html'"></div>
+<div class='header-container' ng-include="'common/partials/_nav.html'"></div>
+
+<div id='blog-nav' class='condensed-nav' ng-class='{"show-nav":boolChangeClass}'>
+
+  <div class='logo-container'>
+    <div id='header-info'>
+      <h1 id='header-title'>Randy Panado</h1>
+      <h2 class='show-for-large'>Director of Photography</h2>
+      <h2 class='show-for-large'>Aerial Cinematographer</h2>
+    </div>
+  </div>
+    
+  <div class='nav-section blog-nav-section'>
+    <ul class='nav-list blog-nav-list'>
+      <li class='nav-item blog-nav-item'>
+        <img src='../../../assets/icons/all-posts.svg' class='nav-item-icon' ui-sref='chronicles'>
+        <h1>Label</h1>
+      </li>  
+      <li class='nav-item blog-nav-item'>
+        <img src='../../../assets/icons/photography.svg' class='nav-item-icon' ui-sref='category({category: "tools & techniques"})'>
+        <h1>Label</h1>
+      </li>  
+      <li class='nav-item blog-nav-item'>
+        <img src='../../../assets/icons/adventure.svg' class='nav-item-icon' ui-sref='category({category: "adventures"})'>
+        <h1>Label</h1>
+      </li>  
+      <li class='nav-item blog-nav-item'>
+        <img src='../../../assets/icons/aerials.svg' class='nav-item-icon' ui-sref='category({category: "aerials"})'>
+        <h1>Label</h1>
+      </li>  
+      <li class='nav-item blog-nav-item'>
+        <img src='../../../assets/icons/gear-talk.svg' class='nav-item-icon' ui-sref='category({category: "gear talk"})'>
+        <h1>Label</h1>
+      </li>  
+      <li class='nav-item blog-nav-item'>
+        <img src='../../../assets/icons/corporate.svg' class='nav-item-icon' ui-sref='category({category: "corporate"})'>
+        <h1>Label</h1>
+      </li>  
+    </ul>
+  </div>
+    
+  <img src='../../../assets/icons/menu.svg' class='toggle-dropdown blog-toggle' ng-click='toggleDropdown=!toggleDropdown'>
+
+  <div class='blog-dropdown-nav'>
+    <ul ng-show='toggleDropdown' class='nav-list'>
+      <li class='nav-item'><a ui-sref='home'>Work</a></li>
+      <li class='nav-item'><a ui-sref='about'>About</a></li>
+      <li class='nav-item'><a ui-sref='about'>Equipment</a></li>
+      <li class='nav-item'><a ui-sref='chronicles'>Chronicles</a></li>
+      <li class='nav-item'><a ui-sref='home'>Contact</a></li>
+    </ul>
+  </div>
+
+</div>
 
 <div class='page-content-container' id='category'>
   

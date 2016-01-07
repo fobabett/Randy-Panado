@@ -126,7 +126,7 @@ body{
     border-bottom: 3px solid #AAD9D9;
   }
 }
-.compressed-nav {
+.condensed-nav {
   position: fixed;
   top: 0;
   width: 100%;
@@ -149,13 +149,13 @@ body{
     left: 0;
   }
 }
-.compressed-nav * {
+.condensed-nav * {
   opacity: 0;
 }
-.compressed-nav.show-nav * {
+.condensed-nav.show-nav * {
   opacity: 1;
 }
-.compressed-nav.show-nav {
+.condensed-nav.show-nav {
   visibility: visible;
   height: 80px;
   text-transform: uppercase;
@@ -314,7 +314,7 @@ body{
     animation-iteration-count: 1;
     animation-timing-function: ease;
     animation-delay: 0;
-  }
+  } 
 
   h1#header-title {
     color: #5B5B5B;
@@ -359,6 +359,25 @@ body{
   }
 }
 
+
+@keyframes logoSlideInCompressed {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 0;
+  }
+
+  25% {
+    transform: translateX(0) translateY(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+
 @keyframes logoTextSlideIn {
   0% {
     transform: translateX(-30px);
@@ -376,9 +395,9 @@ body{
   }
 }
 
-// Compressed Nav Logo
+// Condensed Nav Logo
 
-.compressed-nav .logo-container{
+.condensed-nav .logo-container{
 
   display: none;
   
@@ -391,6 +410,7 @@ body{
     background-size: 40px auto;
     background-position: 28px 15px;
     padding-left: 80px;
+    animation-name: logoSlideInCompressed;
 
     #header-info h1#header-title{
       background-color: pink;
