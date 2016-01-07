@@ -3565,9 +3565,7 @@ body {
       position: absolute;
       right: 0;
       top: 0;
-      transform: translateY(50%);
-      -webkit-transform: translateY(50%);
-      -moz-transform: translateY(50%); } }
+      transform: translateY(50%); } }
 
 .about-nav-section {
   top: 79px; }
@@ -3712,15 +3710,11 @@ body {
   @media (max-width: 639px) {
     .toggle-dropdown {
       margin: 15px;
-      transform: translateY(50%);
-      -webkit-transform: translateY(50%);
-      -moz-transform: translateY(50%); } }
+      transform: translateY(50%); } }
   @media (min-width: 640px) and (max-width: 1023px) {
     .toggle-dropdown {
       margin: 20px;
-      transform: translateY(50%);
-      -webkit-transform: translateY(50%);
-      -moz-transform: translateY(50%); } }
+      transform: translateY(50%); } }
   @media (min-width: 1024px) {
     .toggle-dropdown {
       margin: 30px; } }
@@ -3735,8 +3729,6 @@ body {
     text-transform: uppercase;
     font-family: 'Novecento Sans';
     font-size: 12px;
-    -webkit-box-shadow: 1px 1px 2px 2px #E3E2DE;
-    -moz-box-shadow: 1px 1px 2px 2px #E3E2DE;
     box-shadow: 1px 1px 2px 2px #E3E2DE;
     text-align: right;
     border-radius: 2px;
