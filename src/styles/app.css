@@ -3581,6 +3581,7 @@ body {
     transform: translateY(30px);
     position: absolute;
     max-height: 0;
+    display: none;
     width: 100%;
     left: 0;
     max-height: 0;
@@ -3591,6 +3592,7 @@ body {
 
 .nav-list.toggle-nav {
   opacity: 1;
+  display: block;
   max-height: 265px;
   overflow-y: hidden;
   transition-property: all;
