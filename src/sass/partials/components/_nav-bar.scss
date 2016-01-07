@@ -133,6 +133,11 @@ body{
     border-bottom: 3px solid #AAD9D9;
   }
 }
+// @keyframes slidedown {
+//   0% {
+//     transl
+//   }
+// }
 .compressed-nav {
   position: fixed;
   width: 100%;
@@ -143,6 +148,8 @@ body{
   visibility: hidden;
   z-index: 1;
   text-align: center; 
+  transition: 0.5s ease-in-out;  
+  transform: translateY(-80px);
 
   @include respond-to('medium-small') {
     top: 80px;
@@ -161,13 +168,18 @@ body{
     top: 0;
   }
 }
+.compressed-nav * {
+  opacity: 0;
+}
+.compressed-nav.show-nav * {
+  opacity: 1;
+}
 .compressed-nav.show-nav {
   visibility: visible;
   height: 80px;
   text-transform: uppercase;
+  transform: translateY(0);
 }
-
-
 .category-container {
   position: absolute;
   top: 0;
