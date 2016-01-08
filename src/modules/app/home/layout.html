@@ -87,7 +87,7 @@
   <div>
     <ul id='filter' ng-hide='modalShown'> 
       <li class='filter-title'>Type</li>
-      <li class='filter-type' ng-click='refresh(); selectTag($index, tag)' ng-class='{"selected-tag": tag==selectedTags[$index]}' ng-repeat='tag in tags'>{{tag}}</li>
+      <li class='filter-type' ng-click='refresh(); selectTag($index, tag); active=!active' ng-class='{"selected-tag": active}' ng-repeat='tag in tags'>{{tag}}</li>
     </ul>
   </div>
 
