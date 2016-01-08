@@ -3631,7 +3631,7 @@ body {
   height: 80px;
   width: 100%;
   border-bottom: 1px solid #ADDDDD;
-  background-color: orange;
+  background-image: url("../assets/images/bg1.png");
   background-repeat: no-repeat;
   background-size: cover;
   text-transform: uppercase;
