@@ -3671,15 +3671,23 @@ body {
       .condensed-nav.show-nav.about-condensed-nav {
         transform: translateY(80px); } }
 
-.category-container {
+.condensed-nav .category-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1; }
+  z-index: 1;
+  opacity: 1; }
+
+.condensed-nav .category-container * {
+  opacity: 1; }
 
 .category-list {
   background-color: transparent; }
+  .condensed-nav .category-list {
+    opacity: 1; }
+  .condensed-nav.show-nav .category-list {
+    opacity: 1; }
   @media (max-width: 1023px) {
     .category-list {
       padding-top: 10px; } }
@@ -3721,9 +3729,12 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 10; }
+  z-index: 10;
+  transition: all 0.2s ease; }
   .toggle-dropdown:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.2s ease; }
   @media (max-width: 639px) {
     .toggle-dropdown {
       margin: 15px;
@@ -3740,27 +3751,44 @@ body {
   display: inline-block; }
   .desktop-dropdown-nav ul {
     position: absolute;
-    top: 80px;
-    right: 40px;
+    top: 63px;
+    right: 20px;
     background-color: #ffffff;
     text-transform: uppercase;
     font-family: 'Novecento Sans';
     font-size: 12px;
-    box-shadow: 1px 1px 2px 2px #E3E2DE;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
     text-align: right;
     border-radius: 2px;
-    color: #565656; }
+    color: #565656;
+    z-index: 2; }
+    .desktop-dropdown-nav ul:before {
+      display: block;
+      top: 0;
+      right: 0;
+      content: " ";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid white;
+      border-left: 6px solid transparent;
+      transform: translateY(-12px) translateX(-14px);
+      z-index: 1; }
   .desktop-dropdown-nav .nav-item {
     display: block;
-    padding: 10px;
-    padding-left: 30px;
-    padding-right: 15px;
     margin: 0;
     cursor: pointer; }
-    .desktop-dropdown-nav .nav-item:hover {
-      background-color: #ACDADA; }
-      .desktop-dropdown-nav .nav-item:hover a {
-        color: #ffffff; }
+    .desktop-dropdown-nav .nav-item a {
+      display: block;
+      padding: 10px;
+      padding-left: 30px;
+      padding-right: 15px;
+      transition: all 0.2s ease; }
+      .desktop-dropdown-nav .nav-item a:hover {
+        background-color: #ACDADA;
+        transition: all 0.2s ease; }
 
 .logo-container {
   display: block;
@@ -4347,6 +4375,7 @@ section#photo {
     color: #878685; }
 
 #contact-section {
+  background-color: pink;
   text-align: center;
   font-family: 'proxima-nova';
   text-transform: uppercase; }
