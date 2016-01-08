@@ -14,11 +14,11 @@
 
   <div class='desktop-dropdown-nav'>
     <ul ng-show='toggleDropdown' class='nav-list'>
-      <li ng-click='toggleDropdown=!toggleDropdown' class='nav-item'><a ui-sref='home'>Work</a></li>
-      <li ng-click='toggleDropdown=!toggleDropdown' class='nav-item'><a ui-sref='about'>About</a></li>
-      <li ng-click='toggleDropdown=!toggleDropdown' class='nav-item'><a ui-sref='about'>Equipment</a></li>
-      <li ng-click='toggleDropdown=!toggleDropdown' class='nav-item'><a ui-sref='chronicles'>Chronicles</a></li>
-      <li ng-click='toggleDropdown=!toggleDropdown' class='nav-item'><a ui-sref='home'>Contact</a></li>
+      <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='home'>Work</a></li>
+      <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' href='#about' du-smooth-scroll duration='1000'>About</a></li>
+      <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' href='#equipment-section' du-smooth-scroll duration='1000'>Equipment</a></li>
+      <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='chronicles'>Chronicles</a></li>
+      <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='home({scrollTo: "contact-section"})'>Contact</a></li>
     </ul>
   </div>
     

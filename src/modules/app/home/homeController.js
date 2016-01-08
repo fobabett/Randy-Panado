@@ -6,7 +6,7 @@ module.exports = /*@ngInject*/
     $timeout(function() { 
       var anchor = angular.element(document.getElementById($stateParams.scrollTo));
       $document.scrollToElement(anchor, 150, 2000);
-    }, 1000);
+    }, 600);
 
     $scope.activeTab = $state.current.name;
     $scope.selectedTags = [];
