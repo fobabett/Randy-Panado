@@ -100,7 +100,7 @@ section#photo {
   }
 }
 .section-subtitle {
-  color: #A0C6C6;
+  color: $panado-blue;
   font-size: 14px;
   letter-spacing: 2px;
 }
@@ -144,6 +144,7 @@ section#photo {
 
   .article-date {
     font-size: 14px;
+    color: $primary-font-color;
   }
 
   p {
@@ -257,7 +258,7 @@ section#photo {
 
   button {
     color: #FFFFFF;
-    background-color: #ACDADA;
+    background-color: $panado-blue;
     width: 100%;
     padding: 15px;
   }

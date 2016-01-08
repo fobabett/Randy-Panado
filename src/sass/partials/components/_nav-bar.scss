@@ -112,7 +112,7 @@ body{
   @include respond-to('medium-small') {
     display: block;
     padding: 20px;
-    border-bottom: 1px solid #AAD9D9;
+    border-bottom: 1px solid $panado-blue;
   }
 
   @include respond-to('large') {
@@ -123,14 +123,14 @@ body{
 
   @include respond-to('large') {
     padding-bottom: 3px;
-    border-bottom: 3px solid #AAD9D9;
+    border-bottom: 3px solid $panado-blue;
   }
 }
 .compressed-nav {
   position: fixed;
   top: 0;
   width: 100%;
-  border-bottom: 1px solid #ADDDDD;
+  border-bottom: 1px solid $panado-blue;
   background-image: url('../assets/images/bg1.png');
   background-repeat: no-repeat;
   background-size: cover;

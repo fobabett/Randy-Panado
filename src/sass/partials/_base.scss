@@ -15,9 +15,10 @@
 .title,
 .subtitle {
   text-transform: uppercase;
+  color: $title-blue;
 }
 .title {
-  color: #4B4B4B;
+  color: $primary-font-color;
 }
 .columns {
   padding: 0;

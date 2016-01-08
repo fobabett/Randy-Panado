@@ -3610,7 +3610,7 @@ body {
     .nav-item {
       display: block;
       padding: 20px;
-      border-bottom: 1px solid #AAD9D9; } }
+      border-bottom: 1px solid #ADDDDD; } }
   @media (min-width: 1024px) {
     .nav-item {
       margin-right: 20px; } }
@@ -3618,7 +3618,7 @@ body {
 @media (min-width: 1024px) {
   .nav-item.active {
     padding-bottom: 3px;
-    border-bottom: 3px solid #AAD9D9; } }
+    border-bottom: 3px solid #ADDDDD; } }
 
 .compressed-nav {
   position: fixed;
@@ -3984,7 +3984,6 @@ body {
       border-bottom: 1px solid #BDE0E0;
       padding: 100px; } }
   .title-banner .subtitle {
-    color: #92BDBD;
     font-family: 'Novecento Sans DemiBold';
     letter-spacing: 3px; }
 
@@ -4224,7 +4223,7 @@ section#photo {
       color: #4E4E4E; } }
 
 .section-subtitle {
-  color: #A0C6C6;
+  color: #ADDDDD;
   font-size: 14px;
   letter-spacing: 2px; }
 
@@ -4259,7 +4258,8 @@ section#photo {
   .article-snippet-content .article-title {
     font-family: 'proxima-nova'; }
   .article-snippet-content .article-date {
-    font-size: 14px; }
+    font-size: 14px;
+    color: #525252; }
   .article-snippet-content p {
     font-size: 14px;
     color: #B8B8B8; }
@@ -4338,7 +4338,7 @@ section#photo {
     resize: none; }
   #contact-section button {
     color: #FFFFFF;
-    background-color: #ACDADA;
+    background-color: #ADDDDD;
     width: 100%;
     padding: 15px; }
 
@@ -4406,7 +4406,7 @@ section#photo {
   padding: 40px;
   font-family: 'Novecento Sans DemiBold';
   text-transform: uppercase;
-  color: #ACDADA;
+  color: #ADDDDD;
   letter-spacing: 3px; }
 
 .page-content-container {
@@ -4422,10 +4422,11 @@ section#photo {
 
 .title,
 .subtitle {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #99C1C2; }
 
 .title {
-  color: #4B4B4B; }
+  color: #525252; }
 
 .columns {
   padding: 0; }
