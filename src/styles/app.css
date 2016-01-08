@@ -3642,7 +3642,7 @@ body {
   transform: translateY(-80px); }
   @media (max-width: 1023px) {
     .condensed-nav {
-      transform: translateY(80px);
+      transform: translateY(-80px);
       text-align: center;
       position: fixed;
       width: 100%;
@@ -3665,6 +3665,9 @@ body {
 .condensed-nav.show-nav {
   top: 0;
   transform: translateY(0); }
+  @media (max-width: 1023px) {
+    .condensed-nav.show-nav {
+      transform: translateY(80px); } }
   .condensed-nav.show-nav.about-condensed-nav {
     opacity: 1; }
     @media (max-width: 1023px) {

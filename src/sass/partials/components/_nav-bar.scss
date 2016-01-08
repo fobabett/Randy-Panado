@@ -143,7 +143,7 @@ body{
   transform: translateY(-80px);
 
   @include respond-to('medium-small') {
-    transform: translateY(80px);
+    transform: translateY(-80px);
     text-align: center;
     position: fixed;
     width: 100%;
@@ -172,8 +172,10 @@ body{
 
 .condensed-nav.show-nav {
   top:0;
-  // height: 80px; // this was causing issues. on close. needs to be 80px at both open and closed states.
-  transform: translateY(0);
+  transform: translateY(0); //this was causing the condensed-nav on mobile chronicles to disappear. added lines 176-178 to fix
+  @include respond-to('medium-small'){
+    transform: translateY(80px);
+  }
 
   &.about-condensed-nav{
     opacity: 1;
