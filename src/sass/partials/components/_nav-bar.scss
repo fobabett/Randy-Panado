@@ -100,13 +100,13 @@ body{
   }
 }
 .nav-list.toggle-nav {
-  height: 265px;
-  transform: translateY(2px);
-  background-color: #ffffff;
-  z-index: -1;
-  transition: 0.5s ease-in-out;
-
+  
   @include respond-to('medium-small') {
+    height: 265px;
+    transform: translateY(2px);
+    background-color: #ffffff;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
 
     li {
       opacity: 1;

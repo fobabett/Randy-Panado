@@ -3608,13 +3608,13 @@ body {
     opacity: 0;
     transition: 0.5s ease-in-out; } }
 
-.nav-list.toggle-nav {
-  height: 265px;
-  transform: translateY(2px);
-  background-color: #ffffff;
-  z-index: -1;
-  transition: 0.5s ease-in-out; }
-  @media (max-width: 1023px) {
+@media (max-width: 1023px) {
+  .nav-list.toggle-nav {
+    height: 265px;
+    transform: translateY(2px);
+    background-color: #ffffff;
+    z-index: -1;
+    transition: 0.5s ease-in-out; }
     .nav-list.toggle-nav li {
       opacity: 1;
       transition: 0.5s ease-in-out; } }
