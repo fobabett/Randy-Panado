@@ -15,7 +15,7 @@
   <div class='desktop-dropdown-nav'>
     <ul ng-show='toggleDropdown' class='nav-list'>
       <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' href='#photo' du-smooth-scroll duration='1000' offset='50'>Work</a></li>
-      <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='about'>About</a></li>
+      <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='about({scrollTo: "about"})'>About</a></li>
       <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='about({scrollTo: "equipment-section"})'>Equipment</a></li>
       <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='chronicles'>Chronicles</a></li>
       <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' href='#contact-section' du-smooth-scroll duration='1000' offset='100'>Contact</a></li>
@@ -85,7 +85,7 @@
   </div>
 
   <div>
-    <ul id='filter' ng-hide='modalShown' du-scrollspy='contact-section' offset='300'> 
+    <ul id='filter' ng-hide='modalShown' du-scrollspy='contact-section' offset='100'> 
       <li class='filter-title'>Type</li>
       <li class='filter-type' ng-click='refresh(); selectTag($index, tag); active=!active' ng-class='{"selected-tag": active}' ng-repeat='tag in tags'>{{tag}}</li>
     </ul>
@@ -151,7 +151,7 @@
             <div id='about-section-snippet'>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum ab exercitationem ut dicta, dolor eius sed. Doloribus, sed totam, odio fuga, amet commodi consectetur accusantium officiis eaque magnam adipisci hic?</p>
             </div>
-            <a ui-sref="about">More About Randy</a>
+            <a ui-sref='about({scrollTo: "about"})'>More About Randy</a>
           </div>
         </div>
 

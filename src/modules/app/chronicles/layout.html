@@ -44,7 +44,7 @@
   <div class='desktop-dropdown-nav'>
     <ul ng-show='toggleDropdown' class='nav-list'>
       <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='home'>Work</a></li>
-      <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='about'>About</a></li>
+      <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='about({scrollTo: "about"})'>About</a></li>
       <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='about({scrollTo: "equipment-section"})'>Equipment</a></li>
       <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='chronicles'>Chronicles</a></li>
       <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='home({scrollTo: "contact-section"})'>Contact</a></li>
