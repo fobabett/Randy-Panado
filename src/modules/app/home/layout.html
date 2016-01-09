@@ -85,7 +85,7 @@
   </div>
 
   <div>
-    <ul id='filter' ng-hide='modalShown'> 
+    <ul id='filter' ng-hide='modalShown' du-scrollspy='contact-section' offset='300'> 
       <li class='filter-title'>Type</li>
       <li class='filter-type' ng-click='refresh(); selectTag($index, tag); active=!active' ng-class='{"selected-tag": active}' ng-repeat='tag in tags'>{{tag}}</li>
     </ul>
