@@ -1,43 +1,47 @@
 <div class='header clearfix rows'>
 
-  <div class='logo-container'>
-    <div id='header-info'>
-      <h1 id='header-title'>Randy Panado</h1>
-      <h2 class='show-for-large'>Director of Photography</h2>
-      <h2 class='show-for-large'>Aerial Cinematographer</h2>
-    </div>
-  </div>
-  
-  <div class='nav-section'>
+  <div id='header-content'>
 
-    <img src='../../../assets/icons/menu.svg' class='toggle-dropdown hide-for-large' ng-click='toggleNav=!toggleNav'>
-    <ul ng-class='{"toggle-nav": toggleNav}' class='nav-list'>
-      <li ng-click='toggleNav=!toggleNav' ng-hide='activeTab=="home"' ng-class='{active: activeTab == "home"}' class='nav-item'>
-        <a ng-click='toggleNav=!toggleNav' ui-sref='home'>Work</a>
-      </li>
-      <li ng-click='toggleNav=!toggleNav' ng-show='activeTab=="home"' ng-class='{active: activeTab == "home"}' class='nav-item' >
-        <a ng-click='toggleNav=!toggleNav' href='#photo' du-smooth-scroll duration='1000' offset='100'>Work</a>
-      </li>
-      <li ng-click='toggleNav=!toggleNav' ng-class='{active: activeTab == "about"}' class='nav-item'>
-        <a ng-click='toggleNav=!toggleNav' ui-sref='about'>About</a>
-      </li>
-      <li ng-click='toggleNav=!toggleNav' ng-show='activeTab == "about"' ng-class='{active: activeTab == "equipment"}' class='nav-item'>
-        <a ng-click='toggleNav=!toggleNav' href='#equipment-section' du-smooth-scroll duration='1000'>Equipment</a>
-      </li>
-      <li ng-click='toggleNav=!toggleNav' ng-hide='activeTab == "about"' ng-class='{active: activeTab == "equipment"}' class='nav-item'>
-        <a ng-click='toggleNav=!toggleNav' ui-sref='about({scrollTo: "equipment-section"})'>Equipment</a>
-      </li>
-      <li ng-click='toggleNav=!toggleNav' ng-class='{active: activeTab == "chronicles"}' class='nav-item'>
-        <a ng-click='toggleNav=!toggleNav' ui-sref='chronicles'>Chronicles</a>
-      </li>
-      <li ng-click='toggleNav=!toggleNav' ng-hide='activeTab == "home"' ng-class='{active: activeTab == "contact"}' class='nav-item'>
-        <a ng-click='toggleNav=!toggleNav' ui-sref='home({scrollTo: "contact-section"})' du-smooth-scroll duration='1000'>Contact</a>
-      </li>
-      <li ng-click='toggleNav=!toggleNav' ng-show='activeTab == "home"' ng-class='{active: activeTab == "contact"}' class='nav-item'>
-        <a ng-click='toggleNav=!toggleNav' href='#contact-section' du-smooth-scroll duration='1000' offset='100'>Contact</a>
-      </li>
-    </ul>
+    <div class='logo-container'>
+      <div id='header-info'>
+        <h1 id='header-title'>Randy Panado</h1>
+        <h2 class='show-for-large'>Director of Photography</h2>
+        <h2 class='show-for-large'>Aerial Cinematographer</h2>
+      </div>
+    </div>
+  
+    <div class='nav-section'>
+
+      <img src='../../../assets/icons/menu.svg' class='toggle-dropdown hide-for-large' ng-click='toggleNav=!toggleNav'>
+      <ul ng-class='{"toggle-nav": toggleNav}' class='nav-list'>
+        <li ng-click='toggleNav=!toggleNav' ng-hide='activeTab=="home"' ng-class='{active: activeTab == "home"}' class='nav-item'>
+          <a ng-click='toggleNav=!toggleNav' ui-sref='home'>Work</a>
+        </li>
+        <li ng-click='toggleNav=!toggleNav' ng-show='activeTab=="home"' ng-class='{active: activeTab == "home"}' class='nav-item' >
+          <a ng-click='toggleNav=!toggleNav' href='#photo' du-smooth-scroll duration='1000' offset='100'>Work</a>
+        </li>
+        <li ng-click='toggleNav=!toggleNav' ng-class='{active: activeTab == "about"}' class='nav-item'>
+          <a ng-click='toggleNav=!toggleNav' ui-sref='about'>About</a>
+        </li>
+        <li ng-click='toggleNav=!toggleNav' ng-show='activeTab == "about"' ng-class='{active: activeTab == "equipment"}' class='nav-item'>
+          <a ng-click='toggleNav=!toggleNav' href='#equipment-section' du-smooth-scroll duration='1000'>Equipment</a>
+        </li>
+        <li ng-click='toggleNav=!toggleNav' ng-hide='activeTab == "about"' ng-class='{active: activeTab == "equipment"}' class='nav-item'>
+          <a ng-click='toggleNav=!toggleNav' ui-sref='about({scrollTo: "equipment-section"})'>Equipment</a>
+        </li>
+        <li ng-click='toggleNav=!toggleNav' ng-class='{active: activeTab == "chronicles"}' class='nav-item'>
+          <a ng-click='toggleNav=!toggleNav' ui-sref='chronicles'>Chronicles</a>
+        </li>
+        <li ng-click='toggleNav=!toggleNav' ng-hide='activeTab == "home"' ng-class='{active: activeTab == "contact"}' class='nav-item'>
+          <a ng-click='toggleNav=!toggleNav' ui-sref='home({scrollTo: "contact-section"})' du-smooth-scroll duration='1000'>Contact</a>
+        </li>
+        <li ng-click='toggleNav=!toggleNav' ng-show='activeTab == "home"' ng-class='{active: activeTab == "contact"}' class='nav-item'>
+          <a ng-click='toggleNav=!toggleNav' href='#contact-section' du-smooth-scroll duration='1000' offset='100'>Contact</a>
+        </li>
+      </ul>
     
-  </div>
+    </div>
+    
+  </div>  
 
 </div>

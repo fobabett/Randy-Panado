@@ -18,6 +18,23 @@ body{
   letter-spacing: 2px;
   z-index: 2;
 
+  @include respond-to('medium-small') {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    background-color: white;
+    margin: 0 auto;
+  }
+
+  @include respond-to('large') {
+    height: 150px;
+  }
+}
+#header-content {
+  height: 100%;
+
   @include respond-to('small') {
     padding-left: 15px;
     padding-right: 15px;
@@ -29,18 +46,8 @@ body{
   }
 
   @include respond-to('medium-small') {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
+    background-color: #ffffff;
     border-bottom: 1px solid #BEE1E0;
-    height: 80px;
-    background-color: white;
-    margin: 0 auto;
-  }
-
-  @include respond-to('large') {
-    height: 150px;
   }
 }
 .nav-section {
@@ -74,31 +81,42 @@ body{
 .nav-list {
 
   @include respond-to('medium-small') {
-    opacity: 0;
-    // transform: translateY(30px);
+    height: 265px;
     position: absolute;
-    max-height: 0;
-    display: none;
     width: 100%;
     left: 0;
-    max-height: 0;
+    transform: translateY(-267px);
     background-color: #ffffff;
-    transition-property: all;
-    transition-duration: 0.5s;
-    transition-timing-function: cubic-bezier(0.5, 1, 0.5, 1);
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+  }
+
+  @include respond-to('medium-small') {
+
+    li {
+      opacity: 0;
+      transition: 0.5s ease-in-out;
+    }
   }
 }
 .nav-list.toggle-nav {
-  opacity: 1;
-  display: block;
-  max-height: 265px;
-  overflow-y: hidden;
-  transition-property: all;
-  transition-duration: 0.5s;
-  transition-timing-function: cubic-bezier(0.5, 1, 0.5, 1);
+  height: 265px;
+  transform: translateY(2px);
+  background-color: #ffffff;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+
+  @include respond-to('medium-small') {
+
+    li {
+      opacity: 1;
+      transition: 0.5s ease-in-out;
+    }
+  }
 }
 .nav-item {
   display: inline-block;
+  position: relative;
 
   a {
     font-family: 'Novecento Sans';

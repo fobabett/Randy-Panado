@@ -3540,27 +3540,33 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   z-index: 2; }
-  @media (max-width: 639px) {
-    .header {
-      padding-left: 15px;
-      padding-right: 15px; } }
-  @media (min-width: 640px) and (max-width: 1023px) {
-    .header {
-      padding-right: 30px;
-      padding-left: 30px; } }
   @media (max-width: 1023px) {
     .header {
       position: fixed;
       top: 0;
       right: 0;
       left: 0;
-      border-bottom: 1px solid #BEE1E0;
       height: 80px;
       background-color: white;
       margin: 0 auto; } }
   @media (min-width: 1024px) {
     .header {
       height: 150px; } }
+
+#header-content {
+  height: 100%; }
+  @media (max-width: 639px) {
+    #header-content {
+      padding-left: 15px;
+      padding-right: 15px; } }
+  @media (min-width: 640px) and (max-width: 1023px) {
+    #header-content {
+      padding-right: 30px;
+      padding-left: 30px; } }
+  @media (max-width: 1023px) {
+    #header-content {
+      background-color: #ffffff;
+      border-bottom: 1px solid #BEE1E0; } }
 
 .nav-section {
   font-family: 'Novecento Sans Wide'; }
@@ -3588,29 +3594,34 @@ body {
 
 @media (max-width: 1023px) {
   .nav-list {
-    opacity: 0;
+    height: 265px;
     position: absolute;
-    max-height: 0;
-    display: none;
     width: 100%;
     left: 0;
-    max-height: 0;
+    transform: translateY(-267px);
     background-color: #ffffff;
-    transition-property: all;
-    transition-duration: 0.5s;
-    transition-timing-function: cubic-bezier(0.5, 1, 0.5, 1); } }
+    transition: 0.5s ease-in-out;
+    z-index: -1; } }
+
+@media (max-width: 1023px) {
+  .nav-list li {
+    opacity: 0;
+    transition: 0.5s ease-in-out; } }
 
 .nav-list.toggle-nav {
-  opacity: 1;
-  display: block;
-  max-height: 265px;
-  overflow-y: hidden;
-  transition-property: all;
-  transition-duration: 0.5s;
-  transition-timing-function: cubic-bezier(0.5, 1, 0.5, 1); }
+  height: 265px;
+  transform: translateY(2px);
+  background-color: #ffffff;
+  z-index: -1;
+  transition: 0.5s ease-in-out; }
+  @media (max-width: 1023px) {
+    .nav-list.toggle-nav li {
+      opacity: 1;
+      transition: 0.5s ease-in-out; } }
 
 .nav-item {
-  display: inline-block; }
+  display: inline-block;
+  position: relative; }
   .nav-item a {
     font-family: 'Novecento Sans';
     color: #737272;
