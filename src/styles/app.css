@@ -3662,12 +3662,10 @@ body {
       transform: translateY(0); } }
 
 .condensed-nav * {
-  opacity: 0;
-  transition: 0.5s ease-in-out; }
+  opacity: 0; }
 
 .condensed-nav.show-nav * {
-  opacity: 1;
-  transition: 0.5s ease-in-out; }
+  opacity: 1; }
 
 .condensed-nav.show-nav {
   top: 0;

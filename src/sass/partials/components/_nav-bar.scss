@@ -162,12 +162,12 @@ body{
 }
 .condensed-nav * {
   opacity: 0;
-  transition: 0.5s ease-in-out; // so it animates
+  // transition: 0.5s ease-in-out; // so it animates
 }
 
 .condensed-nav.show-nav * {
   opacity: 1;
-  transition: 0.5s ease-in-out; // so it animates 
+  // transition: 0.5s ease-in-out; // so it animates 
 }
 
 .condensed-nav.show-nav {
