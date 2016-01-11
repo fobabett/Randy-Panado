@@ -12,7 +12,13 @@
   
     <div class='nav-section'>
 
-      <img src='../../../assets/icons/menu.svg' class='toggle-dropdown hide-for-large' ng-click='toggleNav=!toggleNav'>
+      <!-- <img src='../../../assets/icons/menu.svg' class='toggle-dropdown hide-for-large' ng-click='toggleNav=!toggleNav'> -->
+      <div class='toggle-dropdown hide-for-large' ng-click='toggleNav=!toggleNav' ng-class='{"menu-open": toggleNav}'>
+        <div class='bar first'></div>
+        <div class='bar second'></div>
+        <div class='bar third'></div>
+      </div>
+
       <ul ng-class='{"toggle-nav": toggleNav}' class='nav-list'>
         <li ng-click='toggleNav=!toggleNav' ng-hide='activeTab=="home"' ng-class='{active: activeTab == "home"}' class='nav-item'>
           <a ng-click='toggleNav=!toggleNav' ui-sref='home'>Work</a>

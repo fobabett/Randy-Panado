@@ -29,8 +29,9 @@ section#photo {
   }
 
   @include respond-to('large') {
-    padding-left: 200px;
-    padding-right: 200px;
+    // padding-left: 200px;
+    // padding-right: 200px;
+    max-width: 1250px;
   }
 }
 .photo-item {
