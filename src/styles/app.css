@@ -4234,7 +4234,8 @@ body {
 
 section#photo {
   text-align: center;
-  background-color: #FBFAF7; }
+  background-color: #FBFAF7;
+  margin: 0 auto; }
   @media (max-width: 639px) {
     section#photo {
       padding: 15px; } }
@@ -4243,8 +4244,8 @@ section#photo {
       padding: 30px; } }
   @media (min-width: 1024px) {
     section#photo {
-      padding-left: 50px;
-      padding-right: 50px; } }
+      padding-left: 200px;
+      padding-right: 200px; } }
 
 .photo-item {
   position: relative;

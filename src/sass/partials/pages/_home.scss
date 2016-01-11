@@ -17,6 +17,8 @@
 section#photo {
   text-align: center;
   background-color: #FBFAF7;
+  // max-width: 1200px;
+  margin: 0 auto;
 
   @include respond-to('small') {
     padding: 15px;
@@ -27,8 +29,8 @@ section#photo {
   }
 
   @include respond-to('large') {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
   }
 }
 .photo-item {
