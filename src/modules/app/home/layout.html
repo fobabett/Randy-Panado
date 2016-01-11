@@ -96,12 +96,14 @@
     <section id='photo'>
 
       <ul class="dynamic-grid" angular-grid="pics" grid-width="250" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="true">
-        <li data-ng-repeat="pic in pics | selectedTags:selectedTags" class="grid angular-grid-item image-loaded" ng-init='getTags(pic)'>
+        <li data-ng-repeat="pic in pics | selectedTags:selectedTags" class="grid angular-grid-item image-loaded photo-item" ng-init='getTags(pic)'>
           <img ng-if='pic.type == "image"' src="{{pic.url}}" class="grid-img image-loaded" ng-click='toggleModal(pic); setCurrentSlideIndex($index); pauseVideo()'/>
 
           <embed-video ng-if='pic.type == "vimeo"' iframe-id="test" api="1" player_id="test" width='300' height='200' ng-href="{{pic.url | trustAsResourceUrl}}" ng-click='pauseVideo(); toggleModal(pic); setCurrentSlideIndex($index)'><a href="{{pic.url | trustAsResourceUrl}}"></a></embed-video>
 
           <!-- <youtube-video ng-if='pic.type == "youtube"' player-width='300'  player-height='200' video-url="pic.url" player='video' id='video' ng-click='pauseVideo(); toggleModal(pic); setCurrentSlideIndex($index)'></youtube-video> -->
+
+          <span class="photo-details"><span>{{pic.name}}</span></span>
         </li>
       </ul>
 

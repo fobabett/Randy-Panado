@@ -73,6 +73,8 @@ body{
 }
 .about-nav-section {
   top: 79px;
+  transform: translateY(50%);
+  
   @include respond-to('large') {
     top:0;
   }

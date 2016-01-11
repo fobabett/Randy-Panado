@@ -160,9 +160,9 @@ img.active {
 }
 .animate-slide.ng-hide-add.ng-hide-add-active,
 .animate-slide.ng-hide-remove.ng-hide-remove-active {
-  transition: 0.2s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 .animate-slide.ng-hide {
   max-height: 0;
-  opacity: 0;
+  // opacity: 0;
 }

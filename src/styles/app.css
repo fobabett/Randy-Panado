@@ -3293,11 +3293,10 @@ img.active {
 
 .animate-slide.ng-hide-add.ng-hide-add-active,
 .animate-slide.ng-hide-remove.ng-hide-remove-active {
-  transition: 0.2s ease-in-out; }
+  transition: 0.5s ease-in-out; }
 
 .animate-slide.ng-hide {
-  max-height: 0;
-  opacity: 0; }
+  max-height: 0; }
 
 #filter {
   background-color: pink;
@@ -3587,7 +3586,8 @@ body {
       transform: translateY(50%); } }
 
 .about-nav-section {
-  top: 79px; }
+  top: 79px;
+  transform: translateY(50%); }
   @media (min-width: 1024px) {
     .about-nav-section {
       top: 0; } }
@@ -4280,16 +4280,13 @@ section#photo {
       padding: 30px; } }
   @media (min-width: 1024px) {
     section#photo {
+      padding-left: 50px;
+      padding-right: 50px;
       max-width: 1250px; } }
 
 .photo-item {
   position: relative;
   text-align: center; }
-  @media (max-width: 1023px) {
-    .photo-item {
-      margin-bottom: 15px; } }
-  .photo-item img {
-    margin: 5px; }
   .photo-item:hover .photo-details {
     opacity: 1; }
 

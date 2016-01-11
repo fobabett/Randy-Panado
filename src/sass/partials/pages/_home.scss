@@ -17,7 +17,6 @@
 section#photo {
   text-align: center;
   background-color: #FBFAF7;
-  // max-width: 1200px;
   margin: 0 auto;
 
   @include respond-to('small') {
@@ -29,22 +28,14 @@ section#photo {
   }
 
   @include respond-to('large') {
-    // padding-left: 200px;
-    // padding-right: 200px;
+    padding-left: 50px;
+    padding-right: 50px;
     max-width: 1250px;
   }
 }
 .photo-item {
   position: relative;
   text-align: center;
-
-  @include respond-to('medium-small') {
-    margin-bottom: 15px;
-  }
-
-  img {
-    margin: 5px;
-  }
 
   &:hover .photo-details {
     opacity: 1;
@@ -65,7 +56,6 @@ section#photo {
     left: 0;
     top: 0;
     position: absolute;
-    // same as photo
     width: 300px;
     height: 200px;
     opacity: 0;
@@ -240,13 +230,6 @@ section#photo {
 
   @include respond-to('large') {
     border-left: 2px solid #D7D7D6;
-  }
-
-  &.ng-hide {
-    
-    @include respond-to('large') {
-      // display: block !important;
-    }
   }
 
   input,
