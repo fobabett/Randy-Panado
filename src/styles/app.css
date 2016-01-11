@@ -3592,13 +3592,6 @@ body {
     .about-nav-section {
       top: 0; } }
 
-.bar {
-  background-color: #817F7D;
-  width: 22px;
-  height: 3px;
-  right: 0;
-  top: 0; }
-
 @media (max-width: 1023px) {
   .nav-list {
     height: 265px;
@@ -3772,6 +3765,13 @@ body {
   @media (min-width: 1024px) {
     .toggle-dropdown {
       margin: 30px; } }
+
+.toggle-dropdown .bar {
+  background-color: #817F7D;
+  width: 22px;
+  height: 3px;
+  right: 0;
+  top: 0; }
 
 .toggle-dropdown .first {
   position: absolute;
