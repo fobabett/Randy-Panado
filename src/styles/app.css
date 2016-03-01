@@ -3339,37 +3339,42 @@ img.active {
 .animate-slide.ng-hide {
   max-height: 0; }
 
+.masonry-filters {
+  padding: 10px 0; }
+  @media (min-width: 1024px) {
+    .masonry-filters {
+      padding-bottom: 0;
+      padding-top: 55px;
+      border-top: 1px solid #ADDDDD; } }
+
 #filter {
   padding: 0;
   margin: 0;
-  background-color: pink;
-  border-bottom: 1px solid red;
-  padding-bottom: 20px;
+  background-color: #FBFAF7;
   font-family: 'Novecento Sans';
   color: #737272;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 400; }
-  @media (max-width: 639px) {
-    #filter {
-      padding-top: 15px; } }
-  @media (min-width: 640px) and (max-width: 1023px) {
-    #filter {
-      padding-top: 30px; } }
+  font-weight: 400;
+  margin-top: -1px; }
   @media (max-width: 1023px) {
     #filter {
+      padding: 15px 0;
       text-align: center;
       position: fixed;
       top: 80px;
       width: 100%;
       z-index: 1;
       transition: all 0.2s ease;
-      transform: translateY(0); } }
+      transform: translateY(0);
+      border-bottom: 1px solid #ADDDDD; } }
   @media (min-width: 1024px) {
     #filter {
       text-align: right;
-      padding-right: 50px; } }
+      margin: auto;
+      max-width: 1350px;
+      padding: 0 28px 0 30px; } }
   #filter li {
     display: inline-block; }
   @media (max-width: 1023px) {
@@ -3386,8 +3391,12 @@ img.active {
   display: none; }
   @media (min-width: 640px) and (max-width: 1023px) {
     #filter li.filter-title {
-      display: inline-block;
-      margin-right: 10px; }
+      display: inline-block; }
+      #filter li.filter-title:after {
+        content: ":"; } }
+  @media (min-width: 1024px) {
+    #filter li.filter-title {
+      display: inline-block; }
       #filter li.filter-title:after {
         content: ":"; } }
 
@@ -3399,25 +3408,24 @@ li.filter-type {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 400;
-  padding: 3px 5px 2px; }
-  @media (max-width: 639px) {
-    li.filter-type {
-      padding: 0; } }
+  padding: 2px 4px;
+  margin: 0;
+  margin-left: 3px;
+  transition: all 0.2s ease;
+  border-radius: 2px; }
+  li.filter-type:hover {
+    background-color: #EEE; }
   @media (max-width: 1023px) {
     li.filter-type {
-      font-size: 12px;
-      margin-bottom: 0; } }
+      font-size: 12px; } }
 
 li.filter-type.selected-tag {
-  margin-bottom: 0; }
-  @media (max-width: 1023px) {
-    li.filter-type.selected-tag {
-      background-color: transparent;
-      border-bottom: 3px solid #ABD9D9; } }
-  @media (min-width: 1024px) {
-    li.filter-type.selected-tag {
-      background-color: #CCE5E1;
-      color: #777E7D; } }
+  padding: 2px 4px;
+  margin: 0;
+  margin-left: 3px;
+  transition: all 0.2s ease;
+  border-radius: 2px;
+  background-color: #ADDDDD; }
 
 .dynamic-grid {
   position: relative;
@@ -3588,7 +3596,7 @@ body {
       top: 0;
       right: 0;
       left: 0;
-      height: 80px;
+      height: auto;
       background-color: white;
       margin: 0 auto; } }
   @media (min-width: 1024px) {
@@ -3607,8 +3615,8 @@ body {
       padding-left: 30px; } }
   @media (max-width: 1023px) {
     #header-content {
-      background-color: #ffffff;
-      border-bottom: 1px solid #BEE1E0; } }
+      background-color: #FBFAF7;
+      border-bottom: 1px solid #ADDDDD; } }
 
 .nav-section {
   font-family: 'Novecento Sans Wide'; }
@@ -3629,7 +3637,9 @@ body {
 
 .about-nav-section {
   top: 79px;
-  transform: translateY(50%); }
+  width: 300px;
+  background-color: red;
+  margin: auto; }
   @media (min-width: 1024px) {
     .about-nav-section {
       top: 0; } }
@@ -3643,8 +3653,8 @@ body {
       position: absolute;
       width: 100%;
       left: 0;
-      transform: translateY(-267px);
-      background-color: #ffffff;
+      transform: translateY(-293px);
+      background-color: #FBFAF7;
       transition: 0.5s ease-in-out;
       z-index: -1; }
       .nav-list li {
@@ -3654,8 +3664,8 @@ body {
 @media (max-width: 1023px) {
   .nav-list.toggle-nav {
     height: 290px;
-    transform: translateY(2px);
-    background-color: #ffffff;
+    transform: translateY(0);
+    background-color: #FBFAF7;
     z-index: -1;
     transition: 0.5s ease-in-out; }
     .nav-list.toggle-nav li {
@@ -4030,9 +4040,12 @@ section#photo {
       padding: 30px; } }
   @media (min-width: 1024px) {
     section#photo {
-      padding-left: 50px;
-      padding-right: 50px;
-      max-width: 1250px; } }
+      padding: 30px;
+      padding-top: 25px;
+      max-width: 1350px; } }
+  section#photo .dynamic-grid {
+    margin: 0;
+    padding: 0; }
 
 .photo-item {
   position: relative;

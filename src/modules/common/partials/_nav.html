@@ -2,13 +2,13 @@
 
   <div id='header-content'>
 
-    <div class='logo-container'>
+    <a class='logo-container' ui-sref='home'>
       <div id='header-info'>
         <h1 id='header-title'>Randy Panado</h1>
         <h2 class='show-for-large'>Director of Photography</h2>
         <h2 class='show-for-large'>Aerial Cinematographer</h2>
       </div>
-    </div>
+    </a>
   
     <div class='nav-section'>
 
@@ -27,7 +27,7 @@
           <a ng-click='toggleNav=!toggleNav' href='#photo' du-smooth-scroll duration='1000' offset='100'>Work</a>
         </li>
         <li ng-click='toggleNav=!toggleNav' ng-hide='activeTab=="about"' ng-class='{active: activeTab == "about"}' class='nav-item'>
-          <a ng-click='toggleNav=!toggleNav' ui-sref='about({scrollTo: "about"})'>About</a>
+          <a ng-click='toggleNav=!toggleNav' ui-sref='about'>About</a>
         </li>
         <li ng-click='toggleNav=!toggleNav' ng-show='activeTab == "about"' ng-class='{active: activeTab == "about"}' class='nav-item'>
           <a ng-click='toggleNav=!toggleNav' href='#about' du-smooth-scroll duration='1000' offset='150'>About</a>

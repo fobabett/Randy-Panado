@@ -3,7 +3,7 @@
 body{
   // background-image: url('../assets/images/bg1.png');
   background-repeat: no-repeat;
-  background-color: #FBFAF7;
+  background-color: $panado-tan;
 }
 
 .header-container.ng-hide {
@@ -23,7 +23,7 @@ body{
     top: 0;
     right: 0;
     left: 0;
-    height: 80px;
+    height: auto;
     background-color: white;
     margin: 0 auto;
   }
@@ -47,8 +47,8 @@ body{
   }
 
   @include respond-to('medium-small') {
-    background-color: #ffffff;
-    border-bottom: 1px solid #BEE1E0;
+    background-color: $panado-tan;
+    border-bottom: 1px solid $panado-blue;
   }
 }
 .nav-section {
@@ -73,7 +73,10 @@ body{
 }
 .about-nav-section {
   top: 79px;
-  transform: translateY(50%);
+  width: 300px;
+  background-color: red;
+  margin:auto;
+  // transform: translateY(50%);
   
   @include respond-to('large') {
     top:0;
@@ -85,12 +88,12 @@ body{
   padding:0;
 
   @include respond-to('medium-small') {
-    height: 265px;
+    height: 265px; // why hardcoded? 
     position: absolute;
     width: 100%;
     left: 0;
-    transform: translateY(-267px);
-    background-color: #ffffff;
+    transform: translateY(-293px); // why hardcoded? 
+    background-color: $panado-tan;
     transition: 0.5s ease-in-out;
     z-index: -1;
 
@@ -104,8 +107,8 @@ body{
   
   @include respond-to('medium-small') {
     height: 290px; // why hardcoded? otherwise it won't animate I assume?
-    transform: translateY(2px);
-    background-color: #ffffff;
+    transform: translateY(0);
+    background-color: $panado-tan;
     z-index: -1;
     transition: 0.5s ease-in-out;
 
@@ -133,7 +136,7 @@ body{
     display: block;
     
     font-family: 'Novecento Sans';
-    color: #737272;
+    color: $panado-brown;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -165,13 +168,13 @@ body{
     // padding-bottom: 3px;
     display: block;
     // padding-bottom: 3px;
-    color: darken(#737272, 20%);
+    color: darken($panado-brown, 20%);
     transition: border 0.2s ease;
     border-bottom: 2px solid $panado-blue;
   }
 }
 .condensed-nav {
-  background-color: #FBFAF7;
+  background-color: $panado-tan;
   // background-color: #FFF;
   position: fixed;
   top: 0;

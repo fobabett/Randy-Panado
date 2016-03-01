@@ -16,8 +16,9 @@
 }
 section#photo {
   text-align: center;
-  background-color: #FBFAF7;
+  background-color: $panado-tan;
   margin: 0 auto;
+  // background-color: orange;
 
   @include respond-to('small') {
     padding: 15px;
@@ -28,11 +29,19 @@ section#photo {
   }
 
   @include respond-to('large') {
-    padding-left: 50px;
-    padding-right: 50px;
-    max-width: 1250px;
+    padding: 30px;
+    padding-top: 25px;
+    // padding-left: 50px;
+    // padding-right: 50px;
+    max-width: 1350px;
+  }
+
+  .dynamic-grid{
+    margin:0;
+    padding:0;
   }
 }
+
 .photo-item {
   position: relative;
   text-align: center;
@@ -184,7 +193,7 @@ section#photo {
   }
 }
 #footer-section {
-  background-color: #FBFAF7;
+  background-color: $panado-tan;
   background-image: url('./assets/images/bg4.png');
   background-repeat: no-repeat;
   background-position: bottom right;

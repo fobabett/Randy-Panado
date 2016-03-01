@@ -1,37 +1,48 @@
+.masonry-filters{
+  padding: 10px 0;
+  // background-color: purple;
+
+  @include respond-to('large') {
+    padding-bottom: 0;
+    padding-top: 55px;
+    border-top: 1px solid $panado-blue;
+  }
+}
+
 #filter {
   // margin-top: 20px;
-  background-color: pink;
-  border-bottom: 1px solid red;
-  padding-bottom: 20px;
+  padding: 0;
+  margin: 0;
+  // background-color: pink;
+  background-color: $panado-tan;
+  // padding-bottom: 20px;
   font-family: 'Novecento Sans';
-  color: #737272;
+  color: $panado-brown;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 400;
-
-  @include respond-to('small') {
-    padding-top: 15px;
-  }
-
-  @include respond-to('medium') {
-    padding-top: 30px;
-  }
+  margin-top: -1px;
 
   @include respond-to('medium-small') {
+    padding: 15px 0;
     text-align: center;
     position: fixed;
     top: 80px;
     width: 100%;
     z-index: 1;
-    transition: 0.5s ease-in-out;
+    transition: all 0.2s ease;
     transform: translateY(0);
+    border-bottom: 1px solid $panado-blue;
   }
 
   @include respond-to('large') {
     text-align: right;
     // margin-left: 50px;
-    padding-right: 50px;
+    margin:auto;
+    max-width: 1350px;
+    padding: 0 28px 0 30px;
+    // padding-right: 50px;
   }
 
   li {
@@ -43,10 +54,11 @@
     @include respond-to('medium-small') {
       transform: translateY(-50px);
       opacity: 0;
-      transition: 0.5s ease-in-out;
+      transition: all 0.2s ease;
     }
   }
 }
+
 #filter.ng-hide {
 
   @include respond-to('large') {
@@ -59,7 +71,14 @@
 
   @include respond-to('medium'){
     display: inline-block;
-    margin-right: 10px;
+    // margin-right: 10px;
+    &:after{
+      content: ":";
+    }
+  }
+  @include respond-to('large'){
+    display: inline-block;
+    // margin-right: 10px;
     &:after{
       content: ":";
     }
@@ -68,24 +87,30 @@
 
 li.filter-type {
   cursor: pointer;
-
   font-family: 'Novecento Sans';
-  color: #737272;
+  color: $panado-brown;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 400;
-  padding: 3px 5px 2px;
+  padding:2px 4px;
+  margin:0;
+  margin-left: 3px;
+  transition: all 0.2s ease;
+  border-radius: 2px;
+  // margin-left: 20px;
   // margin-left: 5px;
 
+  &:hover{
+    background-color: #EEE;
+  }
+
   @include respond-to('small') {
-    padding: 0;
   }
 
   @include respond-to('medium-small') {
     // margin-left: 10px;
     font-size: 12px;
-    margin-bottom: 0;
   }
 
   @include respond-to('large') {
@@ -94,15 +119,10 @@ li.filter-type {
 }
 
 li.filter-type.selected-tag {
-  margin-bottom: 0;
-
-  @include respond-to('medium-small') {
-    background-color: transparent;
-    border-bottom: 3px solid #ABD9D9;
-  }
-  
-  @include respond-to('large') {
-    background-color: #CCE5E1;
-    color: #777E7D;
-  }
+  padding:2px 4px;
+  margin:0;
+  margin-left: 3px;
+  transition: all 0.2s ease;
+  border-radius: 2px;
+  background-color: $panado-blue;
 }
