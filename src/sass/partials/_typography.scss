@@ -22,10 +22,6 @@
   font-family: 'Novecento Sans Wide';
   src: url('../../assets/fonts/novecento_sans/2FE2AA_2_0.woff');
 }
-// @font-face {
-//   font-family: 'Novecento Test';
-//   src: url('../../assets/fonts/novecento_sans/2FE2AA_5_0.woff');
-// }
 
 @font-face {
   font-family: 'Caviar Dreams';
@@ -47,33 +43,45 @@
 .title {
   font-family: 'Caviar Dreams Bold';
   letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $primary-font-color;
+
+  &.blog-category-title {
+    font-family: 'Novecento Sans';
+    font-size: 20px;
+  }
+  
+  &.article-title.snippet {
+    font-family: 'proxima-nova';
+    font-size: 20px;
+    letter-spacing: 0;
+  }
+
+  &.section-title {
+    font-family: 'Novecento Sans';
+    font-size: 30px;
+  }
 }
+
 .subtitle {
   font-family: 'Novecento Sans DemiBold';
+  text-transform: uppercase;
+  color: $title-blue;
 }
-.title.blog-category-title {
-  font-family: 'Novecento Sans';
-  font-size: 20px;
-}
-.title.article-title.snippet {
-  font-family: 'proxima-nova';
-  font-size: 20px;
-  letter-spacing: 0;
-}
+
 .article-date {
   font-family: 'proxima-nova';
 }
+
 .article-snippet-text {
   font-family: 'proxima-nova';
 }
-.title.section-title {
-  font-family: 'Novecento Sans';
-  font-size: 30px;
-}
+
 #about-section-snippet {
   font-family: 'proxima-nova';
   font-size: 14px;
 }
+
 .footer-notes {
   font-family: 'proxima-nova';
 }

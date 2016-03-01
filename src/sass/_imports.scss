@@ -5,10 +5,15 @@
 @import "../../bower_components/foundation-sites/scss/foundation";
 @include foundation-everything;
 
-//utils
-@import "./partials/utils/mixins";
-@import "./partials/utils/reset";
+// utils
 @import "./partials/utils/variables";
+@import "./partials/utils/mixins";
+
+// structure
+@import "./partials/base";
+
+// typography
+@import "./partials/typography";
 
 // components
 @import "./partials/components/carousel";
@@ -17,11 +22,8 @@
 @import "./partials/components/nav-bar";
 
 // pages
+@import "./partials/pages/home";
 @import "./partials/pages/about";
 @import "./partials/pages/blog";
 @import "./partials/pages/category";
-@import "./partials/pages/home";
 @import "./partials/pages/post";
-
-@import "./partials/base";
-@import "./partials/typography";

@@ -6,20 +6,14 @@
     margin-top: 80px;
   }
 }
+
 .page-content-container.modalOpen {
 
   @include respond-to('medium-small') {
     margin-top: 0;
   }
 }
-.title,
-.subtitle {
-  text-transform: uppercase;
-  color: $title-blue;
-}
-.title {
-  color: $primary-font-color;
-}
+
 .columns {
   padding: 0;
 }
