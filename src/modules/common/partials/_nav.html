@@ -19,7 +19,37 @@
         <div class='bar third'></div>
       </div>
 
-      <ul ng-class='{"toggle-nav": toggleNav}' class='nav-list'>
+      <ul ng-class='{"toggle-nav": toggleNav}' class='nav-list show-for-large'>
+        <li ng-click='toggleNav=!toggleNav' ng-hide='activeTab=="home"' ng-class='{active: activeTab == "home"}' class='nav-item'>
+          <a ng-click='toggleNav=!toggleNav' ui-sref='home'>Work</a>
+        </li>
+        <li ng-click='toggleNav=!toggleNav' ng-show='activeTab=="home"' ng-class='{active: activeTab == "home"}' class='nav-item' >
+          <a ng-click='toggleNav=!toggleNav' href='#photo' du-smooth-scroll duration='1000' offset='100'>Work</a>
+        </li>
+        <li ng-click='toggleNav=!toggleNav' ng-hide='activeTab=="about"' ng-class='{active: activeTab == "about"}' class='nav-item'>
+          <a ng-click='toggleNav=!toggleNav' ui-sref='about'>About</a>
+        </li>
+        <li ng-click='toggleNav=!toggleNav' ng-show='activeTab == "about"' ng-class='{active: activeTab == "about"}' class='nav-item'>
+          <a ng-click='toggleNav=!toggleNav' href='#about' du-smooth-scroll duration='1000' offset='150'>About</a>
+        </li>
+        <li ng-click='toggleNav=!toggleNav' ng-show='activeTab == "about"' ng-class='{active: activeTab == "equipment"}' class='nav-item'>
+          <a ng-click='toggleNav=!toggleNav' href='#equipment-section' du-smooth-scroll duration='1000' offset='150'>Equipment</a>
+        </li>
+        <li ng-click='toggleNav=!toggleNav' ng-hide='activeTab == "about"' ng-class='{active: activeTab == "equipment"}' class='nav-item'>
+          <a ng-click='toggleNav=!toggleNav' ui-sref='about({scrollTo: "equipment-section"})'>Equipment</a>
+        </li>
+        <li ng-click='toggleNav=!toggleNav' ng-class='{active: activeTab == "chronicles"}' class='nav-item'>
+          <a ng-click='toggleNav=!toggleNav' ui-sref='chronicles'>Chronicles</a>
+        </li>
+        <li ng-click='toggleNav=!toggleNav' ng-hide='activeTab == "home"' ng-class='{active: activeTab == "contact"}' class='nav-item'>
+          <a ng-click='toggleNav=!toggleNav' ui-sref='home({scrollTo: "contact-section"})' du-smooth-scroll duration='1000'>Contact</a>
+        </li>
+        <li ng-click='toggleNav=!toggleNav' ng-show='activeTab == "home"' ng-class='{active: activeTab == "contact"}' class='nav-item'>
+          <a ng-click='toggleNav=!toggleNav' href='#contact-section' du-smooth-scroll duration='1000' offset='100'>Contact</a>
+        </li>
+      </ul>
+
+      <ul ng-class='{"toggle-nav": toggleNav}' class='nav-list hide-for-large'>
         <li ng-click='toggleNav=!toggleNav' ng-hide='activeTab=="home"' ng-class='{active: activeTab == "home"}' class='nav-item'>
           <a ng-click='toggleNav=!toggleNav' ui-sref='home'>Work</a>
         </li>

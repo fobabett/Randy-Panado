@@ -194,7 +194,7 @@ section#photo {
 }
 #footer-section {
   background-color: $panado-tan;
-  background-image: url('./assets/images/bg4.png');
+  // background-image: url('./assets/images/bg4.png');
   background-repeat: no-repeat;
   background-position: bottom right;
 
@@ -307,7 +307,8 @@ section#photo {
 }
 
 .bg2 {
-  background-image: url('../assets/images/bg2.png');
+  // background-image: url('../assets/images/bg2.png');
+  background-color: $panado-tan;
   background-repeat: no-repeat;
   background-position: right;
   background-size: 100%;
@@ -318,7 +319,8 @@ section#photo {
   }
 }
 .bg3 {
-  background-image: url('../assets/images/bg3.png');
+  // background-image: url('../assets/images/bg3.png');
+  background-color: $panado-tan;
   background-repeat: no-repeat;
   background-position: right;
   background-size: 100%;
