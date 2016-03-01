@@ -2,13 +2,13 @@
 
 <div class='condensed-nav show-for-large' ng-class='{"show-nav":boolChangeClass}'>
 
-  <div class='logo-container'>
+  <a ui-sref='home' class='logo-container'>
     <div id='header-info'>
       <h1 id='header-title'>Randy Panado</h1>
       <h2 class='show-for-large'>Director of Photography</h2>
       <h2 class='show-for-large'>Aerial Cinematographer</h2>
     </div>
-  </div>
+  </a>
   
   <div class='toggle-dropdown desktop-toggle' ng-click='toggleDropdown=!toggleDropdown'>
     <div class='bar first'></div>
@@ -19,7 +19,7 @@
   <div class='desktop-dropdown-nav'>
     <ul ng-show='toggleDropdown' class='nav-list'>
       <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' href='#photo' du-smooth-scroll duration='1000' offset='50'>Work</a></li>
-      <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='about({scrollTo: "about"})'>About</a></li>
+      <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='about'>About</a></li>
       <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='about({scrollTo: "equipment-section"})'>Equipment</a></li>
       <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='chronicles'>Chronicles</a></li>
       <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' href='#contact-section' du-smooth-scroll duration='1000' offset='100'>Contact</a></li>
@@ -88,7 +88,7 @@
     </div>
   </div>
 
-  <div>
+  <div class="masonry-filters">
     <ul id='filter' ng-hide='modalShown' du-scrollspy='contact-section' offset='100'> 
       <li class='filter-title'>Type</li>
       <li class='filter-type' ng-click='refresh(); selectTag($index, tag); active=!active' ng-class='{"selected-tag": active}' ng-repeat='tag in tags'>{{tag}}</li>
