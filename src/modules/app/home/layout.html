@@ -107,7 +107,7 @@
 
           <!-- <youtube-video ng-if='pic.type == "youtube"' player-width='300'  player-height='200' video-url="pic.url" player='video' id='video' ng-click='pauseVideo(); toggleModal(pic); setCurrentSlideIndex($index)'></youtube-video> -->
 
-          <span class="photo-details"><span>{{pic.name}}</span></span>
+          <span class="photo-details" ng-click='toggleModal(pic)'><span>{{pic.name}}</span></span>
         </li>
       </ul>
 
