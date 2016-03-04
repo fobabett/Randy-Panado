@@ -8,7 +8,8 @@ module.exports =
   .config(function ($stateProvider) {
     $stateProvider
     .state('about', {
-      url: '/about/:scrollTo',
+      url: '/about',
+      params: {scrollTo: null},
       templateUrl: 'app/about/layout.html',
       controller: 'aboutController'
     });
