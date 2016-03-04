@@ -19,8 +19,8 @@
   <div class='desktop-dropdown-nav'>
     <ul ng-show='toggleDropdown' class='nav-list'>
       <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='home'>Work</a></li>
-      <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' href='#about' du-smooth-scroll duration='1000' offset='150'>About</a></li>
-      <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' href='#equipment-section' du-smooth-scroll duration='1000' offset='150'>Equipment</a></li>
+      <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' href='#about-page' du-smooth-scroll duration='1000' offset='150'>About</a></li>
+      <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown;scrollToSection("equipment")'>Equipment</a></li>
       <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='chronicles'>Chronicles</a></li>
       <li class='nav-item'><a ng-click='toggleDropdown=!toggleDropdown' ui-sref='home({scrollTo: "contact-section"})'>Contact</a></li>
     </ul>
@@ -28,9 +28,9 @@
     
   <div class='about-nav-section'>
     <ul class='about-nav-list'>
-      <li class='page-nav-item' duration='1000' offset='300' du-smooth-scroll='about' du-scrollspy='about'>About</li>
-      <li class='page-nav-item' duration='1000' offset='300' du-smooth-scroll='credits-section' du-scrollspy='credits-section'>Credits</li>
-      <li class='page-nav-item' duration='1000' offset='300' du-smooth-scroll='equipment-section' du-scrollspy='equipment-section'>Equipment</li>
+      <li class='page-nav-item' duration='1000' offset='300' du-smooth-scroll='about-page' du-scrollspy='about-page'>About</li>
+      <li class='page-nav-item' ng-click='scrollToSection("credits")' offset='{{offset}}' du-scrollspy='credits-section'>Credits</li>
+      <li class='page-nav-item' ng-click='scrollToSection("equipment")' offset='{{offset}}' du-scrollspy='equipment-section'>Equipment</li>
     </ul>
   </div>
 </div>  
@@ -44,15 +44,15 @@
 
   <div id='page-nav'>
     <ul class='page-nav-list'>
-      <li class='page-nav-item' ng-class='{active: activeSection == "about"}' duration='1000' offset='150' du-smooth-scroll='about'>About</li>
-      <li class='page-nav-item' ng-class='{active: activeSection == "credits"}' duration='1000' offset='150' du-smooth-scroll='credits-section'>Credits</li>
-      <li class='page-nav-item' ng-class='{active: activeSection == "equipment"}' duration='1000' offset='150' du-smooth-scroll='equipment-section'>Equipment</li>
+      <li class='page-nav-item' ng-class='{active: activeSection == "about"}' duration='1000' offset='150' du-smooth-scroll='about-page'>About</li>
+      <li class='page-nav-item' ng-class='{active: activeSection == "credits"}' ng-click='scrollToSection("credits")'>Credits</li>
+      <li class='page-nav-item' ng-class='{active: activeSection == "equipment"}' ng-click='scrollToSection("equipment")'>Equipment</li>
     </ul>
   </div>
 
   <div class='content-container'>
 
-    <section id='about'>
+    <section id='about-page'>
       <h3 class='title section-title hide-for-large'>about</h3>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur eveniet totam quis, voluptatum id dignissimos, quisquam illum temporibus ipsa unde ab quae provident nobis aliquam dicta mollitia a praesentium, sunt.
