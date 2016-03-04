@@ -23,4 +23,10 @@ module.exports =
     //load extra app modules here, e.g.:
     //require('./frontend').name,
     //require('./admin').name
-  ]);
+  ])
+  .run(function ($rootScope, $state, $document, $timeout, $stateParams) {
+    $rootScope.$on('$stateChangeSuccess', function (ev, to, toParams, from, fromParams) {
+      $rootScope.previousState = from.name;
+      $rootScope.previousParams = fromParams.category;
+    });
+  });

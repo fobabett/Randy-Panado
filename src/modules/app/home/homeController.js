@@ -1,14 +1,17 @@
 'use strict';
 
 module.exports = /*@ngInject*/
-  function homeController($scope, $location, $anchorScroll, $window, angularGridInstance, $state, blogService, $document, $stateParams, $timeout) {
-
-    $timeout(function() { 
-      var anchor = angular.element(document.getElementById($stateParams.scrollTo));
-      $document.scrollToElement(anchor, 150, 2000);
-    }, 600);
+  function homeController($scope, $location, $anchorScroll, $window, angularGridInstance, $state, blogService, $document, $stateParams, $timeout, $rootScope) {
+    if($stateParams.scrollTo !== null) {
+      $timeout(function() { 
+        var anchor = angular.element(document.getElementById($stateParams.scrollTo));
+        $document.scrollToElement(anchor, 150, 2000);
+      }, 600);
+    }
 
     $scope.activeTab = $state.current.name;
+      console.log($scope.activeTab);
+
     $scope.selectedTags = [];
     $scope.tags = ['commercial', 'narrative', 'creative'];
     var video = document.getElementsByTagName('iframe');

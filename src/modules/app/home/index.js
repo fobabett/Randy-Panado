@@ -6,7 +6,8 @@ module.exports =
   .config(function ($stateProvider) {
     $stateProvider
     .state('home', {
-      url: '/:scrollTo',
+      url: '/',
+      params: {scrollTo: null},
       templateUrl: 'app/home/layout.html',
       controller: 'homeController',
       directive: 'modalDirective',

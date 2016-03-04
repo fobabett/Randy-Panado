@@ -42,7 +42,7 @@
           <a ng-click='toggleNav=!toggleNav' ui-sref='chronicles'>Chronicles</a>
         </li>
         <li ng-click='toggleNav=!toggleNav' ng-hide='activeTab == "home"' ng-class='{active: activeTab == "contact"}' class='nav-item'>
-          <a ng-click='toggleNav=!toggleNav' ui-sref='home({scrollTo: "contact-section"})' du-smooth-scroll duration='1000'>Contact</a>
+          <a ng-click='toggleNav=!toggleNav; test()' ui-sref='home({scrollTo: "contact-section"})' du-smooth-scroll duration='1000'>Contact</a>
         </li>
         <li ng-click='toggleNav=!toggleNav' ng-show='activeTab == "home"' ng-class='{active: activeTab == "contact"}' class='nav-item'>
           <a ng-click='toggleNav=!toggleNav' href='#contact-section' du-smooth-scroll duration='1000' offset='100'>Contact</a>
