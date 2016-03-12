@@ -3217,7 +3217,9 @@ table.hover tr:nth-of-type(even):hover {
 
 @media (min-width: 1024px) {
   .modal-content {
-    padding: 50px; } }
+    padding: 50px 0;
+    max-width: 1350px;
+    margin: auto; } }
 
 #close-modal {
   position: absolute;
@@ -3326,15 +3328,34 @@ img.active {
 
 .animate-slide {
   opacity: 1; }
-  @media (min-width: 1024px) {
+  @media (min-width: 640px) {
     .animate-slide {
       max-height: 600px;
-      display: inline-block;
+      display: block;
+      overflow-y: hidden;
+      transition: all 0.5s ease; } }
+  @media (min-width: 1024px) {
+    .animate-slide {
+      max-height: 700px;
+      display: block;
       overflow-y: hidden; } }
 
-.animate-slide.ng-hide-add.ng-hide-add-active,
-.animate-slide.ng-hide-remove.ng-hide-remove-active {
-  transition: 0.5s ease-in-out; }
+.page-content-container.modalOpen .animate-slide.ng-hide-remove.ng-hide-remove-active * {
+  background-color: green;
+  opacity: 0;
+  transition: none; }
+
+.page-content-container.modalOpen .animate-slide * {
+  opacity: 1;
+  background-color: orange;
+  transition: all 0.4s ease;
+  /* easeInOutQuad */ }
+
+.animate-slide.ng-hide-add.ng-hide-add-active * {
+  opacity: 0;
+  background-color: red;
+  transition: all 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  /* easeInOutQuad */ }
 
 .animate-slide.ng-hide {
   max-height: 0; }
