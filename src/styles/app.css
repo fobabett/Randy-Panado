@@ -3202,24 +3202,22 @@ table.hover tr:nth-of-type(even):hover {
 #slideshow-modal {
   background-color: #464646;
   position: relative;
-  font-family: 'Novecento Sans Light'; }
-  @media (max-width: 639px) {
+  font-family: 'Novecento Sans Light';
+  padding: 15px;
+  height: auto;
+  overflow: auto; }
+  @media (min-width: 1024px) {
     #slideshow-modal {
-      padding: 15px; } }
-  @media (max-width: 1023px) {
-    #slideshow-modal {
-      height: auto;
-      overflow: auto; } }
+      padding: 0;
+      overflow: hidden; } }
 
-@media (min-width: 640px) and (max-width: 1023px) {
-  .modal-content {
-    padding: 30px; } }
-
-@media (min-width: 1024px) {
-  .modal-content {
-    padding: 50px 0;
-    max-width: 1350px;
-    margin: auto; } }
+.modal-content {
+  padding: 30px; }
+  @media (min-width: 1024px) {
+    .modal-content {
+      padding: 50px 0;
+      max-width: 1350px;
+      margin: auto; } }
 
 #close-modal {
   position: absolute;
@@ -3237,19 +3235,15 @@ table.hover tr:nth-of-type(even):hover {
     width: 70%; } }
 
 #slide {
-  width: 100%; }
-  @media (max-width: 639px) {
-    #slide {
-      margin-top: 15px; } }
+  width: 100%;
+  margin-top: 15px; }
   @media (min-width: 1024px) {
     #slide {
       height: 400px; } }
 
 .slideshow-nav-dots {
-  text-align: center; }
-  @media (max-width: 639px) {
-    .slideshow-nav-dots {
-      margin-top: 15px; } }
+  text-align: center;
+  margin-top: 15px; }
   @media (min-width: 1024px) {
     .slideshow-nav-dots {
       margin-top: 20px; } }
@@ -3272,10 +3266,8 @@ img.active {
 
 .selected-photo-title {
   color: #CFCFCF;
-  font-family: 'proxima-nova'; }
-  @media (max-width: 639px) {
-    .selected-photo-title {
-      font-size: 20px; } }
+  font-family: 'proxima-nova';
+  font-size: 20px; }
   @media (min-width: 1024px) {
     .selected-photo-title {
       font-size: 36px; } }
@@ -3283,9 +3275,6 @@ img.active {
 .selected-photo-subtitle {
   color: #95BABA;
   font-family: 'Novecento Sans'; }
-  @media (max-width: 639px) {
-    .selected-photo-subtitle {
-      font-size: 12px; } }
   @media (min-width: 1024px) {
     .selected-photo-subtitle {
       font-size: 14px; } }
@@ -3328,9 +3317,9 @@ img.active {
 
 .page-content-container .animate-slide {
   opacity: 1; }
-  @media (min-width: 640px) {
+  @media (min-width: 1024px) {
     .page-content-container .animate-slide {
-      max-height: 600px;
+      max-height: 700px;
       display: block;
       overflow-y: hidden;
       transition: all 500ms cubic-bezier(0.175, 0.02, 0.15, 0.995);
@@ -3340,9 +3329,6 @@ img.active {
       .page-content-container .animate-slide * {
         opacity: 0;
         transition: 0.7s ease-out; } }
-  @media (min-width: 1024px) {
-    .page-content-container .animate-slide {
-      max-height: 700px; } }
 
 #filter {
   display: block; }
@@ -3352,13 +3338,13 @@ img.active {
       #filter.ng-animate.ng-hide-animate.ng-hide-add.ng-hide-add-active {
         display: block; } }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   .page-content-container.modalOpen .animate-slide.ng-hide-remove.ng-hide-remove-active * {
     background-color: green;
     opacity: 0;
     transition: none; } }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   .page-content-container.modalOpen .animate-slide {
     transition: all 500ms cubic-bezier(0.455, 0.03, 0.725, 0.99);
     /* custom */
@@ -3372,7 +3358,10 @@ img.active {
       transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
       /* easeOutQuart */ } }
 
-@media (min-width: 640px) {
+.page-content-container.modalOpen .masonry-filters {
+  padding: 0; }
+
+@media (min-width: 1024px) {
   .animate-slide.ng-hide-add.ng-hide-add-active * {
     opacity: 0;
     background-color: red; } }
