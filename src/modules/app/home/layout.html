@@ -31,10 +31,10 @@
 <div class='page-content-container' ng-class='{modalOpen: modalShown == true}' id='home-page'>
   
   <div ng-show='modalShown' id='slideshow-modal' class='animate-slide' scroll>
-    <div class='modal-content'>
+    <div class='modal-content clearfix'>
 
       <h3 class='selected-photo-title hide-for-large'>{{selectedPic.name}}</h3>
-      <h3 class='selected-photo-subtitle hide-for-large'>Panado Ranch</h3>
+      <h3 class='selected-photo-subtitle hide-for-large'>{{selectedPic.location}}</h3>
       <span ng-click='modalShown = !modalShown; pauseVideo()' id='close-modal'>&times;</span>
   
       <div class='rows slideshow-content'>
@@ -66,7 +66,7 @@
   
         <div class='large-3 columns selected-photo-description-container'>
           <h3 class='selected-photo-title show-for-large'>{{selectedPic.name}}</h3>
-          <h3 class='selected-photo-subtitle show-for-large'>Panado Ranch</h3>
+          <h3 class='selected-photo-subtitle show-for-large'>{{selectedPic.name}}</h3>
           <p class='selected-photo-details'>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, dicta labore rerum itaque ipsa nihil repellat ad modi iste totam, quaerat eveniet ab quam. Harum fuga sunt libero ad deserunt?
           </p>
@@ -107,7 +107,10 @@
 
           <!-- <youtube-video ng-if='pic.type == "youtube"' player-width='300'  player-height='200' video-url="pic.url" player='video' id='video' ng-click='pauseVideo(); toggleModal(pic); setCurrentSlideIndex($index)'></youtube-video> -->
 
-          <span class="photo-details" ng-click='toggleModal()'><span>{{pic.name}}</span></span>
+          <span class="photo-details" ng-click='toggleModal()'>
+            <h4>{{pic.name}}</h4>
+            <h5>{{pic.location}}</h5>
+          </span>
         </li>
       </ul>
 

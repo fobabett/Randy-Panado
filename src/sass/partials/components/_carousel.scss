@@ -23,14 +23,18 @@
 }
 #close-modal {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 20px;
+  top: 20px;
   color: #898989;
   font-size: 70px;
+  line-height: 45px;
+  height: 45px;
   cursor: pointer;
+  background-color: pink;
+  z-index: 300;
 
   @include respond-to('large') {
-    margin-right: 20px;
+    margin-right: 0;
   }
 }
 .slide-container {
@@ -205,6 +209,10 @@ img.active {
 
 .page-content-container.modalOpen .masonry-filters{
   padding: 0;
+
+  @include respond-to('large') {
+    padding-top: 55px;
+  }
 }
 
 // state while closing box

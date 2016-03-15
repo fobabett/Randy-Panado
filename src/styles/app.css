@@ -3221,14 +3221,18 @@ table.hover tr:nth-of-type(even):hover {
 
 #close-modal {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 20px;
+  top: 20px;
   color: #898989;
   font-size: 70px;
-  cursor: pointer; }
+  line-height: 45px;
+  height: 45px;
+  cursor: pointer;
+  background-color: pink;
+  z-index: 300; }
   @media (min-width: 1024px) {
     #close-modal {
-      margin-right: 20px; } }
+      margin-right: 0; } }
 
 @media (min-width: 1024px) {
   .slide-container {
@@ -3360,6 +3364,9 @@ img.active {
 
 .page-content-container.modalOpen .masonry-filters {
   padding: 0; }
+  @media (min-width: 1024px) {
+    .page-content-container.modalOpen .masonry-filters {
+      padding-top: 55px; } }
 
 @media (min-width: 1024px) {
   .animate-slide.ng-hide-add.ng-hide-add-active * {
@@ -4079,34 +4086,67 @@ section#photo {
     margin: 0;
     padding: 0; }
 
-.photo-item {
+li.photo-item {
   position: relative;
-  text-align: center; }
-  .photo-item:hover .photo-details {
-    opacity: 1; }
+  text-align: center;
+  background-color: transparent;
+  border: 0; }
+  @media (min-width: 1024px) {
+    li.photo-item {
+      background-color: #FFF; } }
+  li.photo-item:hover {
+    cursor: pointer; }
+    li.photo-item:hover img {
+      opacity: 0.7; }
+    @media (min-width: 1024px) {
+      li.photo-item:hover {
+        background-color: #000; }
+        li.photo-item:hover img {
+          opacity: 0.35; } }
 
-.photo-details {
-  text-transform: uppercase; }
-  @media (max-width: 1023px) {
-    .photo-details {
-      color: #606060;
-      font-size: 14px; } }
+@media (min-width: 1024px) {
+  .photo-details {
+    transition: opacity 500ms;
+    display: table;
+    left: 0;
+    top: 50%;
+    margin-top: -10px;
+    position: absolute;
+    width: 100%;
+    opacity: 0; } }
+
+li.photo-item:hover .photo-details {
+  opacity: 1; }
+
+.photo-details h4 {
+  font-family: 'Novecento Sans', 'Helvetica', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 0;
+  color: #606060;
+  padding-top: 10px; }
   @media (min-width: 1024px) {
-    .photo-details {
-      transition: opacity 500ms;
-      color: #FEFEFE;
-      display: table;
-      left: 0;
-      top: 0;
-      position: absolute;
-      width: 300px;
-      height: 200px;
-      opacity: 0; } }
+    .photo-details h4 {
+      color: #FFF;
+      font-size: 14px;
+      padding-top: 0; } }
+
+.photo-details h5 {
+  font-family: 'proxima-nova', 'Helvetica', sans-serif;
+  text-align: center;
+  font-size: 13px;
+  font-weight: normal;
+  margin-bottom: 0;
+  color: #606060;
+  padding-bottom: 30px; }
   @media (min-width: 1024px) {
-    .photo-details span {
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center; } }
+    .photo-details h5 {
+      color: #FFF;
+      font-size: 14px;
+      padding-bottom: 0; } }
 
 #chronicles-section {
   text-align: center;
