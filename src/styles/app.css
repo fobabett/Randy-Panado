@@ -3759,7 +3759,7 @@ body {
   background-size: cover;
   text-transform: uppercase;
   opacity: 1;
-  z-index: 1;
+  z-index: 1000;
   text-align: center;
   transform: translateY(-80px); }
   @media (max-width: 1023px) {
