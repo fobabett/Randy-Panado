@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = /*@ngInject*/
-  function homeController($scope, $location, $anchorScroll, $window, angularGridInstance, $state, blogService, $document, $stateParams, $timeout, $rootScope, $http) {
+  function homeController($scope, $location, $anchorScroll, $window, angularGridInstance, $state, blogService, $document, $stateParams, $timeout, $rootScope, $http, projectService) {
     if($stateParams.scrollTo !== null) {
       $timeout(function() { 
         var anchor = angular.element(document.getElementById($stateParams.scrollTo));
@@ -15,6 +15,11 @@ module.exports = /*@ngInject*/
     $scope.selectedTags = [];
     $scope.tags = ['commercial', 'narrative', 'creative'];
     var video = document.getElementsByTagName('iframe');
+
+    projectService.getProjects()
+      .success(function(res) {
+        console.log(res);
+      });
     var mockData = [
       {
         name: 'one of a kind',

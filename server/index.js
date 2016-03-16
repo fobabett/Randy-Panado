@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 // var _ = require('lodash');
 var articles = require('./articles');
+var projects = require('./projects');
 var bodyParser = require('body-parser');
 var port = process.env.PORT || 8080;
 
@@ -11,6 +12,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/articles', function(req, res){
   res.json(articles);
+});
+
+app.get('/projects', function(req, res){
+  res.json(projects);
 });
 
 app.get('/articles/:id', function(req,res) {
