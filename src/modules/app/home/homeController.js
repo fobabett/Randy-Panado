@@ -18,7 +18,8 @@ module.exports = /*@ngInject*/
     var mockData = [
       {
         name: 'one of a kind',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/1050x750',
+        location: 'Panado Ranch 1',
         type: 'image',
         tags: [
           {value: 'commercial'},
@@ -28,8 +29,9 @@ module.exports = /*@ngInject*/
       {
         name: 'Adventure Time',
         // url: '//vimeo.com/74611159',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/1050x750',
         // type: 'vimeo',
+        location: 'Panado Ranch 1',
         type: 'image',
         tags: [
           {value: 'commercial'}
@@ -37,7 +39,8 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'Star Wars',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/1050x750',
+        location: 'Panado Ranch 1',
         type: 'image',
         tags: [
           {value: 'creative'},
@@ -46,7 +49,8 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'blah',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/1050x750',
+        location: 'Panado Ranch 1',
         type: 'image',
         tags: [
           {value: 'narrative'}
@@ -54,7 +58,8 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'dsfdsf',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/1050x750',
+        location: 'Panado Ranch 1',
         type: 'image',
         tags: [
           {value: 'creative'},
@@ -63,7 +68,8 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'boooo',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/1050x750',
+        location: 'Panado Ranch 1',
         type: 'image',
         tags: [
           {value: 'creative'},
@@ -73,7 +79,8 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'one of a kind',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/1050x750',
+        location: 'Panado Ranch 1',
         type: 'image',
         tags: [
           {value: 'commercial'},
@@ -82,7 +89,8 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'kitty cat',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/1050x750',
+        location: 'Panado Ranch 1',
         type: 'image',
         tags: [
           {value: 'creative'}
@@ -90,7 +98,8 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'awesomeness',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/1050x750',
+        location: 'Panado Ranch 1',
         type: 'image',
         tags: [
           {value: 'creative'},
@@ -99,7 +108,8 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'blah',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/1050x750',
+        location: 'Panado Ranch 1',
         type: 'image',
         tags: [
           {value: 'narrative'}
@@ -107,7 +117,8 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'dsfdsf',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/1050x750',
+        location: 'Panado Ranch 1',
         type: 'image',
         tags: [
           {value: 'commercial'},
@@ -116,7 +127,8 @@ module.exports = /*@ngInject*/
       },
       {
         name: 'boooo',
-        url: 'http://placehold.it/300x200',
+        url: 'http://placehold.it/1050x750',
+        location: 'Panado Ranch 1',
         type: 'image',
         tags: [
           {value: 'commercial'},
