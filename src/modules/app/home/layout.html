@@ -159,14 +159,14 @@
 
         <div class='large-6 columns' id='contact-section' ng-hide='modalShown'>
           <h3 class='title section-title'>Contact</h3>
-          <form action="" id='contact-form' name='contact_form' ng-model='contact_form'>
-            <input type="text" name='name' ng-model='name' placeholder='name'>
-            <input type="text" name='phone' ng-model='phone' placeholder='phone'>
-            <input type="text" name='email' ng-model='email' placeholder='email'>
-            <input type="text" name='company' ng-model='company' placeholder='company'>
-            <select name="project_type" ng-model='project_type'>Type of Project</select>
-            <input type="text" name='project_date' ng-model='project_date' placeholder='Dates of Project'>
-            <textarea name="project_notes" ng-model='project_notes' cols="30" rows="10" placeholder='Project Notes'></textarea>
+          <form id='contact-form' name='contact_form' ng-model='contact_form' method='POST' action='https://script.google.com/macros/s/AKfycbzPDcx9lJYlrTvJYiM50oNFeXfYb61uQ7qcHfiKVvMBzw3vZ_A/exec' target='/'>
+            <input type="text" name='name' ng-model='form.name' placeholder='name'>
+            <input type="text" name='phone' ng-model='form.phone' placeholder='phone'>
+            <input type="text" name='email' ng-model='form.email' placeholder='email'>
+            <input type="text" name='company' ng-model='form.company' placeholder='company'>
+            <select name="project_type" ng-model='form.project_type'>Type of Project</select>
+            <input type="text" name='date' ng-model='form.date' placeholder='Dates of Project'>
+            <textarea name="notes" ng-model='form.notes' cols="30" rows="10" placeholder='Project Notes'></textarea>
             <button type='submit'>Submit</button>
           </form>
         </div>

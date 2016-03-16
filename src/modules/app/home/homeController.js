@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = /*@ngInject*/
-  function homeController($scope, $location, $anchorScroll, $window, angularGridInstance, $state, blogService, $document, $stateParams, $timeout, $rootScope) {
+  function homeController($scope, $location, $anchorScroll, $window, angularGridInstance, $state, blogService, $document, $stateParams, $timeout, $rootScope, $http) {
     if($stateParams.scrollTo !== null) {
       $timeout(function() { 
         var anchor = angular.element(document.getElementById($stateParams.scrollTo));
@@ -203,6 +203,25 @@ module.exports = /*@ngInject*/
     window.onload = function() {
       loadVimeoPlayer();
     };
+
+    // $scope.contact = function(form) { //doesn't work
+    //   console.log('yas');
+    //   $http({
+    //     method: 'POST',
+    //     url: 'https://script.google.com/macros/s/AKfycbzPDcx9lJYlrTvJYiM50oNFeXfYb61uQ7qcHfiKVvMBzw3vZ_A/exec',
+    //     headers: {
+    //       'Content-Type': 'application/json; charset=utf-8',
+    //       'Access-Control-Allow-Origin': true
+    //     },
+    //     data: {name: 'te vallee'}
+    //   }).then(function(res) {
+    //     console.log(res);
+    //   });
+    // };
+    $scope.submit = function() {
+      console.log('hayyy')
+      $state.go('home')
+    }
 
     return blogService.getBlogArticles()
       .success(function(res) {
