@@ -152,8 +152,10 @@ module.exports = /*@ngInject*/
 
     $scope.modalShown = false;
     $scope.toggleModal = function(pic) {
-      // console.log(pic);
-      $scope.modalShown = !$scope.modalShown;
+      console.log(pic);
+      if(!$scope.modalShown) {
+        $scope.modalShown = !$scope.modalShown;
+      }
       $scope.selectedPic = pic;
       $scope.types = pic.types;
     };
