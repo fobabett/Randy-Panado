@@ -3200,7 +3200,7 @@ table.hover tr:nth-of-type(even):hover {
   font-family: 'proxima-nova'; }
 
 #slideshow-modal {
-  background-color: #464646;
+  background-color: #1f1f1f;
   position: relative;
   font-family: 'Novecento Sans Light';
   padding: 15px;
@@ -3317,7 +3317,7 @@ li.dot {
   position: absolute;
   right: 0;
   top: 0;
-  color: #898989;
+  color: #9f9f9f;
   font-size: 70px;
   line-height: 45px;
   height: 45px;
@@ -3362,11 +3362,11 @@ h3.selected-photo-subtitle,
   margin-top: 30px; }
 
 .selected-tag {
-  background-color: #ACDADA;
+  background-color: #ADDDDD;
   display: inline-block;
   margin-right: 5px;
   margin-bottom: 50px;
-  color: #464646;
+  color: #1f1f1f;
   padding: 2px;
   padding-left: 10px;
   padding-right: 10px;

@@ -1,7 +1,7 @@
 // CONTAINER & CENTERING 
 
 #slideshow-modal {
-  background-color: #464646;
+  background-color: darken($primary-font-color, 20%);
   position: relative;
   font-family: 'Novecento Sans Light';
   padding: 15px;
@@ -156,7 +156,7 @@ li.dot {
   position: absolute;
   right: 0;
   top: 0;
-  color: #898989;
+  color: lighten($primary-font-color, 30%);
   font-size: 70px;
   line-height: 45px;
   height: 45px;
@@ -212,11 +212,11 @@ h3.selected-photo-subtitle,
 }
 
 .selected-tag {
-  background-color: #ACDADA;
+  background-color: $panado-blue;
   display: inline-block;
   margin-right: 5px;
   margin-bottom: 50px;
-  color: #464646;
+  color: darken($primary-font-color, 20%);
   padding: 2px;
   padding-left: 10px;
   padding-right: 10px;
