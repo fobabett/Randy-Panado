@@ -1,3 +1,5 @@
+// CONTAINER & CENTERING 
+
 #slideshow-modal {
   background-color: #464646;
   position: relative;
@@ -11,99 +13,204 @@
     overflow: hidden;
   }
 }
-.modal-content {
 
+.modal-content {
   padding: 30px;
+  height: auto;
 
   @include respond-to('large') {
-    padding: 50px 0;
+    height: 500px;
+    padding: 50px 30px;
     max-width: 1350px;
     margin: auto;
   }
+
+  @include respond-to('largest') {
+    height: 700px;
+  }
 }
+
+// GENERAL GRID LAYOUT
+
+.slideshow-content{
+  display: flex;
+  flex-flow: row wrap;
+
+  @include respond-to('large') {
+    flex-flow: row nowrap;
+  }
+}
+
+.slide-container {
+  flex: 0 0 100%;
+  position: relative;
+
+  @include respond-to('large') {
+    flex: 0 0 70%;
+  }
+}
+
+.selected-photo-description-container {
+  flex: 0 0 100%;
+  margin-top: 30px;
+
+  @include respond-to('large') {
+    margin-top: 0;
+    flex: 0 0 30%;
+    position: relative;
+    padding: 0 0 0 50px;
+  }
+}
+
+// LEFT
+
+.slide-inner{
+  display: block;
+  position: relative;
+}
+
+#slide {
+  width: 100%;
+  top:0;
+  left:0;
+  position: absolute;
+  height: 300px;
+  border: 1px dashed white;
+  opacity: 1;
+  z-index: 1;
+
+  @include respond-to('medium') {
+    height: 450px;
+    border: 1px dashed orange;
+  }
+
+  @include respond-to('large') {
+    height: 350px;
+    border: 1px dashed yellow;
+  }
+
+  @include respond-to('largest') {
+    height: 550px;
+    border: 1px dashed green;
+  }
+}
+
+#slide.slide-type-image{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+// start of fade out? right now it blinks from this state to closed (TO DO later)
+#slide.slide-type-image.ng-hide-animate.ng-hide-add{
+  opacity: 0;
+}
+
+// new item fades in
+#slide.slide-type-image.ng-hide-animate.ng-hide-remove{
+  opacity: 0;
+}
+
+ul.slideshow-nav-dots {
+  text-align: center;
+  margin:0;
+  padding:0;
+  width: 100%;
+  border: 1px dashed pink;
+  margin-top: 320px;
+
+  @include respond-to('medium') {
+    margin-top: 470px;
+  }
+
+  @include respond-to('large') {
+    margin-top: 360px;
+  }
+
+  @include respond-to('largest') {
+    margin-top: 560px;
+
+  }
+}
+
+li.dot {
+  display: inline-block;
+  border: 1px solid transparent;
+  margin: 0 5px;
+
+  &:hover,
+  &.active{
+    border: 1px solid yellow;
+    cursor: pointer;
+  }
+
+  img{
+    width: 40px;
+    height: 40px;
+  }
+}
+
+// RIGHT
+
 #close-modal {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 0;
+  top: 0;
   color: #898989;
   font-size: 70px;
   line-height: 45px;
   height: 45px;
   cursor: pointer;
-  background-color: pink;
   z-index: 300;
+
+  &:hover{
+    opacity: 0.7;
+    cursor: pointer;
+  }
 
   @include respond-to('large') {
     margin-right: 0;
+    right: 10px;
+    top: 9px;
   }
 }
-.slide-container {
 
-  @include respond-to('large') {
-    width: 70%;
-  }
-}
-#slide {
-  width: 100%;
-  margin-top: 15px;
 
-  @include respond-to('large') {
-    height: 400px;
-  }
-}
-.slideshow-nav-dots {
-  text-align: center;
-  margin-top: 15px;
-
-  @include respond-to('large') {
-    margin-top: 20px;
-  }
-}
-li.dot {
-  display: inline-block;
-}
-.slide-image {
-  width: 60px;
-  height: 60px;
-  margin: 5px;
-  cursor: pointer;
-}
-img.active {
-  border: 5px solid #CFCFCF;
-}
-.selected-photo-description-container {
-
-  @include respond-to('large') {
-    padding: 50px;
-  }
-}
-.selected-photo-title {
-  color: #CFCFCF;
+h3.selected-photo-title {
+  color: lighten($primary-font-color, 30%);
   font-family: 'proxima-nova';
-  font-size: 20px;
-
-  @include respond-to('large') {
-    font-size: 36px;
-  }
+  font-size:29px;
+  line-height: 30px;
+  margin-bottom: 2px;
 }
-.selected-photo-subtitle {
-  color: #95BABA;
+
+h3.selected-photo-subtitle,
+#related-blog-post h3.subtitle{
+  color: $panado-blue;
   font-family: 'Novecento Sans';
-
-  @include respond-to('large') {
-    font-size: 14px;
-  }
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
 }
+
 .selected-photo-details {
-  color: #B8B8B8;
-  margin-top: 30px;
-  font-family: 'Novecento Sans';
-  font-size: 14px;
-  font-family: 'proxima-nova';
+  margin-top: 25px;
+  padding-right: 30px;
+
+  p{
+    color: lighten($primary-font-color, 30%);
+    font-family: 'proxima-nova';
+    font-size: 13px;
+    line-height: 19px;
+    margin-bottom: 17px;
+  }
 }
+
 .filter-tags {
   margin-top: 30px;
 }
+
 .selected-tag {
   background-color: #ACDADA;
   display: inline-block;
@@ -117,21 +224,29 @@ img.active {
   font-family: 'Novecento Sans';
   font-size: 14px;
 }
-#related-blog-post {
-  border-left: 5px solid #ACDADA;
-  padding-left: 5px;
 
-  .subtitle {
-    color: #ACDADA;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-family: 'Novecento Sans';
+#related-blog-post {
+  border-left: 2px solid $panado-blue;
+  padding-left: 10px;
+
+  h3.subtitle{
+    line-height: 10px;
   }
 
-  .blog-title {
-    color: #CDCDCD;
+  h3.blog-title {
+    color: lighten($primary-font-color, 30%);
     font-family: 'proxima-nova';
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 14px;
+    padding-top: 2px;
+
+    a{
+      color: lighten($primary-font-color, 30%);
+      
+      &:hover{
+        opacity: 0.7;
+      }
+    }
   }
 }
 
@@ -144,18 +259,17 @@ img.active {
     display: block;
     overflow-y: hidden;
     
-    //-----------------------------------------------------
     // from open, returning to closed state
-    transition: all 500ms cubic-bezier(0.175, 0.020, 0.150, 0.995); /* custom */
-    transition-timing-function: cubic-bezier(0.175, 0.020, 0.150, 0.995); /* custom */
+    transition: all 0.9s ease;
+    // this one stopped working well
+    // transition: all 2s cubic-bezier(0.175, 0.020, 0.150, 0.995); /* custom */
+    // transition-timing-function: cubic-bezier(0.175, 0.020, 0.150, 0.995); /* custom */
 
     * {
-      opacity: 0;
-
       // from open to closed animation of inner elements
-      transition: 0.7s ease-out;
+      opacity: 0;
+      transition: all 0.7s ease;
     }
-    //-----------------------------------------------------
   }
 }
 
@@ -179,7 +293,6 @@ img.active {
     // no transition on purpose
 
     * {
-      background-color: green;
       opacity: 0;
       
       // no transition on purpose
@@ -197,12 +310,10 @@ img.active {
     transition-timing-function: cubic-bezier(0.455, 0.030, 0.725, 0.990); /* custom */
 
     * {
-      opacity: 1;
-      background-color: orange;
-
       // faster animation of inner elements from closed to open
       transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000); /* easeOutQuart */
       transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000); /* easeOutQuart */
+      opacity: 1;
     }
   }
 }
@@ -224,7 +335,6 @@ img.active {
 
     * {
       opacity: 0;
-      background-color: red;
       // no transition on purpose
     }
   }

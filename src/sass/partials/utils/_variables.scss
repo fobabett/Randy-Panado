@@ -3,7 +3,8 @@ $breakpoints: (
   'medium-small': '(max-width: 1023px)',
   'medium': '(min-width: 640px) and (max-width: 1023px)',
   'medium-up': '(min-width: 640px)',
-  'large': '(min-width: 1024px)'
+  'large': '(min-width: 1024px)',
+  'largest': '(min-width: 1280px)'
 );
 
 $medium-large-width: 945px;
