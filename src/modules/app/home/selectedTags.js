@@ -2,19 +2,21 @@
 
 module.exports = /*@ngInject*/
   function selectedTags() {
-    return function(pics, selectedTags) {
-      return pics.filter(function(pic) {
-
-        if(selectedTags.length === 0) {
-          return pics;
-        }
-
-        for (var i in pic.tags) {
-          if (selectedTags.indexOf(pic.tags[i].value) != -1) {
-            return true;
+    return function(projects, selectedTags) {
+      if (projects!== undefined) {
+        return projects.filter(function(project) {
+  
+          if(selectedTags.length === 0) {
+            return projects;
           }
-        }
-        return false;
-      });
+  
+          for (var i in project.tags) {
+            if (selectedTags.indexOf(project.tags[i].value) != -1) {
+              return true;
+            }
+          }
+          return false;
+        });
+      }
     };
   }

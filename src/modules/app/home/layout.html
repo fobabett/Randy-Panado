@@ -39,18 +39,18 @@
       <div class='slideshow-content'>
 
         <div class='slide-container'>
-          <div ng-repeat='pic in pics'>
+          <div ng-repeat='image in selectedProject.images'>
             <div class="slide-inner">
-              <div id='slide' class="slide-type-image" ng-if='pic.type == "image"' style="background-image:url('{{pic.url}}')" ng-hide='!isCurrentSlideIndex($index)'></div>
-              <embed-video id='slide' class="slide-type-video" width='700' height='400' ng-if='pic.type == "vimeo"' iframe-id="vimeo1" api="1" player_id="vimeo1" ng-hide='!isCurrentSlideIndex($index)' ng-href="{{pic.url | trustAsResourceUrl}}"><a href="{{pic.url | trustAsResourceUrl}}"></a></embed-video>
-              <!-- <youtube-video ng-if='pic.type == "youtube"' video-url="pic.url" player='video' id='slide' ng-hide='!isCurrentSlideIndex($index)'></youtube-video> -->
+              <div id='slide' ng-if='image.image_url' class="slide-type-image" style="background-image:url('{{image.image_url}}')" ng-hide='!isCurrentSlideIndex($index)'></div>
+              <embed-video ng-if='image.video_url' id='slide' class="slide-type-video" width='700' height='300' iframe-id="vimeo1" api="1" player_id="vimeo1" ng-href="{{image.video_url | trustAsResourceUrl}}" ng-hide='!isCurrentSlideIndex($index)'><a href="{{image.video_url | trustAsResourceUrl}}"></a></embed-video>
+              <!-- <youtube-video video-url="IZHnWvMaoKM" player='video' id='slide'></youtube-video> -->
             </div>
           </div>
           <nav class="slideshow-nav">
             <div class="wrapper">
               <ul class="slideshow-nav-dots">
-                <li class="dot" ng-class="{'active':isCurrentSlideIndex($index)}" ng-repeat="pic in pics | limitTo: 3">
-                  <img class='-' ng-click="setCurrentSlideIndex($index); setSelectedPic(pic); pauseVideo()" ng-src='{{pic.url}}'>
+                <li class="dot" ng-class="{'active':isCurrentSlideIndex($index)}" ng-repeat="image in selectedProject.images" ng-click='pasueVideo()'>
+                  <img class='-' ng-click="setCurrentSlideIndex($index); pauseVideo()" ng-src='{{image.thumbnail}}'>
                 </li>
               </ul>
             </div>
@@ -58,24 +58,23 @@
         </div><!--slide-container-->
   
         <div class='selected-photo-description-container'>
-          <h3 class='selected-photo-title'>{{selectedPic.name}}</h3>
-          <h3 class='selected-photo-subtitle'>{{selectedPic.location}}</h3>
+          <h3 class='selected-photo-title'>{{selectedProject.project_title}}</h3>
+          <h3 class='selected-photo-subtitle'>{{selectedProject.location}}</h3>
           <div class='selected-photo-details'>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, dicta labore rerum itaque ipsa nihil repellat ad modi iste totam, quaerat eveniet ab quam. Harum fuga sunt libero ad deserunt?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, dicta labore rerum itaque ipsa nihil repellat ad modi iste totam, quaerat eveniet ab quam. Harum fuga sunt libero ad deserunt?
+              {{selectedProject.description}}
             </p>
           </div>
 
           <div class='filter-tags'>
-            <span class='selected-tag' ng-repeat='type in types'>{{type.value}}</span>
+            <span class='selected-tag' ng-repeat='tag in selectedProject.tags'>{{tag.value}}</span>
           </div>
 
           <div id='related-blog-post'>
             <h3 class='subtitle'>Related Blog Post</h3>
-            <h3 class='blog-title'><a>Kinetic Cinematography</a></h3>
+            <h3 class='blog-title' ng-repeat='blog in selectedProject.related_blog_posts'>
+              <a href='/#{{blog.url}}'>{{blog.title}}</a>
+            </h3>
           </div>
 
         </div><!--selected-photo-description-container-->
@@ -99,16 +98,11 @@
     <section id='photo'>
 
       <ul class="dynamic-grid" angular-grid="pics" grid-width="250" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="true">
-        <li data-ng-repeat="pic in pics | selectedTags:selectedTags" class="grid angular-grid-item image-loaded photo-item" ng-init='getTags(pic)'>
-          <img ng-if='pic.type == "image"' src="{{pic.url}}" class="grid-img image-loaded" ng-click='toggleModal(pic); setCurrentSlideIndex($index); pauseVideo()'/>
-
-          <embed-video ng-if='pic.type == "vimeo"' iframe-id="test" api="1" player_id="test" width='300' height='200' ng-href="{{pic.url | trustAsResourceUrl}}" ng-click='pauseVideo(); toggleModal(pic); setCurrentSlideIndex($index)'><a href="{{pic.url | trustAsResourceUrl}}"></a></embed-video>
-
-          <!-- <youtube-video ng-if='pic.type == "youtube"' player-width='300'  player-height='200' video-url="pic.url" player='video' id='video' ng-click='pauseVideo(); toggleModal(pic); setCurrentSlideIndex($index)'></youtube-video> -->
-
-          <span class="photo-details" ng-click='toggleModal()'>
-            <h4>{{pic.name}}</h4>
-            <h5>{{pic.location}}</h5>
+        <li data-ng-repeat="project in projects | selectedTags:selectedTags" class="grid angular-grid-item image-loaded photo-item" ng-init='getTags(project)'>
+          <img src="{{project.thumbnail_image}}" class="grid-img image-loaded" ng-click='toggleModal(project); pauseVideo()'/>
+          <span class="photo-details" ng-click='toggleModal(project)'>
+            <h4>{{project.project_title}}</h4>
+            <h5>{{project.location}}</h5>
           </span>
         </li>
       </ul>
