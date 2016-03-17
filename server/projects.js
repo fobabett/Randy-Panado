@@ -9,10 +9,10 @@ module.exports = [
       {title: 'PuppyCat', url: '/post/4'}
     ],
     images: [
-      {thumbnail: 'http://placehold.it/1050x750', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'awesome pic'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'epic pic'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'wonderful pic'}
+      {thumbnail: 'http://placehold.it/150x150', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'awesome pic'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'epic pic'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'wonderful pic'}
     ],
     tags: [
       {value: 'commercial'},
@@ -28,8 +28,8 @@ module.exports = [
       {title: 'Kinetic Cinematography', url: '/post/2'}
     ],
     images: [
-      {thumbnail: 'http://placehold.it/1050x750', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'awesome pic'}
+      {thumbnail: 'http://placehold.it/150x150', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'awesome pic'}
     ],
     tags: [
       {value: 'commercial'}
@@ -44,12 +44,12 @@ module.exports = [
       {title: 'Trip to San Diego', url: '/post/1'}
     ],
     images: [
-      {thumbnail: 'http://placehold.it/1050x750', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'awesome pic'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'epic pic'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'wonderful pic'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'jedi pic'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'bobafett'},
+      {thumbnail: 'http://placehold.it/150x150', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'awesome pic'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'epic pic'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'wonderful pic'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'jedi pic'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'bobafett'},
     ],
     tags: [
       {value: 'creative'},
@@ -64,7 +64,7 @@ module.exports = [
     related_blog_posts: [
     ],
     images: [
-      {thumbnail: 'http://placehold.it/1050x750', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
+      {thumbnail: 'http://placehold.it/150x150', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
     ],
     tags: [
       {value: 'narrative'}
@@ -79,10 +79,10 @@ module.exports = [
       {title: 'Trip to San Diego', url: '/post/1'}
     ],
     images: [
-      {thumbnail: 'http://placehold.it/1050x750', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'awesome pic'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'epic pic'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'wonderful pic'}
+      {thumbnail: 'http://placehold.it/150x150', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'awesome pic'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'epic pic'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'wonderful pic'}
     ],
     tags: [
       {value: 'creative'},
@@ -99,9 +99,9 @@ module.exports = [
       {title: 'bizzz', url: '/post/5'}
     ],
     images: [
-      {thumbnail: 'http://placehold.it/1050x750', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'awesome pic'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'epic pic'}
+      {thumbnail: 'http://placehold.it/150x150', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'awesome pic'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'epic pic'}
     ],
     tags: [
       {value: 'creative'},
@@ -119,8 +119,8 @@ module.exports = [
       {title: 'bizzz', url: '/post/5'}
     ],
     images: [
-      {thumbnail: 'http://placehold.it/1050x750', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'awesome pic'}
+      {thumbnail: 'http://placehold.it/150x150', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'awesome pic'}
     ],
     tags: [
       {value: 'commercial'},
@@ -135,13 +135,13 @@ module.exports = [
     related_blog_posts: [
     ],
     images: [
-      {thumbnail: 'http://placehold.it/1050x750', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'awesome pic'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'dope pic'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'blah pic'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'wow pic'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'such pic'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'pic'}
+      {thumbnail: 'http://placehold.it/150x150', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'awesome pic'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'dope pic'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'blah pic'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'wow pic'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'such pic'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'pic'}
     ],
     tags: [
       {value: 'creative'}
@@ -156,8 +156,8 @@ module.exports = [
       {title: 'PuppyCat', url: '/post/4'}
     ],
     images: [
-      {thumbnail: 'http://placehold.it/1050x750', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'awesomeness pic'}
+      {thumbnail: 'http://placehold.it/150x150', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'awesomeness pic'}
     ],
     tags: [
       {value: 'creative'},
@@ -173,8 +173,8 @@ module.exports = [
       {title: 'PuppyCat', url: '/post/4'}
     ],
     images: [
-      {thumbnail: 'http://placehold.it/1050x750', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'awesomeness pic'}
+      {thumbnail: 'http://placehold.it/150x150', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'awesomeness pic'}
     ],
     tags: [
       {value: 'narrative'}
@@ -189,8 +189,8 @@ module.exports = [
       {title: 'bizzz', url: '/post/5'}
     ],
     images: [
-      {thumbnail: 'http://placehold.it/1050x750', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'awesomeness pic'}
+      {thumbnail: 'http://placehold.it/150x150', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'awesomeness pic'}
     ],
     tags: [
       {value: 'commercial'},
@@ -206,8 +206,8 @@ module.exports = [
       {title: 'PuppyCat', url: '/post/4'}
     ],
     images: [
-      {thumbnail: 'http://placehold.it/1050x750', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
-      {thumbnail: 'http://placehold.it/1050x750', image_url: 'http://placehold.it/750x850', caption: 'awesomeness pic'}
+      {thumbnail: 'http://placehold.it/150x150', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
+      {thumbnail: 'http://placehold.it/150x150', image_url: 'http://placehold.it/1050x750', caption: 'awesomeness pic'}
     ],
     tags: [
       {value: 'commercial'},

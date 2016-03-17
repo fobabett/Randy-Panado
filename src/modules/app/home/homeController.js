@@ -66,7 +66,7 @@ module.exports = /*@ngInject*/
         }
       }
       angularGridInstance.gallery.refresh();
-    }
+    };
 
     //Vimeo API
     var vimeoPlayer = null; 
