@@ -36,9 +36,6 @@ module.exports = /*@ngInject*/
     $scope.toggleModal = function(project) {
       $scope.modalShown = true;
       $scope.selectedProject = project;
-      $scope.isCurrentSlideIndex(0);
-      $scope.setCurrentSlideIndex(0);
-      $scope.currentIndex = 0;
     };
 
     $scope.openArticle = function(index, id) {
