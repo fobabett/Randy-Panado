@@ -34,6 +34,7 @@ module.exports = /*@ngInject*/
     $scope.modalShown = false;
     $scope.toggleModal = function(project) {
       $scope.modalShown = true;
+      $scope.currentIndex = 0;
       $scope.selectedProject = project;
     };
 
@@ -46,7 +47,6 @@ module.exports = /*@ngInject*/
 
     $scope.currentIndex = 0;
     $scope.setCurrentSlideIndex = function (index) {
-      console.log(index)
       $scope.currentIndex = index;
     };
     $scope.isCurrentSlideIndex = function (index) {
