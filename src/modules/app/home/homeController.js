@@ -10,7 +10,6 @@ module.exports = /*@ngInject*/
     }
 
     $scope.activeTab = $state.current.name;
-      console.log($scope.activeTab);
 
     $scope.selectedTags = [];
     $scope.tags = ['commercial', 'narrative', 'creative'];
@@ -47,6 +46,7 @@ module.exports = /*@ngInject*/
 
     $scope.currentIndex = 0;
     $scope.setCurrentSlideIndex = function (index) {
+      console.log(index)
       $scope.currentIndex = index;
     };
     $scope.isCurrentSlideIndex = function (index) {

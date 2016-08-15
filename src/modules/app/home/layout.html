@@ -70,7 +70,7 @@
             <span class='selected-tag' ng-repeat='tag in selectedProject.tags'>{{tag.value}}</span>
           </div>
 
-          <div id='related-blog-post'>
+          <div id='related-blog-post' ng-if='selectedProject.related_blog_posts.length > 0'>
             <h3 class='subtitle'>Related Blog Post</h3>
             <h3 class='blog-title' ng-repeat='blog in selectedProject.related_blog_posts'>
               <a href='/#{{blog.url}}'>{{blog.title}}</a>

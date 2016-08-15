@@ -45,7 +45,7 @@ global.config = {
     },
     release: {
       styles: 'bundle.min.css',
-      scripts: 'bundle.min.js'
+      scripts: 'masonry.grid.min.js'
     },
     templates: {
       compiled: 'templates.js',

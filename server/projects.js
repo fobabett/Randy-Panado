@@ -5,8 +5,6 @@ module.exports = [
     location: 'Panado Ranch 1',
     description: 'Description here',
     related_blog_posts: [
-      {title: 'Trip to San Diego', url: '/post/1'},
-      {title: 'PuppyCat', url: '/post/4'}
     ],
     images: [
       {thumbnail: 'http://placehold.it/150x150', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
@@ -41,7 +39,6 @@ module.exports = [
     location: 'Galaxy far far away',
     description: 'Description here',
     related_blog_posts: [
-      {title: 'Trip to San Diego', url: '/post/1'}
     ],
     images: [
       {thumbnail: 'http://placehold.it/150x150', video_url: 'https://vimeo.com/69207979', caption: 'awesome video'},
